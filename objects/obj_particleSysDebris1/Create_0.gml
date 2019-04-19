@@ -18,7 +18,7 @@ part_type_color3(particle1, c_ltgray, c_gray, c_black);
 part_type_alpha2(particle1, 0.5, 0);
 part_type_direction(particle1, P1Direction, P1Direction, 0, 10);
 part_type_life(particle1, 60, 120);
-part_type_size(particle1, 0.1, 0.2, 0.05, 0.01);
+part_type_size(particle1, 0.1, 0.2, 0.03, 0.01);
 part_type_speed(particle1, P1Speed, P1Speed, -0.01, 0.05);
 part_type_blend(particle1, true);
 part_type_orientation(particle1, 0, 359, random_range(-1, 1), 0, false);
