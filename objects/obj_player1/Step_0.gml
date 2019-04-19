@@ -85,9 +85,6 @@ if (keyboard_check_pressed(ord("S")))
 
 ////end of engine sounds	
 
-
-var distanceSun = distance_to_object(obj_collisionSun);	//setting distanceSun variable
-
 move_wrap(true, true, 0);								//wrap around edges of room
 
 //shooting
@@ -153,7 +150,7 @@ if instance_exists(obj_player1Shield)
 	}
 }
 
-//creates laser object if power up active
+
 
 
 

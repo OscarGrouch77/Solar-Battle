@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if distanceSun < 1300
+if distanceSun < room_width/2
 {
-	instance_create_layer(x, y, "Instances", obj_powerUp); 
+	instance_create_layer(x, y, "Instances", obj_powerUp);
 }
