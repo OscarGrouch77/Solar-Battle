@@ -14,7 +14,7 @@ if (instance_exists(obj_player2))
 	if (heat > 5) and (heat <=8) colour = c_orange;
 	if (heat > 8) colour = c_red;
 
-	draw_line_width_colour(obj_healthBar2.x, obj_healthBar2.y + 5, obj_healthBar2.x, obj_healthBar2.y + 8, obj_player2.overheat*3, colour, colour);
+	draw_line_width_colour(obj_player2.x, obj_player2.y + 17, obj_player2.x, obj_player2.y + 20, obj_player2.overheat*3, colour, colour);
 }
 
 else

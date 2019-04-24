@@ -2,7 +2,7 @@
     "id": "0078a847-1ff7-49b3-80ba-8bc1a366363b",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_1playerSelect",
+    "name": "obj_menuButtonDuelSelect",
     "eventList": [
         {
             "id": "d1488a19-6bff-4baa-be26-25fe47ead986",
@@ -22,6 +22,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
+            "m_owner": "0078a847-1ff7-49b3-80ba-8bc1a366363b"
+        },
+        {
+            "id": "c5bfd3cc-332a-4885-9c35-9607f0ca7841",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
             "m_owner": "0078a847-1ff7-49b3-80ba-8bc1a366363b"
         }
     ],
@@ -43,6 +53,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "f6296492-1512-494c-864a-d900df98ccc6",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

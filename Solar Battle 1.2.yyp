@@ -34,7 +34,7 @@
             "Key": "0078a847-1ff7-49b3-80ba-8bc1a366363b",
             "Value": {
                 "id": "aacf5d31-0e76-4163-b159-44a8414c77a8",
-                "resourcePath": "objects\\obj_1playerSelect\\obj_1playerSelect.yy",
+                "resourcePath": "objects\\obj_menuButtonDuelSelect\\obj_menuButtonDuelSelect.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -76,6 +76,14 @@
                 "id": "5a08154d-c7e3-46c0-8d12-d31e4e3833e5",
                 "resourcePath": "objects\\obj_ready\\obj_ready.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "0ca5d478-5e06-4b6e-8887-d95bdad597fc",
+            "Value": {
+                "id": "2eb54036-efec-47f1-b9c2-ed4f96a2497d",
+                "resourcePath": "views\\0ca5d478-5e06-4b6e-8887-d95bdad597fc.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -127,6 +135,14 @@
             }
         },
         {
+            "Key": "179ecb2b-41d5-4e21-83ae-7ff4e415fb6d",
+            "Value": {
+                "id": "dbdad949-e9b6-4305-a32a-7d8a6327c85c",
+                "resourcePath": "rooms\\rm_difficultySelect\\rm_difficultySelect.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1ed76e51-3815-480b-bacf-c5a7cf3a6d16",
             "Value": {
                 "id": "c7f19b78-1219-4360-952e-4c5d3fa999b4",
@@ -148,6 +164,14 @@
                 "id": "ccf6606a-4c14-4ab2-a55e-7f690833c572",
                 "resourcePath": "sprites\\spr_spaceBackground\\spr_spaceBackground.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "28897a26-36d6-4c16-8a56-843a6fa328c6",
+            "Value": {
+                "id": "78771c1a-42dd-4492-9d7d-062c911b2737",
+                "resourcePath": "objects\\obj_menuButtonEasy\\obj_menuButtonEasy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -212,6 +236,14 @@
                 "id": "c2de0e11-9908-455c-ab39-114c0fbaae29",
                 "resourcePath": "scripts\\scr_cpuShipExplosion2\\scr_cpuShipExplosion2.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2ffd596a-39b7-48a8-9a69-86dc9d7c8df9",
+            "Value": {
+                "id": "a9cc6c55-f53b-4106-86ac-593b3d4341e6",
+                "resourcePath": "objects\\obj_menuButton2Player\\obj_menuButton2Player.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -458,7 +490,7 @@
             "Key": "648de26f-828c-4d02-bd89-09e0fefcd98c",
             "Value": {
                 "id": "876fb688-2217-4348-bde8-673a662e8867",
-                "resourcePath": "objects\\obj_system\\obj_system.yy",
+                "resourcePath": "objects\\obj_InGameSystem\\obj_InGameSystem.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -490,7 +522,7 @@
             "Key": "6b96503c-0f85-4bdb-a8b0-330c56963a1b",
             "Value": {
                 "id": "669c175d-73f7-4fc3-8ce6-7b4bd5eb7494",
-                "resourcePath": "objects\\obj_2playerSelect\\obj_2playerSelect.yy",
+                "resourcePath": "objects\\obj_menuButtonSurvivalSelect\\obj_menuButtonSurvivalSelect.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -639,14 +671,6 @@
             }
         },
         {
-            "Key": "8d5ebea5-17b7-4503-a6ae-1cfe21d5665c",
-            "Value": {
-                "id": "e2919425-bf58-4fc1-a4bd-fdf2b79c3f64",
-                "resourcePath": "objects\\obj_globalVariables\\obj_globalVariables.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "8e76d32c-ec17-4891-910d-39fd5d97c518",
             "Value": {
                 "id": "fefd2f71-0be3-4310-af0d-65f204562081",
@@ -692,6 +716,14 @@
                 "id": "07d457fa-4f58-49a0-88f2-a856e0329969",
                 "resourcePath": "sounds\\snd_hit\\snd_hit.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "9b954b11-9354-4564-806c-75113fbaddf9",
+            "Value": {
+                "id": "ece910ac-6ae8-490e-9771-3316c64c5e33",
+                "resourcePath": "objects\\obj_menuButtonStandard\\obj_menuButtonStandard.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -802,8 +834,16 @@
             "Key": "bebfe582-7814-4209-99f0-74ab737a8078",
             "Value": {
                 "id": "e96fca15-5daa-4b6c-94df-7acb0b78b8d2",
-                "resourcePath": "rooms\\rm_playerSelect\\rm_playerSelect.yy",
+                "resourcePath": "rooms\\rm_gameSelect\\rm_gameSelect.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "bf06ae7f-439b-418f-9eb7-efd1243169c7",
+            "Value": {
+                "id": "505edd03-af2c-4b39-bf1d-3e60ba616f39",
+                "resourcePath": "objects\\obj_menuButtonHard\\obj_menuButtonHard.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -919,6 +959,14 @@
             }
         },
         {
+            "Key": "d7ed94a8-0f1b-45b9-a349-c40e6681e3df",
+            "Value": {
+                "id": "93cb89dd-e632-4994-a393-a6fa9076a671",
+                "resourcePath": "rooms\\rm_duelTypeSelect\\rm_duelTypeSelect.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "d851a109-dcf5-48b4-a91d-61fed1ea40be",
             "Value": {
                 "id": "457a01c0-a037-4fd6-982a-830da09a49e8",
@@ -980,6 +1028,14 @@
                 "id": "b36bae65-c467-40ec-9049-ce6771748287",
                 "resourcePath": "sprites\\spr_exit\\spr_exit.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e2324963-55e9-44ca-a6ad-248adb5f769b",
+            "Value": {
+                "id": "b3724568-3fb0-4676-a77d-567253e6bea5",
+                "resourcePath": "objects\\obj_menuButton1Player\\obj_menuButton1Player.yy",
+                "resourceType": "GMObject"
             }
         },
         {
