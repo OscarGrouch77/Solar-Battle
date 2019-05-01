@@ -2,7 +2,7 @@
     "id": "31931d6b-e204-4b51-8644-4559379cb23c",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_menuButtonExit",
+    "name": "obj_menuButtonAnotherRound1",
     "eventList": [
         {
             "id": "04b23fd6-a4be-403e-bf60-65fd9ec604e8",

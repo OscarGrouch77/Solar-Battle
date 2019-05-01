@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_rectangle(x, y, x + 130, y + 40, true);
+//draw_rectangle(x, y, x + 130, y + 40, true);
 
 if (point_in_rectangle(mouse_x, mouse_y, x, y, x + 130, y + 40))
 {

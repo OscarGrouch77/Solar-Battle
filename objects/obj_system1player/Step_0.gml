@@ -49,7 +49,7 @@ if (gameOver = true) and (takeSnapShot = true)
 	}
 	gamePaused = true;
 	instance_deactivate_all(true);
-	instance_create_layer(room_width/2, (room_height/2) + 150, "Instances", obj_menuButtonRestart);
+	instance_create_layer(room_width/2, (room_height/2) + 150, "Instances", obj_menuButtonAnotherRound);
 	instance_create_layer(room_width/2, (room_height/2) + 200, "Instances", obj_menuButtonExit);
 	takeSnapShot = false	
 }

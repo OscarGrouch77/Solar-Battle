@@ -143,22 +143,6 @@
             }
         },
         {
-            "Key": "1ed76e51-3815-480b-bacf-c5a7cf3a6d16",
-            "Value": {
-                "id": "c7f19b78-1219-4360-952e-4c5d3fa999b4",
-                "resourcePath": "objects\\obj_menuButtonRestart\\obj_menuButtonRestart.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "1f691d92-c577-46b3-8511-4b4b10f5a66a",
-            "Value": {
-                "id": "e190bfb9-59a7-4b8c-8fbc-11959ad1dbe7",
-                "resourcePath": "objects\\obj_menuButtonExit\\obj_menuButtonExit.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "20badbc6-a945-4498-b548-d0147f377b07",
             "Value": {
                 "id": "ccf6606a-4c14-4ab2-a55e-7f690833c572",
@@ -260,6 +244,14 @@
                 "id": "e2f037a7-49aa-4657-b962-3ee63dd21b02",
                 "resourcePath": "fonts\\fnt_title\\fnt_title.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "31931d6b-e204-4b51-8644-4559379cb23c",
+            "Value": {
+                "id": "bc2a3a75-544e-4fb7-8d45-147b19672a62",
+                "resourcePath": "objects\\obj_menuButtonExit\\obj_menuButtonExit.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -748,6 +740,14 @@
                 "id": "984ae5c6-cfc5-4ffc-976a-23854c9db092",
                 "resourcePath": "fonts\\fnt_menu\\fnt_menu.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "a0d0c969-1434-4114-8c71-0f53ddd4d0cf",
+            "Value": {
+                "id": "43b37bda-62f5-48dd-9587-eabfaf81231e",
+                "resourcePath": "objects\\obj_menuButtonAnotherRound\\obj_menuButtonAnotherRound.yy",
+                "resourceType": "GMObject"
             }
         },
         {
