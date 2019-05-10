@@ -12,3 +12,5 @@ with cpuDemo1Thrust2
 	image_index = 5;
 	instance_destroy(self);
 }
+
+obj_testing.cpu2Score++;

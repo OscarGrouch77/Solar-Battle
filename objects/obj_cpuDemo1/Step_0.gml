@@ -165,7 +165,11 @@ if (state == states1.orbit)
 	{
 		alarm[2] = 60;
 	}
-
+	
+	if (enemyDis < 400)
+	{
+		state = states1.attack;
+	}
 
 }
 #endregion
@@ -181,7 +185,7 @@ if (state == states1.chase)
 		scr_rotateTo(enemyDir);
 	
 		//thrust towards player if far away
-		if (enemyDis > 600)
+		if (enemyDis > 400)
 		{
 			thrusting = true;
 		}

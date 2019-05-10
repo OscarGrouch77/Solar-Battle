@@ -20,6 +20,8 @@ thrusting = false;
 reversing = false;
 rotate = 0;
 firing = false;
+aimAt = 0;
+enemyDis = 600;
 
 
 //states
