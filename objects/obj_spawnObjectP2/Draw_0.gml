@@ -1,4 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-instance_create_layer(randX1, randY1, "Instances", obj_cpuDemo1);
+draw_self();
+image_alpha = image_alpha * 1.025;

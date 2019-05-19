@@ -39,18 +39,18 @@ state = states2.orbit;
 //set start location
 
 //get random position not too close to sun
-do
-{
-	randX = irandom(room_width);
-	randY = irandom(room_height);
-}
-until (point_distance(randX, randY, obj_sun.x, obj_sun.y) > 200)
+//do
+//{
+//	randX = irandom(room_width);
+//	randY = irandom(room_height);
+//}
+//until (point_distance(randX, randY, obj_sun.x, obj_sun.y) > 200)
 
 
-//place at random position
+////place at random position
 
-x = randX
-y = randY
+//x = randX
+//y = randY
 
 
 

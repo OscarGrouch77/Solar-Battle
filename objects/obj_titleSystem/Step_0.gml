@@ -10,7 +10,14 @@ if (egg == true) and !(instance_exists(obj_cpuDemo1))
 {
 	if alarm[0] == -1
 	{
-		alarm[0] = 120;
+		do
+		{
+			randX1 = irandom(room_width);
+			randY1 = irandom(room_height);
+		}
+		until (point_distance(randX1, randY1, obj_sun.x, obj_sun.y) > 200) 
+		instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectP1);
+		alarm[0] = 180;
 	}
 }
 
@@ -19,7 +26,14 @@ if (egg == true) and !(instance_exists(obj_cpuDemo2))
 {
 	if alarm[1] == -1
 	{
-		alarm[1] = 120;
+		do
+		{
+			randX2 = irandom(room_width);
+			randY2 = irandom(room_height);
+		}
+		until (point_distance(randX2, randY2, obj_sun.x, obj_sun.y) > 200) 
+		instance_create_layer(randX2, randY2, "topParticle", obj_spawnObjectP2);
+		alarm[1] = 180;
 	}
 }
 

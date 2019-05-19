@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//use for testing spawning
+
 if (mouse_check_button_pressed(mb_left))
 {
 	scr_spawn(mouse_x, mouse_y);

@@ -8,13 +8,14 @@ radius = 200;
 //creating spawnFlare object withing a circle around spawn point
 
 
-for (var i = 0; i < 10; i++)
+for (var i = 0; i < 7; i++)
 {
-	do
+	var distRNG = random(radius) + random(radius);	//getting a nice distribution of spawn distances
+	if (distRNG > radius)							//taking dists further than the mean and transposing them inside the radius
 	{
-		var distRNG = random(radius) + random(radius);	
+		distAdjust = (distRNG - 200) * 2;
+		distRNG = distRNG - distAdjust;
 	}
-	until (distRNG <= radius)
 	
 	var dir = random(360);
 	var spawnX = xx + lengthdir_x(distRNG, dir);
