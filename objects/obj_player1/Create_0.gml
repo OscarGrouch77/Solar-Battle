@@ -1,16 +1,5 @@
 /// set variables
 
-hp = 3;
-spd = 0;
-cooldown = 0;
-playerDir = 0;
-overheat = 0;
-shield = false;
-double = false;
-supercool = false;
-missile = false;
-missileAmmo = 0;
-
 
 x = obj_sun.x - (room_width/4);
 y = obj_sun.y;

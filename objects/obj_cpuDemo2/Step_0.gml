@@ -289,8 +289,15 @@ if (overheat < 10)									//cooldown weapon only if not overheated
 
 if (hp <= 0)										//destroy
 {
-	instance_create_layer(x, y, "bottomParticle", obj_partSysDemo2Explosion);
-	scr_genericExplosion(x, y, obj_partSysDemo2Explosion.player2ExplosionBot, obj_partSysDemo2Explosion.player2ExplosionTop, obj_partSysDemo2Explosion.particle1, obj_partSysDemo2Explosion.particle2);
+	//instance_create_layer(x, y, "bottomParticle", obj_partSysDemo2Explosion);
+	//scr_genericExplosion(x, y, obj_partSysDemo2Explosion.player2ExplosionBot, obj_partSysDemo2Explosion.player2ExplosionTop, obj_partSysDemo2Explosion.particle1, obj_partSysDemo2Explosion.particle2);
+	thisExp = instance_create_layer(x, y, "bottomParticle", obj_partSysGenericExplosion);
+	thisExp.expDir = me.direction;
+	thisExp.expSpeed = me.speed;
+	thisExp.expx = me.x;
+	thisExp.expy = me.y;
+	thisExp.me = thisExp;
+	
 	audio_play_sound(snd_explode,0,0);
-	instance_destroy();								
+	instance_destroy();							
 }

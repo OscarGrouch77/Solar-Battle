@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "33642783-fbd4-4b37-955d-8d7b28f01beb",
+            "Value": {
+                "id": "a579898c-580f-47c3-9658-2dd9312711a4",
+                "resourcePath": "objects\\obj_cpuSurvival1\\obj_cpuSurvival1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "339b875a-42fc-4f27-9d5c-aaf60fa5bf70",
             "Value": {
                 "id": "48376f59-ed1b-466d-9587-7e4c8422f1de",
@@ -311,6 +319,14 @@
             }
         },
         {
+            "Key": "3a77df92-979b-48a1-b20e-15c65aed7971",
+            "Value": {
+                "id": "c880a8f6-ccd5-4443-8380-0d511295ddd5",
+                "resourcePath": "objects\\obj_spawnObjectSurvival\\obj_spawnObjectSurvival.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3b9984cd-57db-410e-94ba-46a2078c849e",
             "Value": {
                 "id": "a4b4f4a7-dcbb-46a6-bd4c-87c5a795f0cc",
@@ -332,6 +348,14 @@
                 "id": "32afcf25-b7cd-40a6-ae43-2d492624ab20",
                 "resourcePath": "objects\\obj_healthBar1\\obj_healthBar1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3f83781d-57c2-4638-8994-7f537c1786c9",
+            "Value": {
+                "id": "06a72105-b92c-42b5-9635-dabff7f0eff4",
+                "resourcePath": "rooms\\rm_gameSurvival\\rm_gameSurvival.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -404,6 +428,14 @@
                 "id": "5baad7ef-001c-47cc-94ca-a7f58485a988",
                 "resourcePath": "scripts\\scr_spawn\\scr_spawn.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "54851c8b-6ff0-4713-a118-f68d3cb259b0",
+            "Value": {
+                "id": "1337a31f-6b3b-4651-9229-c44bde8ae445",
+                "resourcePath": "objects\\obj_survivalSystem\\obj_survivalSystem.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -667,6 +699,14 @@
             "Value": {
                 "id": "726945df-bd1b-42a5-8016-d89be371b7ef",
                 "resourcePath": "objects\\obj_spawnFlare\\obj_spawnFlare.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7c13be89-0128-4635-b829-fc05cbb33aeb",
+            "Value": {
+                "id": "7c9b0826-1733-4428-9ab9-0d8164bf7306",
+                "resourcePath": "objects\\obj_testShip\\obj_testShip.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -959,6 +999,14 @@
             }
         },
         {
+            "Key": "c50e8951-ad18-477d-a970-91e3a9c0f9b0",
+            "Value": {
+                "id": "1bf390f9-533a-4a07-a6ba-ac153606e2d3",
+                "resourcePath": "sprites\\spr_player2spawn\\spr_player2spawn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c54ed690-3cab-4994-b656-dcb89d6eaf50",
             "Value": {
                 "id": "d070710a-223f-4784-9421-8dc01f4c59f9",
@@ -1020,6 +1068,14 @@
                 "id": "ae51596a-2585-442d-84e0-04ca9829f3c6",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "ced6d12f-08ce-4ce4-829f-4d000fd8cff6",
+            "Value": {
+                "id": "77ceca8c-b9e7-442d-8565-5e899ba98bf1",
+                "resourcePath": "objects\\obj_genericBullet\\obj_genericBullet.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1211,6 +1267,14 @@
             "Value": {
                 "id": "6ed9c28f-5821-4e87-a5d2-9525f89e5a86",
                 "resourcePath": "objects\\obj_asteroidBig\\obj_asteroidBig.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f9c93cca-7b3c-48a0-b03c-dba1131e4e74",
+            "Value": {
+                "id": "f9d93f05-e431-4444-b5bd-593d3a93ad72",
+                "resourcePath": "objects\\obj_partSysGenericExplosion\\obj_partSysGenericExplosion.yy",
                 "resourceType": "GMObject"
             }
         },

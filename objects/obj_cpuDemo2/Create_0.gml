@@ -3,7 +3,7 @@
 
 //set variables for cpuShip
 
-hp = 3;
+hp = 1;
 spd = 0;
 cooldown = 0;
 playerDir = 0;
@@ -16,11 +16,17 @@ chosen = false;
 
 //variables for AI
 
+aiLevel = 0;
 thrusting = false;
 reversing = false;
 rotate = 0;
 firing = false;
 aimAt = 0;
+enemyDis = 600;
+enemy = obj_cpuDemo1;
+myBullet = obj_bulletDemo2;
+enemyBullet = obj_bulletDemo1;
+me = obj_cpuDemo2;
 
 
 //states
@@ -34,24 +40,6 @@ enum states2 {
 }
 
 state = states2.orbit;
-
-
-//set start location
-
-//get random position not too close to sun
-//do
-//{
-//	randX = irandom(room_width);
-//	randY = irandom(room_height);
-//}
-//until (point_distance(randX, randY, obj_sun.x, obj_sun.y) > 200)
-
-
-////place at random position
-
-//x = randX
-//y = randY
-
 
 
 //set start orientation

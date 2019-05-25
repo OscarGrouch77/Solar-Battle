@@ -92,7 +92,7 @@ if (state == states.idle)
 	{
 		
 		//switch to chase state
-		if (enemyDis >= 400)
+		if (enemyDis > 400)
 		{
 			state = states.chase;
 		}
@@ -181,7 +181,7 @@ if (state == states.chase)
 		scr_rotateTo(enemyDir);
 	
 		//thrust towards player if far away
-		if (enemyDis > 600)
+		if (enemyDis > 400)
 		{
 			thrusting = true;
 		}

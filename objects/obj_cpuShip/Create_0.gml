@@ -16,10 +16,12 @@ chosen = false
 
 //variables for AI
 
+aiLevel = 0;
 thrusting = false;
 reversing = false;
 rotate = 0;
 firing = false;
+
 
 
 //states
