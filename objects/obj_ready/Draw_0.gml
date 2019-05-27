@@ -19,6 +19,7 @@ if (getReady = true)
 		allObjects[i, 8]
 		);	
 	}
+	draw_set_font(fnt_score);
 	draw_set_color(c_black);
 	draw_set_alpha(0.5);
 	draw_rectangle(0, 0, room_width, room_height, false);
@@ -28,6 +29,7 @@ if (getReady = true)
 
 if (readySetGo == 1)
 {
+	draw_set_font(fnt_score);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
@@ -39,6 +41,7 @@ if (readySetGo == 1)
 
 if (readySetGo == 2)
 {
+	draw_set_font(fnt_score);
 	draw_set_colour(c_white);
 	draw_set_alpha(textAlpha);
 	draw_text_transformed(room_width/2, room_height/3,"Set", textScale, textScale, 0);
@@ -50,6 +53,7 @@ if (readySetGo == 3)
 {
 	if (textScale < 1.5)
 	{
+		draw_set_font(fnt_score);
 		draw_set_colour(c_white);
 		draw_set_alpha(textAlpha);
 		draw_text_transformed(room_width/2, room_height/3,"Go!", textScale, textScale, 0);
@@ -59,6 +63,7 @@ if (readySetGo == 3)
 	else
 	{
 		var textAngle = 0 + random_range(-10, 10);
+		draw_set_font(fnt_score);
 		draw_set_colour(c_white);
 		textAlpha = 1;
 		draw_text_transformed(room_width/2, room_height/3,"Go!", textScale, textScale, textAngle);

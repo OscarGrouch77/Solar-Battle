@@ -93,12 +93,19 @@ if (keyboard_check(vk_space)) and (cooldown <= 0)
 {
 	if (double == false)
 	{
-		instance_create_layer(x,y,"Bullets",obj_bullet1);			//creates bullet if cooldown 0
+		var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
+		with bullet
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
 	}
 	if (double == true)												//double bullets if double power up active
 	{
-		instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_bullet1);
-		instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_bullet1);
+		instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_genericBullet);
+		instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_genericBullet);
 	}
 	cooldown = 15
 	overheat = overheat + 2;

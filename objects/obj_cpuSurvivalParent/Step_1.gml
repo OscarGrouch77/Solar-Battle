@@ -40,10 +40,10 @@ if(instance_exists(enemy))
 
 		aimAt = point_direction(0,0,aimX,aimY);
 		
-		//firing if close enough - 100 is bullet lifetime
+		//firing if close enough - 100 is bullet lifetime - aimTol is aim tolerance
 		if (timeToHit <= 110)
 			{
-				if (abs(angle_difference(image_angle, aimAt)) < 5)
+				if (abs(angle_difference(image_angle, aimAt)) < aimTol)
 				{
 				firing = true;
 				}

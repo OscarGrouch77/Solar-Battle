@@ -60,10 +60,10 @@ if (gameOver == true) and (winner == 0)
 //displayed tallyed scores
 if (gameOver == true)
 {
-	draw_set_font(fnt_score);
+	draw_set_font(fnt_title);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text_transformed((room_width/2) - 400, room_height/2, global.scorePlayer1, 2, 2, 0);
-	draw_text_transformed((room_width/2) + 400, room_height/2, global.scoreCpu, 2, 2, 0);
+	draw_text_transformed((room_width/2) - 400, room_height/2, global.scorePlayer1, 1, 1, 0);
+	draw_text_transformed((room_width/2) + 400, room_height/2, global.scoreCpu, 1, 1, 0);
 }

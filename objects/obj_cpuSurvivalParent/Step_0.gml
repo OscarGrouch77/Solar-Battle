@@ -37,11 +37,11 @@ if (rotate == -1){
 //AI thrusting controller
 
 if (thrusting == true){
-	motion_add(image_angle, 0.05);
+	motion_add(image_angle, thrust);
 }
 
 if (reversing == true){
-	motion_add(image_angle, -0.025);
+	motion_add(image_angle, -thrust/2);
 }
 
 
@@ -91,13 +91,13 @@ if (state == states1.idle)
 	if (instance_exists(enemy))
 	{
 		
-		//switch to chase state
+		//switch to chase state if enemy further than chase distance
 		if (enemyDis > enemyChaseDis)
 		{
 			state = states1.chase;
 		}
 		
-		//switch to attack state if near
+		//switch to attack state if nearer than attach distance
 		if (enemyDis <= enemyAttackDis)
 		{
 			state = states1.attack;
@@ -190,7 +190,7 @@ if (state == states1.chase)
 		}
 		
 		//switch to attack state if near
-		if (enemyDis <= 600)
+		if (enemyDis <= enemyAttackDis)
 		{
 			state = states1.attack;
 		}
@@ -299,10 +299,10 @@ if (hp <= 0)										//destroy
 	//scr_genericExplosion(x, y, obj_partSysDemo1Explosion.player2ExplosionBot, obj_partSysDemo1Explosion.player2ExplosionTop, obj_partSysDemo1Explosion.particle1, obj_partSysDemo1Explosion.particle2);
 	
 	thisExp = instance_create_layer(x, y, "bottomParticle", obj_partSysGenericExplosion);
-	thisExp.expDir = me.direction;
-	thisExp.expSpeed = me.speed;
-	thisExp.expx = me.x;
-	thisExp.expy = me.y;
+	thisExp.expDir = self.direction;
+	thisExp.expSpeed = self.speed;
+	thisExp.expx = self.x;
+	thisExp.expy = self.y;
 	thisExp.me = thisExp;
 	audio_play_sound(snd_explode,0,0);
 	instance_destroy();								

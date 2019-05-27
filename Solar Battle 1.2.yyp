@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "0ff0c153-27b8-4bdd-bc84-f2ef8878cfb2",
+            "Value": {
+                "id": "d121024a-7cae-4ee4-9af1-d6b00c1f5509",
+                "resourcePath": "objects\\obj_cpuSurvivalEasy\\obj_cpuSurvivalEasy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "116b6a4b-e094-490c-be0d-07ce46fd8775",
             "Value": {
                 "id": "4bef96f9-b392-49b8-9fea-a8cd550f13ea",
@@ -282,7 +290,7 @@
             "Key": "33642783-fbd4-4b37-955d-8d7b28f01beb",
             "Value": {
                 "id": "a579898c-580f-47c3-9658-2dd9312711a4",
-                "resourcePath": "objects\\obj_cpuSurvival1\\obj_cpuSurvival1.yy",
+                "resourcePath": "objects\\obj_cpuSurvivalParent\\obj_cpuSurvivalParent.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -307,6 +315,14 @@
             "Value": {
                 "id": "f3e94970-bbcb-4644-b8ab-fab2e717fa5d",
                 "resourcePath": "objects\\obj_laser1\\obj_laser1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "37dc2a5c-9863-4ce1-bccd-c30a5ed973e9",
+            "Value": {
+                "id": "8b115797-5f5c-43d2-95a7-cd6300807545",
+                "resourcePath": "objects\\obj_menuButtonTryAgain\\obj_menuButtonTryAgain.yy",
                 "resourceType": "GMObject"
             }
         },

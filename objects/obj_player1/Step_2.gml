@@ -24,7 +24,7 @@ if keyboard_check(ord("W"))
 
 	with (player1Thrust1)
 	{
-		if (other.hp==3)
+		if (other.hp >= 3)
 		{
 			image_speed = 1;
 			if image_index == 4 image_index = 0;
@@ -38,7 +38,7 @@ if keyboard_check(ord("W"))
 
 	with (player1Thrust2)
 	{
-		if (other.hp==3) or (other.hp==2)
+		if (other.hp >= 2)
 		{
 			image_speed = 1;
 			if image_index == 4 image_index = 0;

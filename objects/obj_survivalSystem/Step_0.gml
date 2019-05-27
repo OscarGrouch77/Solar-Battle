@@ -9,15 +9,13 @@ if (keyboard_check(vk_escape))
 
 
 //spawn new enemy if no enemy exists
-if !(instance_exists(obj_cpuSurvival1)) and !(instance_exists(obj_spawnObjectSurvival))
+if !(instance_exists(sEnemy)) and !(instance_exists(obj_spawnObjectSurvival))
 {
-	do
+	if alarm[1] = -1
 	{
-		randX1 = irandom(room_width);
-		randY1 = irandom(room_height);
-	}
-	until (point_distance(randX1, randY1, obj_sun.x, obj_sun.y) > 200) 
-	instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvival);
+		global.roundNumber++
+		alarm[1] = 120;
+	}	
 }
 
 

@@ -10,5 +10,5 @@ spawnY = y;
 timer = 0;
 image_alpha = 0.015;
 image_speed = 0;
-image_angle = 180;
+image_angle = random(360);
 
