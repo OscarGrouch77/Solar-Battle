@@ -213,15 +213,15 @@ if (state == states2.attack)
 	#region//attack behaviour
 	
 	//rotate towards player
-		scr_rotateTo(aimAt);
+	scr_rotateTo(aimAt);
 		
 	//switch to orbit state if heading towards sun
-	if (disSun < 500) and (angle_difference(direction, dirSun) < 45)
+	if (disSun < 500) and abs((angle_difference(direction, dirSun)) < 45)
 	{
 		state = states2.orbit;
 	}
 
-	if (angle_difference(direction, dirSun) < 30)
+	if abs((angle_difference(direction, dirSun)) < 30)
 	{
 		state = states2.orbit;
 	}
