@@ -141,8 +141,11 @@ if (state == states1.orbit)
 	
 	scr_rotateTo(targetAngle);
 	
-	//cheating cpu assistance to avoid sun
-	motion_add(targetAngle, 0.02);
+	//cheating cpu assistance to avoid sun at skl level above 5
+	if (skl > 5)
+	{
+		motion_add(targetAngle, 0.02);
+	}
 	
 	if (abs(angle_difference(image_angle, targetAngle)) <= 40)
 	{
@@ -177,10 +180,14 @@ if (state == states1.chase)
 	{
 		
 		//rotate towards player
-		scr_rotateTo(enemyDir);
+		if (skl < 5)
+		{
+			scr_rotateTo(enemyDir);
+		}
+		else scr_rotateTo(aimAt);
 	
 		//thrust towards player if far away
-		if (enemyDis > 400)
+		if (enemyDis > enemyChaseDis)
 		{
 			thrusting = true;
 		}
@@ -212,24 +219,44 @@ if (state == states1.attack)
 	#region//attack behaviour
 	
 	//rotate towards player
-		scr_rotateTo(aimAt);
+	scr_rotateTo(aimAt);
 		
-	//switch to orbit state if heading towards sun
-	if (disSun < 500) and (angle_difference(direction, dirSun) < 45)
+	//switch to orbit state if heading towards sun depending on aggression and skill level
+	
+	if (agr < 3)
 	{
-		state = states1.orbit;
+		if (disSun < 500) and abs((angle_difference(direction, dirSun)) < 50)
+		{
+			state = states1.orbit;
+		}
+		if abs((angle_difference(direction, dirSun)) < 35)
+		{
+			state = states1.orbit;
+		}
+		if (disSun < 500)
+		{
+			state = states1.orbit;
+		}
 	}
+	else
+	{
+		if (disSun < 500) and abs((angle_difference(direction, dirSun)) < 35)
+		{
+			state = states1.orbit;
+		}
+		if abs((angle_difference(direction, dirSun)) < 20)
+		{
+			state = states1.orbit;
+		}
+		if (disSun < 300)
+		{
+			state = states1.orbit;
+		}
+	}
+	
+	
 
-	if (angle_difference(direction, dirSun) < 30)
-	{
-		state = states1.orbit;
-	}
-
-	//orbit state if too close to sun
-	if (disSun < 400)
-	{
-		state = states1.orbit;
-	}
+	
 	
 	//switching to idle after alarm 2 elapsed
 	if (alarm[2] == -1)
@@ -261,8 +288,22 @@ if (firing == true) and (cooldown <= 0)
 	}
 	if (double == true)
 	{
-		instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);
-		instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);
+		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+		with bullet1
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
+		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+		with bullet2
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
 	}
 	cooldown = 15;
 	overheat = overheat + 2;

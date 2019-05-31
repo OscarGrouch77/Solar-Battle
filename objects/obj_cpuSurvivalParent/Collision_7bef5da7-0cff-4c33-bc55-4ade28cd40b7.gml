@@ -3,16 +3,23 @@
 
 if (other.owner != me)
 {
-	hp--
-	motion_add(other.direction,1);
-	
-	with other
+	if (shield == false)
 	{
-		audio_sound_pitch(snd_hit,random_range(0.8,1.2))
-		audio_play_sound(snd_hit,1,0);
+		hp--
+		if (hp > 0) motion_add(other.direction,1);
+	
+		with other
+		{
+			audio_sound_pitch(snd_hit,random_range(0.8,1.2))
+			audio_play_sound(snd_hit,1,0);
 
-		scr_hit(x,y);
+			scr_hit(x,y);
 
-		instance_destroy();
+			instance_destroy();
+		}
+	}
+	else
+	{
+		shield = false;
 	}
 }

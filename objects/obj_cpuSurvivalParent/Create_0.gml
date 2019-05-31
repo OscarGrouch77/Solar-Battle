@@ -24,6 +24,23 @@ if (agr < 2)
 	enemyChaseDis = 800;
 	enemyAttackDis = 400;
 }
+if (agr >= 3) and (agr < 6)
+{
+	enemyChaseDis = 700;
+	enemyAttackDis = 450;
+}
+if (agr >= 6) and (agr < 9)
+{
+	enemyChaseDis = 600;
+	enemyAttackDis = 500;
+}
+if (agr >= 9)
+{
+	enemyChaseDis = 550;
+	enemyAttackDis = 550;
+}
+
+	
 
 if (acc < 2)
 {

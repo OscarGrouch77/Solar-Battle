@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "5b214d4b-ed21-44aa-9199-ee60c0f6095f",
+            "Value": {
+                "id": "b2a3dfce-cb96-49ef-8dfd-67c61d7be74d",
+                "resourcePath": "objects\\obj_cpuSurvivalEasy2\\obj_cpuSurvivalEasy2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5c4051f8-c1d9-4ca0-8689-4360a231b81c",
             "Value": {
                 "id": "3419dadf-723a-4de5-bfb4-ad0fa0e7f235",
@@ -719,6 +727,14 @@
             }
         },
         {
+            "Key": "7babca99-cf99-42b8-be06-6601937e8a59",
+            "Value": {
+                "id": "b4eafb51-8d9a-42b0-acd1-66efe1b1a95b",
+                "resourcePath": "objects\\obj_genericShield\\obj_genericShield.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7c13be89-0128-4635-b829-fc05cbb33aeb",
             "Value": {
                 "id": "7c9b0826-1733-4428-9ab9-0d8164bf7306",
@@ -779,6 +795,14 @@
             "Value": {
                 "id": "5d941c23-acc8-4f55-86bd-27ca98ea59df",
                 "resourcePath": "objects\\obj_menuButtonSettings\\obj_menuButtonSettings.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "89be84bc-fcaa-49fe-810b-6bc4e332f960",
+            "Value": {
+                "id": "2d367751-4fc4-43e7-acb9-cee95771e462",
+                "resourcePath": "objects\\obj_genericMissile\\obj_genericMissile.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1108,6 +1132,14 @@
                 "id": "d6ae06be-3354-414e-ba6c-1acd8fad6c74",
                 "resourcePath": "sprites\\spr_sunGlow\\spr_sunGlow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d61b5fbf-0314-49f7-8b1e-7cb2bc43f3f1",
+            "Value": {
+                "id": "357a83c0-28fd-4ecb-bff3-313e1ad74fde",
+                "resourcePath": "objects\\obj_cpuSurvivalStd\\obj_cpuSurvivalStd.yy",
+                "resourceType": "GMObject"
             }
         },
         {

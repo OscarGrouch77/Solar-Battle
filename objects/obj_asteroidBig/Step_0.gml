@@ -7,7 +7,7 @@ distanceSun = point_distance(obj_sun.x, obj_sun.y, x, y);						///defining varia
 
 scr_gravityForce(x,y);
 
-if (distanceSun > 1300)											//destroys if too far away
+if (distanceSun > (room_width/2 + 60))											//destroys if too far away
 {
 	instance_destroy();
 }

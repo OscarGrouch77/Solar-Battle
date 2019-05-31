@@ -173,6 +173,16 @@
             "enumb": 5,
             "eventtype": 2,
             "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
+        },
+        {
+            "id": "89d9c82e-4de5-4965-b6ff-04c91a7af6aa",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "89be84bc-fcaa-49fe-810b-6bc4e332f960",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -373,6 +383,34 @@
             "value": "obj_player1",
             "varName": "me",
             "varType": 5
+        },
+        {
+            "id": "c88913db-c601-4ba1-8775-325627590a17",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "obj_player2",
+            "varName": "enemy",
+            "varType": 5
+        },
+        {
+            "id": "aec65cb3-5010-43dc-81a7-071a07b4afdb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "missileActive",
+            "varType": 3
         }
     ],
     "solid": false,

@@ -1,7 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-	if (global.roundNumber > 3)
+
+	//sets type of enemy to spawn according to round number
+	if (global.roundNumber < 4)
+	{
+		obj_survivalSystem.sEnemy = obj_cpuSurvivalEasy;
+	}
+	if (global.roundNumber >= 4) and (global.roundNumber < 7)
+	{
+		obj_survivalSystem.sEnemy = obj_cpuSurvivalEasy2;
+	}
+	if (global.roundNumber >= 7) and (global.roundNumber < 10)
+	{
+		obj_survivalSystem.sEnemy = obj_cpuSurvivalStd;
+	}
+	if (global.roundNumber >= 10)
 	{
 		obj_survivalSystem.sEnemy = obj_cpuSurvivalParent;
 	}

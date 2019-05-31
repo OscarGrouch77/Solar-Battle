@@ -1,5 +1,13 @@
 playerDir= image_angle
 
+//define enemy
+if (global.gameSurv == true)
+{
+	enemy = obj_survivalSystem.sEnemy;
+}
+
+
+
 //gravity force
 
 scr_gravityForce(x,y);
@@ -104,8 +112,22 @@ if (keyboard_check(vk_space)) and (cooldown <= 0)
 	}
 	if (double == true)												//double bullets if double power up active
 	{
-		instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_genericBullet);
-		instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_genericBullet);
+		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+		with bullet1
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
+		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+		with bullet2
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
 	}
 	cooldown = 15
 	overheat = overheat + 2;
@@ -132,9 +154,12 @@ if (overheat > 10) and (alarm[1] == -1)				//gun overheated starts alarm 1
 
 if (missile == true)
 {
-	if (keyboard_check(vk_space)) and !(instance_exists(obj_missile1))
+	if (keyboard_check(ord("M"))) and (missileActive = false)
 	{
-		instance_create_layer(x,y,"Bullets",obj_missile1);
+		missileActive = true;
+		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
+		myMissile.owner = self;
+		myMissile.target = enemy;
 		missileAmmo -= 1;
 	}
 	if (missileAmmo <= 0) missile = false;
@@ -147,28 +172,17 @@ if (overheat < 10)									//cooldown weapon only if not overheated
 	cooldown = max((cooldown-1), 0);
 }
 
-//moves shield object with ship if power up active
-if instance_exists(obj_player1Shield)
-{
-	with (obj_player1Shield)
-	{
-		x = other.x;
-		y = other.y;
-	}
-}
-
-
-
-
 
 if (hp <= 0)										//destroy
 {
-	instance_create_layer(x, y, "bottomParticle", obj_partSysP1Explosion);
-	scr_p1Explosion(x, y);
-	audio_sound_pitch(snd_explode,1);
-	audio_sound_gain(snd_explode,1,0);
+	thisExp = instance_create_layer(x, y, "bottomParticle", obj_partSysGenericExplosion);
+	thisExp.expDir = me.direction;
+	thisExp.expSpeed = me.speed;
+	thisExp.expx = me.x;
+	thisExp.expy = me.y;
+	thisExp.me = thisExp;
 	audio_play_sound(snd_explode,0,0);
-	instance_destroy();							
+	instance_destroy();					
 }
 
 //instance_create_depth(x,y,0,obj_path);				//creates object for drawing path

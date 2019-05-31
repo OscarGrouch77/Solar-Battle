@@ -13,4 +13,3 @@ with cpuDemo1Thrust2
 	instance_destroy(self);
 }
 
-obj_testing.cpu2Score++;

@@ -94,12 +94,33 @@ if (keyboard_check(vk_enter)) and (cooldown <= 0)
 {
 	if (double == false)
 	{
-		instance_create_layer(x,y,"Bullets",obj_bullet2);			//creates bullet if cooldown 0
+		var bullet = instance_create_layer(x,y,"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
+		with bullet
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
 	}
 	if (double == true)
 	{
-		instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_bullet2);
-		instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_bullet2);
+		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
+		with bullet1
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
+		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
+		with bullet2
+		{
+			owner = other.me;
+			speed = other.speed;
+			direction = other.direction;
+			motion_add(other.playerDir, other.bulletSpeed);
+		}
 	}
 	cooldown = 15;
 	overheat = overheat + 2;
@@ -129,17 +150,32 @@ if (overheat < 10)									//cooldown weapon only if not overheated
 	cooldown = max((cooldown-1), 0);
 }
 
+
+//shooting missile
+
+if (missile == true)
+{
+	if (keyboard_check(vk_add)) and (missileActive = false)
+	{
+		missileActive = true;
+		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
+		myMissile.owner = self;
+		myMissile.target = enemy;
+		missileAmmo -= 1;
+	}
+	if (missileAmmo <= 0) missile = false;
+}
+
+
 if (hp <= 0)										//destroy
 {
 	instance_create_layer(x, y, "bottomParticle", obj_partSysP2Explosion);
 	scr_p2Explosion(x, y);
+	audio_sound_pitch(snd_explode,1);
+	audio_sound_gain(snd_explode,1,0);
 	audio_play_sound(snd_explode,0,0);
 	instance_destroy();								
 }
-
-
-
-
 
 
 

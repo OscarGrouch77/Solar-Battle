@@ -1,14 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-if (shield == false)
+if instance_exists(owner)
 {
-	hp -= 1;
+	x = owner.x;
+	y = owner.y;
 }
-else shield = false;
+else
 
-with other
-{
-	instance_destroy();
-}
+instance_destroy();
