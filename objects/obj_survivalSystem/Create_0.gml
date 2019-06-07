@@ -4,7 +4,6 @@
 randomize();
 
 global.roundNumber = 1;
-gameType = gameType.survival;
 
 gameOver = false;
 sEnemy = obj_cpuSurvivalEasy;	//defines the type of enemy for this round

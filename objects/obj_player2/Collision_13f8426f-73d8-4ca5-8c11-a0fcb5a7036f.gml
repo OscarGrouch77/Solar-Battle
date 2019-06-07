@@ -40,7 +40,7 @@ if (powerUp == 2)
 if (powerUp == 3)
 {
 	instance_create_layer(x, y - 16, "Ambient", obj_missileText);
-	missileAmmo = 2;
+	missileAmmo += 2;
 	missile = true;
 }
 

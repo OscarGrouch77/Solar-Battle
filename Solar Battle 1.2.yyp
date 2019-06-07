@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0615287f-8f8e-48f2-a4ab-999910072a98",
+            "Value": {
+                "id": "85b81c82-0e62-4191-93c9-c9c231267590",
+                "resourcePath": "scripts\\scr_drawShadow\\scr_drawShadow.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "09a233c6-298f-4ce6-a0fe-81e1212cec4f",
             "Value": {
                 "id": "40c82c6e-4a10-429e-b0e7-864d8e4989fe",
@@ -447,6 +455,14 @@
             }
         },
         {
+            "Key": "4e7e5bfb-0025-40ea-83ad-45c555f1aa1a",
+            "Value": {
+                "id": "4aeda369-3af4-4fd6-a057-21c93444b281",
+                "resourcePath": "sprites\\spr_shadow\\spr_shadow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "54851c8b-6ff0-4713-a118-f68d3cb259b0",
             "Value": {
                 "id": "1337a31f-6b3b-4651-9229-c44bde8ae445",
@@ -772,6 +788,14 @@
                 "id": "6412761e-e98f-4c4d-bde4-98e264b8fa52",
                 "resourcePath": "objects\\obj_powerUp\\obj_powerUp.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7f2f7a7d-4fd8-4794-997b-eeec61762ce5",
+            "Value": {
+                "id": "0291fef8-78bb-4e9a-a440-3a6de9199ba2",
+                "resourcePath": "sprites\\spr_shadow2\\spr_shadow2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1183,6 +1207,14 @@
             }
         },
         {
+            "Key": "d7a194e0-0186-4fc6-801f-d925ed9ef0f1",
+            "Value": {
+                "id": "4c123f75-83be-4fcf-b186-0756a1a7a1a2",
+                "resourcePath": "sprites\\spr_shadow3\\spr_shadow3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d7e32932-3925-40b8-880c-41875f4f37e1",
             "Value": {
                 "id": "70b099a8-f912-4514-994d-f2d2eca37540",
@@ -1416,7 +1448,8 @@
         "d69d9851-4e2c-4804-bb19-f85331317fb8",
         "f9ce0336-0d52-4178-901a-537ded455423",
         "feeed8b6-c33e-4035-9333-b73448db0de3",
-        "46d6df21-97b2-496a-b19f-9cf54280791b"
+        "46d6df21-97b2-496a-b19f-9cf54280791b",
+        "0615287f-8f8e-48f2-a4ab-999910072a98"
     ],
     "tutorial": ""
 }

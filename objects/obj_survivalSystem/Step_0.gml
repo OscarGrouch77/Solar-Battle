@@ -18,13 +18,16 @@ if !(instance_exists(sEnemy)) and !(instance_exists(obj_spawnObjectSurvival))
 	}	
 }
 
-if (global.roundNumber = 1) and !(instance_exists(obj_asteroidSpawner))
+if (global.roundNumber = 3) and !(instance_exists(obj_asteroidSpawner))
 {
 	instance_create_layer(1, 1,"Instances", obj_asteroidSpawner)
 }
 
 //show game over message if player ship does not exist
-if !(instance_exists(obj_player1)) and (alarm[0] = -1)
+if (gameOver = false)
 {
-	alarm[0] = 120
+	if !(instance_exists(obj_player1)) and (alarm[0] = -1)
+	{
+		alarm[0] = 120
+	}
 }

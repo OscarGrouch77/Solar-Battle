@@ -365,6 +365,34 @@
             "varType": 3
         },
         {
+            "id": "6892e0c5-7a73-4e67-bc2c-48bd86921163",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "missile",
+            "varType": 3
+        },
+        {
+            "id": "434b13a2-8639-4371-aaae-fbcbb378674d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "missileAmmo",
+            "varType": 1
+        },
+        {
             "id": "658349b2-282c-4e81-bdbe-8e97fe2b7c40",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
