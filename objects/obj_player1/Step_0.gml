@@ -1,9 +1,21 @@
 playerDir= image_angle
 
+
+
 //define enemy
-if (global.gameSurv == true)
+if (global.gameType == gameType.survival)
 {
 	enemy = obj_survivalSystem.sEnemy;
+}
+
+if (global.gameType == gameType.oneDuel)
+{
+	enemy = obj_system1player.dEnemy;
+}
+
+if (global.gameType == gameType.twoDuel)
+{
+	enemy = obj_player2;
 }
 
 

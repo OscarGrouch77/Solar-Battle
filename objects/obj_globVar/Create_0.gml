@@ -6,5 +6,14 @@ global.scorePlayer1 = 0;
 global.scorePlayer2 = 0;
 global.scoreCpu = 0;
 global.roundNumber = 1;
-global.gameDuel = false;
-global.gameSurv = false;
+global.difficulty = 0;
+
+enum gameType
+{
+	oneDuel,
+	twoDuel,
+	survival,
+}
+
+global.gameType = gameType.oneDuel;
+

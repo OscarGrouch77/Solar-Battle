@@ -24,12 +24,22 @@ if (agr < 2)
 	enemyChaseDis = 800;
 	enemyAttackDis = 400;
 }
-if (agr >= 2) and (agr < 6)
+if (agr >= 2) and (agr < 4)
+{
+	enemyChaseDis = 750;
+	enemyAttackDis = 425;
+}
+if (agr >= 4) and (agr < 6)
 {
 	enemyChaseDis = 700;
 	enemyAttackDis = 450;
 }
-if (agr >= 6) and (agr < 9)
+if (agr >= 6) and (agr < 8)
+{
+	enemyChaseDis = 650;
+	enemyAttackDis = 475;
+}
+if (agr >= 8) and (agr < 9)
 {
 	enemyChaseDis = 600;
 	enemyAttackDis = 500;

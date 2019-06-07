@@ -17,7 +17,7 @@ if (gameOver = false)
 	{
 		alarm[0] = 180;	
 	}
-	if !(instance_exists(obj_cpuShip)) and (alarm[1] == -1)			//if player 2 is dead starts alarm 1
+	if !(instance_exists(dEnemy)) and (alarm[1] == -1)			//if player 2 is dead starts alarm 1
 	{
 		alarm[1] = 180;
 	}

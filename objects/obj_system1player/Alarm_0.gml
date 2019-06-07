@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if (instance_exists(obj_cpuShip))
+if (instance_exists(dEnemy))
 {
 	winner = 2;
 	gameOver = true;

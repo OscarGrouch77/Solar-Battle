@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "57678f0d-c321-415b-9e8d-1e88884f20e5",
+            "Value": {
+                "id": "917e1d5c-997d-4ba4-b4b1-cfb2f46a3a85",
+                "resourcePath": "objects\\obj_cpuDuelParent\\obj_cpuDuelParent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "577df25e-fd11-4f7d-bab0-1ecaf949707f",
             "Value": {
                 "id": "d54948ce-398c-407c-b314-c73b7322cd39",
@@ -612,6 +620,14 @@
                 "id": "0e50fec9-ed15-4e5c-aaa0-c67d8deafe99",
                 "resourcePath": "views\\65930503-8851-4204-a40f-88f2355ff551.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6678b2b1-0bde-4fd1-b381-c9eca5ada996",
+            "Value": {
+                "id": "b943afae-ed63-4e22-bef4-df0a730349f3",
+                "resourcePath": "objects\\obj_cpuDuelStd\\obj_cpuDuelStd.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -831,6 +847,14 @@
             }
         },
         {
+            "Key": "902bf7f1-cdcd-4b73-adb2-6dbd7a0103ca",
+            "Value": {
+                "id": "61998e90-ca95-4d4f-94fc-eb3853249f36",
+                "resourcePath": "objects\\obj_cpuDuelHard\\obj_cpuDuelHard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90614845-7168-480a-871d-31e6337a1d80",
             "Value": {
                 "id": "d42b7396-dd53-40db-877a-b4c3e3f5f138",
@@ -980,6 +1004,14 @@
                 "id": "774304bf-dba4-4369-b433-a7adba68d377",
                 "resourcePath": "scripts\\scr_asteroidExplosion\\scr_asteroidExplosion.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bbe030bf-eca2-4582-be2f-2da41a336a46",
+            "Value": {
+                "id": "f5a4b884-9393-4cc8-8be8-4fb380dec770",
+                "resourcePath": "objects\\obj_cpuDuelEasy\\obj_cpuDuelEasy.yy",
+                "resourceType": "GMObject"
             }
         },
         {

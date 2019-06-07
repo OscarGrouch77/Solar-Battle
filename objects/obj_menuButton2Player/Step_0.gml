@@ -5,6 +5,7 @@ if (point_in_rectangle(mouse_x, mouse_y, x, y, x + 170, y + 40))
 {
 	if (mouse_check_button_pressed(mb_left))
 	{
+		global.gameType = gameType.twoDuel;
 		room_goto(rm_game2p);
 	}
 }
