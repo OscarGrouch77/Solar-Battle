@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "34f7ead7-cbcc-4e1d-b19f-0b056f68131f",
+            "Value": {
+                "id": "259d828a-422e-41d2-8a66-2eca418efb65",
+                "resourcePath": "sprites\\spr_sunGlow2\\spr_sunGlow2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "35c85c53-b655-4351-b203-d8d1a1a30bc1",
             "Value": {
                 "id": "f3e94970-bbcb-4644-b8ab-fab2e717fa5d",
@@ -356,6 +364,14 @@
                 "id": "a4b4f4a7-dcbb-46a6-bd4c-87c5a795f0cc",
                 "resourcePath": "sounds\\snd_asteroidHit\\snd_asteroidHit.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "3cbdddd9-5541-4f86-8e42-a3d6465a7cf2",
+            "Value": {
+                "id": "2de3ccf8-7428-4922-a82e-477a75d22bb2",
+                "resourcePath": "scripts\\scr_raycast\\scr_raycast.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -803,6 +819,14 @@
             "Value": {
                 "id": "8c33b9d8-4374-492d-8274-c5879a63406d",
                 "resourcePath": "sprites\\spr_missile\\spr_missile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "816516df-fae7-4df1-8b13-8a9aad2ffd8e",
+            "Value": {
+                "id": "3443f324-1649-4fd0-bb0b-ed5294268ca8",
+                "resourcePath": "sprites\\spr_sunGlow3\\spr_sunGlow3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1449,7 +1473,8 @@
         "f9ce0336-0d52-4178-901a-537ded455423",
         "feeed8b6-c33e-4035-9333-b73448db0de3",
         "46d6df21-97b2-496a-b19f-9cf54280791b",
-        "0615287f-8f8e-48f2-a4ab-999910072a98"
+        "0615287f-8f8e-48f2-a4ab-999910072a98",
+        "3cbdddd9-5541-4f86-8e42-a3d6465a7cf2"
     ],
     "tutorial": ""
 }
