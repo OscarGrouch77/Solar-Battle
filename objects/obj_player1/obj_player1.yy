@@ -193,6 +193,16 @@
             "enumb": 0,
             "eventtype": 8,
             "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
+        },
+        {
+            "id": "1212adae-3fb3-4b52-9558-d4e362c27392",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "57678f0d-c321-415b-9e8d-1e88884f20e5",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -334,7 +344,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "True",
             "varName": "missile",
             "varType": 3
         },
@@ -348,7 +358,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "4",
             "varName": "missileAmmo",
             "varType": 1
         },

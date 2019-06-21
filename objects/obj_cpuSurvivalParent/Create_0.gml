@@ -1,9 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//for engine sounds
+oldThrusting = false;
+
 //set engine pitch
 
-audio_sound_pitch(snd_engine2,1);
+audio_sound_pitch(snd_engine2,0.8);
 
 //create instances of engine thrusters
 

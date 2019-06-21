@@ -7,6 +7,12 @@ if (keyboard_check(vk_escape))
 	game_end();
 }
 
+//makes cursor invisible if game in progress
+if (gameOver == false)
+{
+	window_set_cursor(cr_none);
+}
+else window_set_cursor(cr_default);
 
 //spawn new enemy if no enemy exists
 if !(instance_exists(sEnemy)) and !(instance_exists(obj_spawnObjectSurvival))

@@ -639,6 +639,20 @@
             "value": "0",
             "varName": "aimTol",
             "varType": 0
+        },
+        {
+            "id": "fabb6345-a0ac-4620-afec-4c60e07f8700",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "missileAmmo",
+            "varType": 1
         }
     ],
     "solid": false,

@@ -116,7 +116,7 @@ if (keyboard_check(vk_space)) and (cooldown <= 0)
 		var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -127,7 +127,7 @@ if (keyboard_check(vk_space)) and (cooldown <= 0)
 		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet1
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -135,7 +135,7 @@ if (keyboard_check(vk_space)) and (cooldown <= 0)
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet2
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -170,7 +170,7 @@ if (missile == true)
 	{
 		missileActive = true;
 		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
-		myMissile.owner = self;
+		myMissile.owner = id;
 		myMissile.target = enemy;
 		missileAmmo -= 1;
 	}

@@ -280,7 +280,7 @@ if (firing == true) and (cooldown <= 0)
 		var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -291,7 +291,7 @@ if (firing == true) and (cooldown <= 0)
 		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet1
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -299,7 +299,7 @@ if (firing == true) and (cooldown <= 0)
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet2
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -331,7 +331,41 @@ if (overheat < 10)									//cooldown weapon only if not overheated
 {
 	cooldown = max((cooldown-1), 0);
 }
+
+//Engine sounds
+if(thrusting == true)					
+{	
+		if !(audio_is_playing(snd_engine2))
+		{	
+			eng = audio_play_sound(snd_engine2,0,1);		///sets variable for engine sound
+			audio_sound_pitch(eng, 0.8);						//sets pitch of eng sound
+			audio_sound_gain(eng,0,0);						///sets volume of engine to 0
+			audio_sound_gain(eng,0.1,1000);					///fades in and plays engine sound
+			oldThrusting = true;
+		}	
+}	
+
+if (oldThrusting == true) and (thrusting == false)						
+{	
+	var engGain = audio_sound_get_gain(eng);				///gets last gain level of engine sound		
 	
+	audio_stop_sound(snd_engine2);
+	var engStop = audio_play_sound(snd_engine2,0,0);
+	audio_sound_pitch(engStop, 0.8);
+	audio_sound_gain(engStop,engGain,0);					///sets engine sound gain to last level for smooth fade out
+	audio_sound_gain(engStop,0,500);						///fades out engine sound
+	if (audio_sound_get_gain(engStop) = 0)
+	{
+		audio_stop_sound(snd_engine2);					///stops engine sound playing when it fades out
+	}
+	oldThrusting = false;
+}
+if (oldThrusting == false) and (thrusting == true)
+	{
+		audio_stop_sound(snd_engine2);					///stops engine sound playing if thrusting starts
+	}	
+
+
 //destroy if HP = 0
 
 if (hp <= 0)										//destroy

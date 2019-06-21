@@ -27,6 +27,7 @@ if(keyboard_check(vk_up))					///thrust in the direction ship is pointing
 		if !(audio_is_playing(snd_engine2))
 		{	
 			eng = audio_play_sound(snd_engine2,0,1);		///sets variable for engine sound
+			audio_sound_pitch(eng, 1);					//sets pitch of eng sound
 			audio_sound_gain(eng,0,0);						///sets volume of engine to 0
 			audio_sound_gain(eng,1,1000);				///fades in and plays engine sound
 		}	
@@ -97,7 +98,7 @@ if (keyboard_check(vk_enter)) and (cooldown <= 0)
 		var bullet = instance_create_layer(x,y,"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
 		with bullet
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -108,7 +109,7 @@ if (keyboard_check(vk_enter)) and (cooldown <= 0)
 		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
 		with bullet1
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -116,7 +117,7 @@ if (keyboard_check(vk_enter)) and (cooldown <= 0)
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
 		with bullet2
 		{
-			owner = other.me;
+			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -159,7 +160,7 @@ if (missile == true)
 	{
 		missileActive = true;
 		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
-		myMissile.owner = self;
+		myMissile.owner = id;
 		myMissile.target = enemy;
 		missileAmmo -= 1;
 	}

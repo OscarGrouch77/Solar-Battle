@@ -7,6 +7,9 @@ global.roundNumber = 1;
 
 gameOver = false;
 sEnemy = obj_cpuSurvivalEasy;	//defines the type of enemy for this round
+
+
+
 do
 	{
 		randX1 = irandom(room_width);

@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "18418f0d-4165-4c3f-b142-92ca733c6225",
+            "Value": {
+                "id": "8c63dd56-3aa3-4493-b491-65aa546f385a",
+                "resourcePath": "objects\\obj_WIPText\\obj_WIPText.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1d42d77e-a6a2-4af2-961e-3b321eb77f62",
             "Value": {
                 "id": "afc6fce6-20e9-4d2f-9fb1-1a38abc47fb7",
@@ -180,6 +188,14 @@
                 "id": "ccf6606a-4c14-4ab2-a55e-7f690833c572",
                 "resourcePath": "sprites\\spr_spaceBackground\\spr_spaceBackground.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "274eedd6-137c-41f9-8a55-a1aff0def28a",
+            "Value": {
+                "id": "7ba9db90-b867-442c-b8a5-b870ba5941e5",
+                "resourcePath": "objects\\obj_controlsText\\obj_controlsText.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -983,6 +999,14 @@
             }
         },
         {
+            "Key": "a1a13d83-3d2e-4860-a9d6-4f03019b749b",
+            "Value": {
+                "id": "ff8e888d-1ccb-49cf-b03e-c41a8a79c7bc",
+                "resourcePath": "rooms\\rm_settings\\rm_settings.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "a28969d8-8d28-43a9-b863-abc5edef5176",
             "Value": {
                 "id": "dfc226b7-5be7-415c-869c-e12c12f0ac88",
@@ -1020,6 +1044,14 @@
                 "id": "e76f9d37-fa04-4c38-a6b5-72a9c0cded49",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a926bba1-eb61-449a-a820-8be6cfec813f",
+            "Value": {
+                "id": "aed1101d-4df1-4634-87bb-78578f72b9bb",
+                "resourcePath": "objects\\obj_menuButtonBack\\obj_menuButtonBack.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1068,6 +1100,14 @@
                 "id": "af5e53bc-2c68-41dc-926f-4b38e735c308",
                 "resourcePath": "sounds\\snd_pew\\snd_pew.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "bebd5841-b8f4-428d-a418-5dd53cb09a49",
+            "Value": {
+                "id": "20f29bdd-b777-44a4-b4a1-e43a90bc3497",
+                "resourcePath": "fonts\\fnt_easyRead\\fnt_easyRead.yy",
+                "resourceType": "GMFont"
             }
         },
         {
