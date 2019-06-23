@@ -291,6 +291,8 @@ if (hp <= 0)										//destroy
 {
 	instance_create_layer(x, y, "bottomParticle", obj_partSysCpuShipExplosion);
 	scr_cpuShipExplosion(x, y);
+	audio_sound_pitch(snd_explode, 1);
+	audio_sound_gain(snd_explode,1,0);
 	audio_play_sound(snd_explode,0,0);
 	instance_destroy();								
 }

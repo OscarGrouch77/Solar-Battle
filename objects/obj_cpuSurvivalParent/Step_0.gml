@@ -345,7 +345,7 @@ if(thrusting == true)
 			audio_sound_gain(eng,0,0);						///sets volume of engine to 0
 			audio_sound_gain(eng,0.1,1000);					///fades in and plays engine sound
 			oldThrusting = true;
-		}	
+		}
 }	
 
 if (oldThrusting == true) and (thrusting == false)						
@@ -382,6 +382,8 @@ if (hp <= 0)										//destroy
 	thisExp.expx = self.x;
 	thisExp.expy = self.y;
 	thisExp.me = thisExp;
+	audio_sound_pitch(snd_explode, 1);
+	audio_sound_gain(snd_explode,1,0);
 	audio_play_sound(snd_explode,0,0);
 	instance_destroy();								
 }

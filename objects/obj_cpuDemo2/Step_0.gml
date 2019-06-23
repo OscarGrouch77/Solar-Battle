@@ -297,7 +297,8 @@ if (hp <= 0)										//destroy
 	thisExp.expx = me.x;
 	thisExp.expy = me.y;
 	thisExp.me = thisExp;
-	
+	audio_sound_pitch(snd_explode, 1);
+	audio_sound_gain(snd_explode,1,0);
 	audio_play_sound(snd_explode,0,0);
 	instance_destroy();							
 }
