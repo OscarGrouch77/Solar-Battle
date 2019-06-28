@@ -7,6 +7,7 @@ global.scorePlayer2 = 0;
 global.scoreCpu = 0;
 global.roundNumber = 1;
 global.difficulty = 0;
+global.preRoom = room;
 
 enum gameType
 {

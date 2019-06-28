@@ -703,6 +703,14 @@
             }
         },
         {
+            "Key": "7163b72a-30b5-407d-bd55-70ea2fc88d31",
+            "Value": {
+                "id": "f966c8b5-ce1f-411d-bbb7-120a22eebf1d",
+                "resourcePath": "objects\\obj_menuButtonBackToDuelType\\obj_menuButtonBackToDuelType.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "71e6e1cf-05e3-42f5-af4d-4a50e759aba7",
             "Value": {
                 "id": "ccd0ffd2-f8af-4f45-ae61-0a191d957fc0",
@@ -763,6 +771,14 @@
             "Value": {
                 "id": "d6b796d0-8991-4747-b65c-571bb40ea624",
                 "resourcePath": "objects\\obj_particleSysDebris1\\obj_particleSysDebris1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "79aa398a-ccff-4727-9fa3-bfbbcb13543d",
+            "Value": {
+                "id": "9314f010-a33a-4e21-9704-cf7e62f4282d",
+                "resourcePath": "objects\\obj_menuButtonBackToGameSelect\\obj_menuButtonBackToGameSelect.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1050,7 +1066,7 @@
             "Key": "a926bba1-eb61-449a-a820-8be6cfec813f",
             "Value": {
                 "id": "aed1101d-4df1-4634-87bb-78578f72b9bb",
-                "resourcePath": "objects\\obj_menuButtonBack\\obj_menuButtonBack.yy",
+                "resourcePath": "objects\\obj_menuButtonBackToTitle\\obj_menuButtonBackToTitle.yy",
                 "resourceType": "GMObject"
             }
         },
