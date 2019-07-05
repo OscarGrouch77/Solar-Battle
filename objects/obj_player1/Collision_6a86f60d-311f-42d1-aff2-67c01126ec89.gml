@@ -6,6 +6,7 @@ if (other.owner != id)
 	if (shield == false)
 	{
 		hp--
+		global.multiplier = 1;
 		if (hp > 0) motion_add(other.direction,1);
 	
 		with other

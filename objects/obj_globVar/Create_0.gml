@@ -7,7 +7,10 @@ global.scorePlayer2 = 0;
 global.scoreCpu = 0;
 global.roundNumber = 1;
 global.difficulty = 0;
-global.preRoom = room;
+score = 0;
+global.multiplier = 1;
+global.roundBonus = 0;
+global.roundEnd = false;
 
 enum gameType
 {

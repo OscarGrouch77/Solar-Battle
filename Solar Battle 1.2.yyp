@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "30b81a18-821c-4f3a-8634-a46ab6b51824",
+            "Value": {
+                "id": "cf160f5f-3b5a-499e-af42-7c61195fab73",
+                "resourcePath": "fonts\\fnt_multi5\\fnt_multi5.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "3102f2f2-7c38-419d-9267-f67f9a507f61",
             "Value": {
                 "id": "1b25efd2-70ce-47e8-8b04-bfb4c8a41e1e",
@@ -399,6 +407,14 @@
             }
         },
         {
+            "Key": "3e7a0923-f692-4b89-9769-8191556793a3",
+            "Value": {
+                "id": "2d2343f8-7f21-4ba7-bf93-d3c7701aed63",
+                "resourcePath": "fonts\\fnt_multi2\\fnt_multi2.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "3f4e65c2-5ba7-4de6-9d5b-81dfdb88005e",
             "Value": {
                 "id": "32afcf25-b7cd-40a6-ae43-2d492624ab20",
@@ -492,6 +508,14 @@
                 "id": "4aeda369-3af4-4fd6-a057-21c93444b281",
                 "resourcePath": "sprites\\spr_shadow\\spr_shadow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4edda3c7-cc5a-4c6a-a583-98d7db2f9bc1",
+            "Value": {
+                "id": "31b06953-ee67-4490-a0a4-6cc619be678c",
+                "resourcePath": "objects\\obj_scoreController\\obj_scoreController.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -604,6 +628,14 @@
                 "id": "3419dadf-723a-4de5-bfb4-ad0fa0e7f235",
                 "resourcePath": "objects\\obj_player2Shield\\obj_player2Shield.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5eb610c5-ff8f-46ce-adc6-e71f2da7d20d",
+            "Value": {
+                "id": "4b0e2733-043d-4f33-b4b4-ed1d84f5ae1c",
+                "resourcePath": "fonts\\fnt_multi4\\fnt_multi4.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -956,6 +988,14 @@
                 "id": "e3885d83-5a2c-4add-83af-88be6b9e28f7",
                 "resourcePath": "scripts\\scr_debrisExplosion1\\scr_debrisExplosion1.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "94f4e14c-4ed8-4cf6-b55f-4a13720a1645",
+            "Value": {
+                "id": "9968f64f-693e-4c0e-9d78-4ad8b24cf774",
+                "resourcePath": "fonts\\fnt_multi3\\fnt_multi3.yy",
+                "resourceType": "GMFont"
             }
         },
         {

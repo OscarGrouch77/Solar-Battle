@@ -14,16 +14,8 @@ if (gameOver == false)
 }
 else window_set_cursor(cr_default);
 
-//spawn new enemy if no enemy exists
-if !(instance_exists(sEnemy)) and !(instance_exists(obj_spawnObjectSurvival))
-{
-	if alarm[1] = -1
-	{
-		global.roundNumber++
-		alarm[1] = 120;
-	}	
-}
 
+//spawn asteroid at round 3 or higher
 if (global.roundNumber = 3) and !(instance_exists(obj_asteroidSpawner))
 {
 	instance_create_layer(1, 1,"Instances", obj_asteroidSpawner)
@@ -37,3 +29,6 @@ if (gameOver = false)
 		alarm[0] = 120
 	}
 }
+
+
+
