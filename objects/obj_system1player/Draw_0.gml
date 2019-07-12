@@ -3,7 +3,7 @@
 
 
 //draws screen capture and dims for pause screen
-if (gamePaused = true)
+if (gamePaused == true)
 {
 	for (var i = 0; i < array_height_2d(allObjects); ++i)
 	{

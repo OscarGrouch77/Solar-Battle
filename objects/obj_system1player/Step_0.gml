@@ -18,7 +18,7 @@ else window_set_cursor(cr_default);
 //checking for end game states
 
 
-if (gameOver = false)
+if (gameOver == false)
 {
 	if !(instance_exists(obj_player1)) and (alarm[0] == -1)			//if player 1 is dead starts alarm 0
 	{

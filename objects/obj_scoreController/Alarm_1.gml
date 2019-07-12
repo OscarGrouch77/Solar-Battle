@@ -6,4 +6,5 @@ global.multiplier = startMulti;
 global.multiplier++;
 roundTime = 0;
 
-obj_survivalSystem.alarm[1] = 60;
+//timer for new enemy spawn
+obj_survivalSystem.alarm[1] = 120;

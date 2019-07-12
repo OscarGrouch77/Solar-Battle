@@ -31,5 +31,5 @@ if (readySetGo == -1)
 {
 	getReady = false
 	instance_activate_all();
-	instance_deactivate_object(self);
+	instance_destroy();
 }

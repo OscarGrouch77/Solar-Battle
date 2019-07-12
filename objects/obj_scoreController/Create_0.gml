@@ -5,3 +5,6 @@ roundTime = 0;
 awardScore = false;
 addBonus = false;
 gameActive = false;
+takeSnapShot = false;
+gamePaused = false;
+timer = 0;
