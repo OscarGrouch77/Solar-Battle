@@ -373,9 +373,6 @@ if (oldThrusting == false) and (thrusting == true)
 
 if (hp <= 0)										//destroy
 {
-	//instance_create_layer(x, y, "bottomParticle", obj_partSysDemo1Explosion);
-	//scr_genericExplosion(x, y, obj_partSysDemo1Explosion.player2ExplosionBot, obj_partSysDemo1Explosion.player2ExplosionTop, obj_partSysDemo1Explosion.particle1, obj_partSysDemo1Explosion.particle2);
-	
 	thisExp = instance_create_layer(x, y, "bottomParticle", obj_partSysGenericExplosion);
 	thisExp.expDir = self.direction;
 	thisExp.expSpeed = self.speed;

@@ -23,12 +23,13 @@ if (gamePaused == true)
 	draw_rectangle(0, 0, room_width, room_height, false);
 	draw_set_alpha(1);
 }
-
+scoreX = room_width - 80;
+scoreY = 50;
 draw_set_font(fnt_menu);
 draw_set_colour(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_middle);
-draw_text(room_width - 300, 50, "SCORE " + string(score));
+draw_text(scoreX, scoreY, "SCORE " + string(score));
 
 
 if (awardScore == true)
@@ -37,7 +38,13 @@ if (awardScore == true)
 	draw_set_colour(c_white);
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_middle);
-	draw_text(room_width - 300, 100, "BONUS " + string(global.roundBonus))
+	draw_text(room_width - 80, 100, "BONUS " + string(global.roundBonus));
+	
+	draw_set_font(fnt_score);
+	draw_set_colour(c_white);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text(room_width/2, room_height/2 + 100, "BONUS " + string(global.roundBonus))
 	
 	draw_set_halign(fa_left);
 	
@@ -73,7 +80,9 @@ if (awardScore == true)
 	}
 	if (countMulti > 1)
 	{
-		draw_text(room_width - 300, 100, " X " + string(countMulti));	
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_middle);
+		draw_text(room_width/2, room_height/2 + 180, " X " + string(countMulti));	
 	}
 }
 else
@@ -82,12 +91,12 @@ else
 	draw_set_colour(c_white);
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_middle);
-	draw_text(room_width - 300, 100, "BONUS " + string(global.roundBonus));
+	draw_text(room_width - 80, 100, "BONUS " + string(global.roundBonus));
 }
 
 draw_set_font(fnt_menu);
 draw_set_colour(c_gray);
 draw_set_halign(fa_right);
 draw_set_valign(fa_middle);
-draw_text(room_width - 300, 150, "x " + string(global.multiplier));
+draw_text(room_width - 80, 150, "x " + string(global.multiplier));
 

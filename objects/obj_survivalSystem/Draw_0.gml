@@ -10,10 +10,12 @@ if (gameOver == true)
 	isPlural = "rounds";
 	if (survivedRounds = 1) isPlural = "round";
 	draw_text(room_width/2, room_height/3, "You Survived " + string(survivedRounds) + " " + string(isPlural));
+	draw_set_font(fnt_scoreBig);
+	draw_text(room_width/2, room_height/2 + 100, "Score : " + string(score));
 }
 
 draw_set_font(fnt_menu);
-draw_set_colour($1494FA);
+draw_set_colour(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text(room_width/2, 50, "ROUND " + string(global.roundNumber));

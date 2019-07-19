@@ -18,11 +18,14 @@ else window_set_cursor(cr_default);
 //spawn asteroid at round 3 or higher
 if (global.roundNumber = 3) and !(instance_exists(obj_asteroidSpawner))
 {
-	instance_create_layer(1, 1,"Instances", obj_asteroidSpawner)
+	if (obj_scoreController.gameActive == true)
+	{
+		instance_create_layer(1, 1,"Instances", obj_asteroidSpawner)
+	}
 }
 
 //show game over message if player ship does not exist
-if (gameOver = false)
+if (gameOver = false) and (global.roundEnd == false)
 {
 	if !(instance_exists(obj_player1)) and (alarm[0] = -1)
 	{

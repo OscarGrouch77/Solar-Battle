@@ -3,7 +3,7 @@
 var xx = argument0;
 var yy = argument1;
 
-radius = 200;
+radius = 50;
 
 //creating spawnFlare object withing a circle around spawn point
 
@@ -22,15 +22,17 @@ for (var i = 0; i < 7; i++)
 	var spawnY = yy + lengthdir_y(distRNG, dir);
 	
 	var name = "spawnFlare" + string(i);
-	name = instance_create_layer(spawnX, spawnY, "topParticle", obj_spawnFlare);
+	name = instance_create_layer(spawnX, spawnY, "scoreFlare", obj_spawnFlare);
 	
 	with name
 	{
-		direction = point_direction(spawnX, spawnY, xx, yy);
-		speed = distRNG/240;
-		lifetime = 120;
-		targetX = xx;
-		targetY = yy;
+		var Tx = obj_scoreController.scoreX - (string_width(string(score))/2) + random_range(-string_width(string(score))/2, string_width(string(score))/2);
+		var Ty = obj_scoreController.scoreY - (string_height(string(score))/2) + random_range(-string_height(string(score))/2, string_height(string(score))/2);
+		direction = point_direction(spawnX, spawnY, Tx, Ty);
+		speed = 20;
+		lifetime = 40;
+		targetX = Tx;
+		targetY = Ty
 	}
 }
 

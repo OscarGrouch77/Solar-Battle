@@ -23,11 +23,14 @@ if (global.roundEnd == false)
 {
 	if !(instance_exists(obj_survivalSystem.sEnemy)) and !(instance_exists(obj_spawnObjectSurvival))
 	{
-		if (alarm[2] = -1) and (awardScore == false)
+		if (instance_exists(obj_player1))
 		{
-			alarm[2] = 120;
-		}	
-		global.roundEnd = true;
+			if (alarm[2] = -1) and (awardScore == false)
+			{
+				alarm[2] = 120;
+			}	
+			global.roundEnd = true;
+		}
 	}
 }
 
@@ -36,7 +39,6 @@ if (global.roundEnd == false)
 //take snapshot for paused screen
 if (awardScore == true)
 {
-	timer++;
 	if(takeSnapShot == true)
 	{
 	
@@ -62,6 +64,8 @@ if (awardScore == true)
 		audio_stop_sound(snd_engine1);
 		audio_stop_sound(snd_engine2);
 		instance_deactivate_all(true);
+		instance_activate_object(obj_InGameSystem);
+		instance_activate_object(obj_survivalSystem);
 		takeSnapShot = false;	
 	}
 	
@@ -78,20 +82,31 @@ if (awardScore == true)
 	}
 	if (addBonus == true)
 	{
-		if (global.roundBonus > 0) and (timer < 1000)
+		if (global.roundBonus > 0)
 		{
 			var targetScore = score + global.roundBonus;
 			score = min(score + 10, targetScore);
 			global.roundBonus = max(global.roundBonus - 10, 0);
+			var bonusX = room_width/2;
+			var bonusY = room_height/2 + 100;
+			scr_scoreFlare(bonusX, bonusY);
 		}
 		else
 		{
-			if (alarm[1] = -1)
+			timer++
+			if (timer>180)
 			{
-				alarm[1] = 120;
-				addBonus = false;
-				awardScore = false;
-				gamePaused = false;				
+				if (alarm[1] = -1)
+				{
+					alarm[1] = 120;
+					addBonus = false;
+					awardScore = false;
+					gamePaused = false;
+					global.roundNumber++;
+					global.multiplier = startMulti;
+					global.multiplier++;
+					global.roundBonus = round(max(100, ((global.roundNumber * 100))))
+				}
 			}
 		}
 	}
