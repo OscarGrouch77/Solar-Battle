@@ -76,23 +76,23 @@ if (awardScore == true)
 		addBonus = false;
 		alarm[3] = 60;
 	}
-	if (alarm[4] = -1) and (countMulti = 1)
+	if (alarm[4] = -1) and (countMulti <= 1)
 	{
-		alarm[4] = 30;
+		alarm[4] = 60;
 	}
 	if (addBonus == true)
 	{
 		if (global.roundBonus > 0)
 		{
+			var scrInc = 10;
+			if global.roundBonus > 1000 scrInc = 100;
+			if global.roundBonus > 10000 scrInc = 1000;
 			var targetScore = score + global.roundBonus;
-			score = min(score + 10, targetScore);
-			global.roundBonus = max(global.roundBonus - 10, 0);
-			var bonusX = room_width/2;
-			var bonusY = room_height/2 + 100;
-			scr_scoreFlare(bonusX, bonusY);
+			score = min(score + scrInc, targetScore);
+			global.roundBonus = max(global.roundBonus - scrInc, 0);
 		}
 		else
-		{
+		{	
 			timer++
 			if (timer>180)
 			{

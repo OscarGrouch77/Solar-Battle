@@ -6,7 +6,7 @@ randomize();
 global.roundNumber = 1;
 
 gameOver = false;
-
+showHighScore = false;
 sEnemy = obj_cpuSurvivalEasy;	//defines the type of enemy for this round
 enemyNumber = 1;
 

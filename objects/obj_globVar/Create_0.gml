@@ -11,7 +11,7 @@ score = 0;
 global.multiplier = 1;
 global.roundBonus = 0;
 global.roundEnd = false;
-
+global.name = "";
 enum gameType
 {
 	oneDuel,

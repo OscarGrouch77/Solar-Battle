@@ -5,5 +5,13 @@
 gameOver = true;
 
 survivedRounds = global.roundNumber - 1;
-instance_create_layer(x,y, "Instances", obj_menuButtonExit);
-instance_create_layer(x,y, "Instances", obj_menuButtonTryAgain);
+
+if (score > highscore_value(10))
+{
+	instance_create_layer(room_width/2, room_height/2 + 270, "UI", obj_inputName);
+}
+else
+{
+	instance_create_layer(x,y, "UI", obj_menuButtonExit);
+	instance_create_layer(x,y, "UI", obj_menuButtonTryAgain);
+}

@@ -33,5 +33,11 @@ if (gameOver = false) and (global.roundEnd == false)
 	}
 }
 
+if (showHighScore == true)
+{
+	instance_create_layer(x,y, "scoreFlare", obj_menuButtonExit);
+	instance_create_layer(x,y, "UI", obj_menuButtonTryAgain);
+}
+
 
 
