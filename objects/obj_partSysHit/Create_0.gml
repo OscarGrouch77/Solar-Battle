@@ -1,5 +1,5 @@
-/// @description smoke trail
-// You can write your code in this editor
+/// @description hit effect
+
 
 bulletHit = part_system_create_layer("topParticle", false);
 

@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "2eaa1d2c-5531-4fee-a46c-e9526acc38ca",
+            "Value": {
+                "id": "7a12bf6e-0283-45cf-94fe-3ab9ec9508e2",
+                "resourcePath": "objects\\obj_partSysHealthGain\\obj_partSysHealthGain.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2fd5c857-86f3-453c-a98e-f4e738b88599",
             "Value": {
                 "id": "c2de0e11-9908-455c-ab39-114c0fbaae29",
@@ -331,6 +339,14 @@
             "Value": {
                 "id": "81d6f858-1dd6-4fdc-87f9-924a8b40b305",
                 "resourcePath": "scripts\\scr_smokeTrail\\scr_smokeTrail.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "331a8721-fec6-4fea-a6dd-dd5cb144e7ea",
+            "Value": {
+                "id": "f7d58821-600c-46d8-a627-45a796ab250c",
+                "resourcePath": "scripts\\scr_healthGain\\scr_healthGain.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1223,6 +1239,14 @@
             }
         },
         {
+            "Key": "c2665602-a655-42c7-a5b0-c9ab166dad1a",
+            "Value": {
+                "id": "4eb36e53-b11f-4af7-b6d5-538815fc2463",
+                "resourcePath": "sprites\\spr_healthCross\\spr_healthCross.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c292352f-1d65-4795-9a13-ec0b56573e48",
             "Value": {
                 "id": "e5c05a38-bc46-41f0-be1b-4460a99364c3",
@@ -1589,6 +1613,7 @@
         "324587ac-79dd-4c43-9d58-b00e8204bab7",
         "7a78c893-de17-49bd-8d21-b09c9c05915a",
         "85286a80-8e49-4911-bd12-061e5062986a",
+        "331a8721-fec6-4fea-a6dd-dd5cb144e7ea",
         "d69d9851-4e2c-4804-bb19-f85331317fb8",
         "f9ce0336-0d52-4178-901a-537ded455423",
         "feeed8b6-c33e-4035-9333-b73448db0de3",

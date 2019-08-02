@@ -70,5 +70,6 @@ for(var i = enemyNumber; i > 0; i--)
 		until (point_distance(randX1, randY1, obj_sun.x, obj_sun.y) > 200)
 		instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvival);
 }
-	if (instance_exists(obj_player1)) obj_player1.hp++
-	global.roundEnd = false;
+
+
+global.roundEnd = false;

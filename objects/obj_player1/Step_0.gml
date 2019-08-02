@@ -199,6 +199,19 @@ if (hp <= 0)										//destroy
 	instance_destroy();					
 }
 
+if (healing == true)
+{
+	timer++
+	instance_create_layer(x, y, "topParticle", obj_partSysHealthGain);
+	scr_healthGain(x, y);
+	if (timer > 120)
+	{
+		timer = 0;
+		hp++;
+		healing = false;
+	}
+}
+
 //instance_create_depth(x,y,0,obj_path);				//creates object for drawing path
 
 

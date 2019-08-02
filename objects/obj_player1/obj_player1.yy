@@ -431,6 +431,34 @@
             "value": "0",
             "varName": "missileActive",
             "varType": 3
+        },
+        {
+            "id": "51a35238-b27a-41ce-a6a2-d221c13cb1bb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "healing",
+            "varType": 3
+        },
+        {
+            "id": "af90d5ee-ca43-437a-92c2-2f6f05c1b0e0",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "timer",
+            "varType": 0
         }
     ],
     "solid": false,
