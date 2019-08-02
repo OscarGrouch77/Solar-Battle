@@ -209,6 +209,7 @@ if (healing == true)
 		timer = 0;
 		hp++;
 		healing = false;
+		instance_destroy(obj_partSysHealthGain);
 	}
 }
 

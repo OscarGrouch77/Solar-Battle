@@ -6,6 +6,7 @@ xx = argument0;
 yy = argument1;
 
 dirSun = point_direction(x, y, obj_sun.x, obj_sun.y);
+distSun = point_distance(xx, yy, obj_sun.x, obj_sun.y);
 xscale = max(30 * ((point_distance(xx, yy, obj_sun.x, obj_sun.y)/room_width)), 2);
 yscale = sprite_get_height(1)/64;
 rotation = point_direction(xx, yy, obj_sun.x, obj_sun.y);
@@ -26,14 +27,16 @@ for(var i = 0; collision_line(obj_sun.x, obj_sun.y, self.x + lengthdir_x(i, dirS
 }
 
 
+if (distSun > 1)
+{
+	scr_raycast(obj_sun.x, obj_sun.y, shad1x + lengthdir_x(-20, dirSun), shad1y + lengthdir_y(-20, dirSun), self);
+	shadHP1x = hitpoint[0];
+	shadHP1y = hitpoint[1];
 
-scr_raycast(obj_sun.x, obj_sun.y, shad1x + lengthdir_x(-20, dirSun), shad1y + lengthdir_y(-20, dirSun), self);
-shadHP1x = hitpoint[0];
-shadHP1y = hitpoint[1];
-
-scr_raycast(obj_sun.x, obj_sun.y, shad2x + lengthdir_x(-20, dirSun), shad2y + lengthdir_y(-20, dirSun), self);
-shadHP2x = hitpoint[0];
-shadHP2y = hitpoint[1];
+	scr_raycast(obj_sun.x, obj_sun.y, shad2x + lengthdir_x(-20, dirSun), shad2y + lengthdir_y(-20, dirSun), self);
+	shadHP2x = hitpoint[0];
+	shadHP2y = hitpoint[1];
+}
 
 //Drawing circles for debugging
 //draw_set_color(c_blue);
