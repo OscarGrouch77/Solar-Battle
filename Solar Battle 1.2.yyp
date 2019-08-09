@@ -695,6 +695,14 @@
             }
         },
         {
+            "Key": "63a27ede-78a7-4b9b-98c1-c5b01f3d3c8b",
+            "Value": {
+                "id": "1ab2019c-816a-494a-ba76-fdf9c283e645",
+                "resourcePath": "sprites\\spr_alien1\\spr_alien1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "648de26f-828c-4d02-bd89-09e0fefcd98c",
             "Value": {
                 "id": "876fb688-2217-4348-bde8-673a662e8867",

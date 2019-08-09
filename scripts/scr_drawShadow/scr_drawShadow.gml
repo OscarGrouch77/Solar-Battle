@@ -16,12 +16,15 @@ alpha = (1 - (point_distance(xx, yy, obj_sun.x, obj_sun.y)/room_width))/8;
 //finding x and y coords of the edge of the shadow
 for(var i = 0; collision_line(obj_sun.x, obj_sun.y, self.x + lengthdir_x(i, dirSun + 90) + lengthdir_x(-20, dirSun), self.y + lengthdir_y(i, dirSun + 90) + lengthdir_y(20, dirSun + 180), self, true, false); i += 1)
 {
+	if i > (max(sprite_get_height(1), sprite_get_width(1))/2) break
 	shad1x = self.x + lengthdir_x(i - 2, dirSun + 90);
 	shad1y = self.y + lengthdir_y(i - 2, dirSun + 90);
+	if i > max(sprite_get_height(1), sprite_get_width(1)) break
 }
 
 for(var i = 0; collision_line(obj_sun.x, obj_sun.y, self.x + lengthdir_x(i, dirSun - 90) + lengthdir_x(-20, dirSun), self.y + lengthdir_y(i, dirSun - 90) + lengthdir_y(20, dirSun + 180), self, true, false); i += 1)
 {
+	if i > (max(sprite_get_height(1), sprite_get_width(1))/2) break
 	shad2x = self.x + lengthdir_x(i - 2, dirSun - 90);
 	shad2y = self.y + lengthdir_y(i - 2, dirSun - 90);
 }
@@ -47,7 +50,7 @@ if (distSun > 1)
 
 xx = (shadHP1x + shadHP2x)/2 + lengthdir_x(-15, dirSun);
 yy = (shadHP1y + shadHP2y)/2 + lengthdir_y(-15, dirSun);
-yscale = point_distance(shad1x, shad1y, shad2x, shad2y)/64;
+yscale = min(point_distance(shad1x, shad1y, shad2x, shad2y)/64, max(sprite_get_height(1), sprite_get_width(1))/64);
 
 draw_sprite_ext(spr_shadow3, 0, xx, yy, xscale, yscale, rotation, c_white, alpha);
 draw_sprite_ext(spr_shadow3, 0, xx, yy, xscale, yscale/2, rotation, c_white, alpha);
