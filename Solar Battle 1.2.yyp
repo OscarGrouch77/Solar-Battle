@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "009869c0-00b6-430d-a273-2b964601da27",
+            "Value": {
+                "id": "38ecce37-d9c0-4475-a3b7-617e25726846",
+                "resourcePath": "sprites\\spr_bullet1\\spr_bullet1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "00abd836-bbd1-4a48-b0b6-a6ef540c7aa3",
             "Value": {
                 "id": "e220c6be-ab09-4180-aaba-8e5fa280bbcf",

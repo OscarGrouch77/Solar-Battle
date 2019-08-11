@@ -284,6 +284,7 @@ if (firing == true) and (cooldown <= 0)
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
+			sprite_index = spr_bullet1;
 		}
 	}
 	if (double == true)
@@ -295,6 +296,7 @@ if (firing == true) and (cooldown <= 0)
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
+			sprite_index = spr_bullet1;
 		}
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet2
@@ -303,6 +305,7 @@ if (firing == true) and (cooldown <= 0)
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
+			sprite_index = spr_bullet1;
 		}
 	}
 	cooldown = 15;
