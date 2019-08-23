@@ -171,7 +171,7 @@ if (missile == true)
 		missileActive = true;
 		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
 		myMissile.owner = id;
-		myMissile.target = enemy;
+		myMissile.target = instance_nearest(x, y, enemy);
 		missileAmmo -= 1;
 	}
 	if (missileAmmo <= 0) missile = false;
