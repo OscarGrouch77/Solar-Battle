@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-
+//creates spawn flares using scr_spawn RNG to manage timing of flares
 if (timer < 80) and (spawning == true)
 {
 	spawnRNG = irandom(80);
