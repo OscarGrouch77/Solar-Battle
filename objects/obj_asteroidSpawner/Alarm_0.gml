@@ -5,5 +5,5 @@ if !(instance_exists(obj_asteroidBig))
 
 
 {
-	instance_create_layer(random_range(0,2048),choose(room_height + sprite_height,0 - sprite_height),"Instances",obj_asteroidBig);
+	instance_create_layer(random_range(0,room_width),choose(room_height + 64, 0 - 64),"Instances",obj_asteroidBig);
 }

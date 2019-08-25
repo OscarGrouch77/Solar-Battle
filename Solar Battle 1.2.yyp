@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "39ef669c-d927-4fe2-b1c3-2492d47d0d60",
+            "Value": {
+                "id": "62e549f6-92b6-441e-854f-edd5f4bf5acb",
+                "resourcePath": "sprites\\spr_asteroidBig2\\spr_asteroidBig2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3a77df92-979b-48a1-b20e-15c65aed7971",
             "Value": {
                 "id": "c880a8f6-ccd5-4443-8380-0d511295ddd5",
