@@ -7,5 +7,6 @@ if (instance_exists(owner))
 	{
 		instance_destroy();
 	}
+	image_angle = owner.image_angle;
 }
 else instance_destroy();

@@ -11,6 +11,9 @@ player1Thrust2 = instance_create_layer(x + lengthdir_x(5, playerDir + 90) + leng
 with (player1Thrust1) image_index = 5;
 with (player1Thrust2) image_index = 5;
 
+width = bbox_right - bbox_left;
+height = bbox_bottom - bbox_top;
+
 //shadHP1[1] = 0;
 //shadHP1[0] = 0;
 

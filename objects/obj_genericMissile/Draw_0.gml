@@ -1,7 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-image_alpha = 0.5;
-owner = undefined;
-
-alarm[0] = 1;
+draw_self();
+draw_sprite_ext(spr_orangeGlow,0,x,y,0.4,0.4,0,c_white,1);

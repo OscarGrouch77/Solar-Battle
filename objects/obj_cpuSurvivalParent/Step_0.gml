@@ -310,8 +310,8 @@ if (firing == true) and (cooldown <= 0)
 	}
 	cooldown = 15;
 	overheat = overheat + 2;
-	audio_sound_pitch(snd_pew,1.2);
-	audio_play_sound(snd_pew,0,0);
+	audio_sound_pitch(snd_pew2,1.2);
+	audio_play_sound(snd_pew2,0,0);
 }
 
 if (overheat <= 10)

@@ -5,15 +5,15 @@
 
 with (player1Thrust1)
 	{
-		x = other.x + lengthdir_x(5, other.image_angle - 90) + lengthdir_x(16, other.image_angle - 180);
-		y = other.y + lengthdir_y(16, other.image_angle - 180) + lengthdir_y(5, other.image_angle - 90);
+		x = other.x + lengthdir_x(5, other.image_angle - 90) + lengthdir_x(20, other.image_angle - 180);
+		y = other.y + lengthdir_y(20, other.image_angle - 180) + lengthdir_y(5, other.image_angle - 90);
 		image_angle = other.image_angle;
 	}
 
 with (player1Thrust2)
 	{
-		x = other.x + lengthdir_x(5, other.image_angle + 90) + lengthdir_x(16, other.image_angle - 180);
-		y = other.y + lengthdir_y(16, other.image_angle - 180) - lengthdir_y(5, other.image_angle - 90);
+		x = other.x + lengthdir_x(5, other.image_angle + 90) + lengthdir_x(20, other.image_angle - 180);
+		y = other.y + lengthdir_y(20, other.image_angle - 180) - lengthdir_y(5, other.image_angle - 90);
 		image_angle = other.image_angle;
 	}
 
