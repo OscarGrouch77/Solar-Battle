@@ -344,7 +344,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "False",
+            "value": "True",
             "varName": "missile",
             "varType": 3
         },
@@ -358,7 +358,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "3",
             "varName": "missileAmmo",
             "varType": 1
         },

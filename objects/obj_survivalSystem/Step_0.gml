@@ -20,8 +20,16 @@ if (global.roundNumber = 3) and !(instance_exists(obj_asteroidSpawner))
 {
 	if (obj_scoreController.gameActive == true)
 	{
-		instance_create_layer(1, 1,"Instances", obj_asteroidSpawner)
+		instance_create_layer(1, 1,"Instances", obj_asteroidSpawner);
 	}
+}
+
+if (global.roundNumber = 10)
+{
+	if (obj_scoreController.gameActive == true)
+		{
+			obj_asteroidSpawner.astNumber = 2;
+		}
 }
 
 //show game over message if player ship does not exist

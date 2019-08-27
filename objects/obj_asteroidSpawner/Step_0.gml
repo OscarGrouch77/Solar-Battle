@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if !(instance_exists(obj_asteroidBig)) and (alarm[0] =-1)
+if (instance_number(obj_asteroidBig) < astNumber) and (alarm[0] =-1)
 
 
 {

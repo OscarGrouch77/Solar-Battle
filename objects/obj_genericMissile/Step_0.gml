@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if !(target)
+{
+	target = instance_nearest(x, y, owner.enemy);
+}
+
 //rotating controller
 if (rotate == 1){
 	image_angle += 4;
