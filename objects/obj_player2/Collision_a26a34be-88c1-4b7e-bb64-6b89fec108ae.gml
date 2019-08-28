@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (other.owner != me)
+if (other.owner != id)
 {
 	if (shield == false)
 	{

@@ -5,15 +5,15 @@
 //set position of thruisters relative to player
 with (player2Thrust1)
 	{
-		x = other.x + lengthdir_x(5, other.image_angle - 90) + lengthdir_x(16, other.image_angle - 180);
-		y = other.y + lengthdir_y(16, other.image_angle - 180) + lengthdir_y(5, other.image_angle - 90);
+		x = other.x + lengthdir_x(5, other.image_angle - 90) + lengthdir_x(20, other.image_angle - 180);
+		y = other.y + lengthdir_y(20, other.image_angle - 180) + lengthdir_y(5, other.image_angle - 90);
 		image_angle = other.image_angle;
 	}
 
 with (player2Thrust2)
 	{
-		x = other.x + lengthdir_x(5, other.image_angle + 90) + lengthdir_x(16, other.image_angle - 180);
-		y = other.y + lengthdir_y(16, other.image_angle - 180) - lengthdir_y(5, other.image_angle - 90);
+		x = other.x + lengthdir_x(5, other.image_angle + 90) + lengthdir_x(20, other.image_angle - 180);
+		y = other.y + lengthdir_y(20, other.image_angle - 180) - lengthdir_y(5, other.image_angle - 90);
 		image_angle = other.image_angle;
 	}
 
@@ -64,7 +64,7 @@ if (hp ==2)
 {
 	with (player2Thrust1)
 	{
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
+		scr_smokeTrail(x + lengthdir_x(4, other.image_angle) + random_range(-3, 3), y + lengthdir_y(4, other.image_angle) + random_range(-3, 3));
 	}
 }
 
@@ -72,12 +72,10 @@ if (hp ==1)
 {
 	with (player2Thrust1)
 	{
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
+		scr_smokeTrail(x + lengthdir_x(4, other.image_angle) + random_range(-3, 3), y + lengthdir_y(4, other.image_angle) + random_range(-3, 3));	
 	}
 	with (player2Thrust2)
 	{
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
+		scr_smokeTrail(x + lengthdir_x(4, other.image_angle) + random_range(-3, 3), y + lengthdir_y(4, other.image_angle) + random_range(-3, 3));
 	}
 }

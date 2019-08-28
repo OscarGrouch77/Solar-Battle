@@ -95,10 +95,11 @@ if (keyboard_check(vk_enter)) and (cooldown <= 0)
 {
 	if (double == false)
 	{
-		var bullet = instance_create_layer(x,y,"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
+		var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet
 		{
 			owner = other.id;
+			sprite_index = spr_bullet1;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -106,18 +107,20 @@ if (keyboard_check(vk_enter)) and (cooldown <= 0)
 	}
 	if (double == true)
 	{
-		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
+		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet1
 		{
 			owner = other.id;
+			sprite_index = spr_bullet1;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
 		}
-		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_genericBullet);			//creates bullet if cooldown 0
+		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet2
 		{
 			owner = other.id;
+			sprite_index = spr_bullet1;
 			speed = other.speed;
 			direction = other.direction;
 			motion_add(other.playerDir, other.bulletSpeed);
@@ -125,8 +128,8 @@ if (keyboard_check(vk_enter)) and (cooldown <= 0)
 	}
 	cooldown = 15;
 	overheat = overheat + 2;
-	audio_sound_pitch(snd_pew,1.2);
-	audio_play_sound(snd_pew,0,0);
+	audio_sound_pitch(snd_pew2,random_range(0.9, 1.2));
+	audio_play_sound(snd_pew2,0,0);
 }
 
 if (overheat <= 10)

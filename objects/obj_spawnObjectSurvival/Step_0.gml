@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+image_alpha = (random_range(0.5, 1));
 //creates spawn flares using scr_spawn RNG to manage timing of flares
 if (timer < 80) and (spawning == true)
 {

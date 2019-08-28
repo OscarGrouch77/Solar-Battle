@@ -62,7 +62,7 @@ if (hp ==2)
 {
 	with (player1Thrust1)
 	{
-		scr_smokeTrail(x + random_range(-3, 3), y + random_range(-3, 3));
+		scr_smokeTrail(x + lengthdir_x(4, other.image_angle) + random_range(-3, 3), y + lengthdir_y(4, other.image_angle) + random_range(-3, 3));
 	}
 }
 
@@ -70,12 +70,10 @@ if (hp ==1)
 {
 	with (player1Thrust1)
 	{
-		scr_smokeTrail(x + random_range(-3, 3), y+ random_range(-3, 3));
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
+		scr_smokeTrail(x + lengthdir_x(4, other.image_angle) + random_range(-3, 3), y + lengthdir_y(4, other.image_angle) + random_range(-3, 3));
 	}
 	with (player1Thrust2)
 	{
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
-		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
+		scr_smokeTrail(x + lengthdir_x(4, other.image_angle) + random_range(-3, 3), y + lengthdir_y(4, other.image_angle) + random_range(-3, 3));
 	}
 }
