@@ -26,21 +26,21 @@ scr_gravityForce(x,y);
 
 //movement
 
-image_angle+=(keyboard_check(ord("A")) - keyboard_check(ord("D"))) * 2;	///rotating the ship
+image_angle+=(keyboard_check(global.p1Left) - keyboard_check(global.p1Right)) * 2;	///rotating the ship
 
 
-if(keyboard_check(ord("W")))					///thrust in the direction ship is pointing
+if(keyboard_check(global.p1Thrust))					///thrust in the direction ship is pointing
 {	
 	motion_add(image_angle,.05);
 }
 		
-if(keyboard_check(ord("S")))					///reverse thrust
+if(keyboard_check(global.p1Reverse))					///reverse thrust
 {	
 	motion_add(image_angle - 180,.025);
 }
 		
 //// engine sounds	
-if(keyboard_check(ord("W")))					
+if(keyboard_check(global.p1Thrust))					
 {	
 		if !(audio_is_playing(snd_engine1))
 		{	
@@ -51,7 +51,7 @@ if(keyboard_check(ord("W")))
 		}	
 }
 
-if (keyboard_check_released(ord("W")))							
+if (keyboard_check_released(global.p1Thrust))							
 {
 	var engGain = audio_sound_get_gain(eng);				///gets last gain level of engine sound		
 	
@@ -65,14 +65,14 @@ if (keyboard_check_released(ord("W")))
 		}
 }
 
-if (keyboard_check_pressed(ord("W")))
+if (keyboard_check_pressed(global.p1Thrust))
 	{
 		audio_stop_sound(snd_engine1);					///stops engine sound playing if "W" pressed
 	}	
 
 //reverse thrust sounds
 
-if(keyboard_check(ord("S")))					
+if(keyboard_check(global.p1Reverse))					
 {	
 		if !(audio_is_playing(snd_engine1))
 		{	
@@ -83,7 +83,7 @@ if(keyboard_check(ord("S")))
 		}	
 }
 
-if (keyboard_check_released(ord("S")))							
+if (keyboard_check_released(global.p1Reverse))							
 {
 	var engGain = audio_sound_get_gain(eng);				///gets last gain level of engine sound		
 	
@@ -98,7 +98,7 @@ if (keyboard_check_released(ord("S")))
 		}
 }
 
-if (keyboard_check_pressed(ord("S")))
+if (keyboard_check_pressed(global.p1Reverse))
 	{
 		audio_stop_sound(snd_engine1);					///stops engine sound playing if "W" pressed
 	}	
@@ -109,7 +109,7 @@ move_wrap(true, true, 0);								//wrap around edges of room
 
 //shooting
 
-if (keyboard_check(vk_space)) and (cooldown <= 0)
+if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
 {
 	if (double == false)
 	{
@@ -166,7 +166,7 @@ if (overheat > 10) and (alarm[1] == -1)				//gun overheated starts alarm 1
 
 if (missile == true)
 {
-	if (keyboard_check(ord("M"))) and (missileActive = false)
+	if (keyboard_check(global.p1AltFire)) and (missileActive = false)
 	{
 		missileActive = true;
 		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
