@@ -242,7 +242,7 @@
             "Key": "274eedd6-137c-41f9-8a55-a1aff0def28a",
             "Value": {
                 "id": "7ba9db90-b867-442c-b8a5-b870ba5941e5",
-                "resourcePath": "objects\\obj_controlsText\\obj_controlsText.yy",
+                "resourcePath": "objects\\obj_controlSettings\\obj_controlSettings.yy",
                 "resourceType": "GMObject"
             }
         },
