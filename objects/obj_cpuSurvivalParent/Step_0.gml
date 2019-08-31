@@ -382,6 +382,9 @@ if (hp <= 0)										//destroy
 	thisExp.expx = self.x;
 	thisExp.expy = self.y;
 	thisExp.me = thisExp;
+	glow = instance_create_layer(x, y, "Ambient", obj_expGlow);
+	glow.direction = direction;
+	glow.speed = speed;
 	audio_sound_pitch(snd_explode2, random_range(0.7, 1.3));
 	audio_sound_gain(snd_explode2,1,0);
 	audio_play_sound(snd_explode2,0,0);

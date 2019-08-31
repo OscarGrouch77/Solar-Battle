@@ -19,7 +19,7 @@ with (player2Thrust2)
 
 //dispaly thruster if thrusting
 
-if keyboard_check(vk_up)
+if keyboard_check(global.p2Thrust)
 {
 
 	with (player2Thrust1)

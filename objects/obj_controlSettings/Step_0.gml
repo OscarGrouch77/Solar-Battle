@@ -3,6 +3,7 @@
 
 
 ///redefine p1 keys
+draw_set_font(fnt_easyRead); //to get clickable area right
 ///change left
 if (point_in_rectangle(mouse_x, mouse_y, p1KeyMargin, topMargin + 2*lineSpacing, p1KeyMargin + string_width(string(scr_returnChr(global.p1Left))), topMargin + 2*lineSpacing + string_height(string(scr_returnChr(global.p1Left))))) and (waitInput == false)
 {
@@ -10,14 +11,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p1KeyMargin, topMargin + 2*lineSpacing,
 	{
 		p1LeftSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p1Left));
 	}
 }
 if (waitInput = true) && (p1LeftSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p1Left = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -32,14 +32,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p1KeyMargin, topMargin + 3*lineSpacing,
 	{
 		p1RightSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p1Right));
 	}
 }
 if (waitInput = true) && (p1RightSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p1Right = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -54,14 +53,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p1KeyMargin, topMargin + 4*lineSpacing,
 	{
 		p1ThrustSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p1Thrust));
 	}
 }
 if (waitInput = true) && (p1ThrustSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p1Thrust = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -76,14 +74,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p1KeyMargin, topMargin + 5*lineSpacing,
 	{
 		p1ReverseSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p1Reverse));
 	}
 }
 if (waitInput = true) && (p1ReverseSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p1Reverse = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -98,14 +95,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p1KeyMargin, topMargin + 6*lineSpacing,
 	{
 		p1FireSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p1Fire));
 	}
 }
 if (waitInput = true) && (p1FireSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p1Fire = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -120,14 +116,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p1KeyMargin, topMargin + 7*lineSpacing,
 	{
 		p1AltFireSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p1AltFire));
 	}
 }
 if (waitInput = true) && (p1AltFireSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p1AltFire = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -143,12 +138,11 @@ if (point_in_rectangle(mouse_x, mouse_y, p2KeyMargin, topMargin + 2*lineSpacing,
 	{
 		p2LeftSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p2Left));
 	}
 }
 if (waitInput = true) && (p2LeftSet = true)
 {
-	keyChange = keyboard_key;
+	global.p2Left = keyboard_key;
 	if (keyboard_key) 
 	{
 		timer++;
@@ -165,14 +159,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p2KeyMargin, topMargin + 3*lineSpacing,
 	{
 		p2RightSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p2Right));
 	}
 }
 if (waitInput = true) && (p2RightSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p2Right = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -187,14 +180,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p2KeyMargin, topMargin + 4*lineSpacing,
 	{
 		p2ThrustSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p2Thrust));
 	}
 }
 if (waitInput = true) && (p2ThrustSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p2Thrust = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -209,14 +201,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p2KeyMargin, topMargin + 5*lineSpacing,
 	{
 		p2ReverseSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p2Reverse));
 	}
 }
 if (waitInput = true) && (p2ReverseSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p2Reverse = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -231,14 +222,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p2KeyMargin, topMargin + 6*lineSpacing,
 	{
 		p2FireSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p2Fire));
 	}
 }
 if (waitInput = true) && (p2FireSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p2Fire = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;
@@ -253,14 +243,13 @@ if (point_in_rectangle(mouse_x, mouse_y, p2KeyMargin, topMargin + 7*lineSpacing,
 	{
 		p2AltFireSet = true;
 		waitInput = true;
-		keyChange = string(scr_returnChr(global.p2AltFire));
 	}
 }
 if (waitInput = true) && (p2AltFireSet = true)
 {
 	timer++;
 	if (timer >= 60) timer = 0;
-	keyChange = keyboard_key;
+	global.p2AltFire = keyboard_key;
 	if (keyboard_key) 
 	{
 		waitInput = false;

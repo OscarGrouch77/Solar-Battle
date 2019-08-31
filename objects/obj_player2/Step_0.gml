@@ -7,22 +7,22 @@ scr_gravityForce(x,y);
 
 ///movement
 
-image_angle+=((keyboard_check(vk_left)) - (keyboard_check(vk_right))) * 2;	///rotating the ship
+image_angle+=((keyboard_check(global.p2Left)) - (keyboard_check(global.p2Right))) * 2;	///rotating the ship
 
 
-if(keyboard_check(vk_up))					///thrust in the direction ship is pointing
+if(keyboard_check(global.p2Thrust))					///thrust in the direction ship is pointing
 {	
 		motion_add(image_angle,.05);
 }
 
-if(keyboard_check(vk_down))					///reverse thrust
+if(keyboard_check(global.p2Reverse))					///reverse thrust
 {	
 		motion_add(image_angle - 180,.025);
 }
 
 //// engine sounds	
 
-if(keyboard_check(vk_up))					///thrust in the direction ship is pointing
+if(keyboard_check(global.p2Thrust))					///thrust in the direction ship is pointing
 {	
 		if !(audio_is_playing(snd_engine2))
 		{	
@@ -33,7 +33,7 @@ if(keyboard_check(vk_up))					///thrust in the direction ship is pointing
 		}	
 }	
 
-if (keyboard_check_released(vk_up))							
+if (keyboard_check_released(global.p2Thrust))							
 {	
 	var engGain = audio_sound_get_gain(eng);				///gets last gain level of engine sound		
 	
@@ -46,14 +46,14 @@ if (keyboard_check_released(vk_up))
 		audio_stop_sound(snd_engine2);					///stops engine sound playing when it fades out
 	}
 }
-if (keyboard_check_pressed(vk_up))
+if (keyboard_check_pressed(global.p2Thrust))
 	{
 		audio_stop_sound(snd_engine2);					///stops engine sound playing if "W" pressed
 	}	
 	
 //reverse thrust sounds
 
-if(keyboard_check(vk_down))					
+if(keyboard_check(global.p2Reverse))					
 {	
 		if !(audio_is_playing(snd_engine2))
 		{	
@@ -64,7 +64,7 @@ if(keyboard_check(vk_down))
 		}	
 }	
 
-if (keyboard_check_released(vk_down))							
+if (keyboard_check_released(global.p2Reverse))							
 {	
 	var engGain = audio_sound_get_gain(eng);				///gets last gain level of engine sound		
 	
@@ -78,7 +78,7 @@ if (keyboard_check_released(vk_down))
 		audio_stop_sound(snd_engine2);					///stops engine sound playing when it fades out
 	}
 }
-if (keyboard_check_pressed(vk_down))
+if (keyboard_check_pressed(global.p2Reverse))
 	{
 		audio_stop_sound(snd_engine2);					///stops engine sound playing if "down" pressed
 	}				
@@ -91,7 +91,7 @@ move_wrap(true, true, 0);
 
 //shooting
 
-if (keyboard_check(vk_enter)) and (cooldown <= 0)
+if (keyboard_check(global.p2Fire)) and (cooldown <= 0)
 {
 	if (double == false)
 	{
@@ -159,7 +159,7 @@ if (overheat < 10)									//cooldown weapon only if not overheated
 
 if (missile == true)
 {
-	if (keyboard_check(vk_add)) and (missileActive = false)
+	if (keyboard_check(global.p2AltFire)) and (missileActive = false)
 	{
 		missileActive = true;
 		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
@@ -175,6 +175,9 @@ if (hp <= 0)										//destroy
 {
 	instance_create_layer(x, y, "bottomParticle", obj_partSysP2Explosion);
 	scr_p2Explosion(x, y);
+	glow = instance_create_layer(x, y, "Ambient", obj_expGlow);
+	glow.direction = direction;
+	glow.speed = speed;
 	audio_sound_pitch(snd_explode,1);
 	audio_sound_gain(snd_explode,1,0);
 	audio_play_sound(snd_explode,0,0);

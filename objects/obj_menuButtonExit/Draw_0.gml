@@ -7,6 +7,7 @@
 
 if (point_in_rectangle(mouse_x, mouse_y, x - 35, y, x + 35, y + 40))
 {
+	draw_set_alpha(1);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	draw_set_font(fnt_menu);
@@ -15,6 +16,7 @@ if (point_in_rectangle(mouse_x, mouse_y, x - 35, y, x + 35, y + 40))
 }
 else
 {
+	draw_set_alpha(1);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	draw_set_font(fnt_menu);

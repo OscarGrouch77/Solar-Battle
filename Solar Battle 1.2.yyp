@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "1be7d196-161c-4414-a5d3-8c6defffb5ea",
+            "Value": {
+                "id": "160239b0-0cac-4d43-997e-f5e124d00da6",
+                "resourcePath": "sprites\\spr_orangeGlowBig\\spr_orangeGlowBig.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d42d77e-a6a2-4af2-961e-3b321eb77f62",
             "Value": {
                 "id": "afc6fce6-20e9-4d2f-9fb1-1a38abc47fb7",
@@ -699,6 +707,14 @@
             "Value": {
                 "id": "b2a3dfce-cb96-49ef-8dfd-67c61d7be74d",
                 "resourcePath": "objects\\obj_cpuSurvivalEasy2\\obj_cpuSurvivalEasy2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5bd3e912-73d5-40c4-b20a-42536f48c236",
+            "Value": {
+                "id": "c23a2205-91cc-4872-a579-bcb5798a11d5",
+                "resourcePath": "objects\\obj_menuButtonResetKeys\\obj_menuButtonResetKeys.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1631,6 +1647,14 @@
             }
         },
         {
+            "Key": "e3dae0c2-22a6-441e-80c4-ac66cb2ddb4a",
+            "Value": {
+                "id": "d4b6fdf6-6682-40b8-83ff-1e5e8215722d",
+                "resourcePath": "objects\\obj_expGlow\\obj_expGlow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e4b03242-fbad-472b-9b76-091ab315cf9e",
             "Value": {
                 "id": "916a4f9c-08fa-4432-af13-ab171a9477f8",
@@ -1708,6 +1732,14 @@
                 "id": "8bf2c546-491a-471c-abbc-c68e2d495996",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f5c3623f-a91a-41dd-af3f-cf51d4b5e1be",
+            "Value": {
+                "id": "924835e6-4a51-463a-9211-de43f64e54b8",
+                "resourcePath": "objects\\obj_menuButtonSaveKeys\\obj_menuButtonSaveKeys.yy",
+                "resourceType": "GMObject"
             }
         },
         {
