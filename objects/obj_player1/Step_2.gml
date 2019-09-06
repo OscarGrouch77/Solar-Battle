@@ -4,16 +4,16 @@
 //sets position of thrusters relative to ship
 
 with (player1Thrust1)
-	{
-		x = other.x + lengthdir_x(5, other.image_angle - 90) + lengthdir_x(20, other.image_angle - 180);
-		y = other.y + lengthdir_y(20, other.image_angle - 180) + lengthdir_y(5, other.image_angle - 90);
+	{	
+		x = other.x + lengthdir_x(other.thrustYOffset, other.image_angle - 90) + lengthdir_x(other.thrustXOffset, other.image_angle - 180);
+		y = other.y + lengthdir_y(other.thrustXOffset, other.image_angle - 180) + lengthdir_y(other.thrustYOffset, other.image_angle - 90);
 		image_angle = other.image_angle;
 	}
 
 with (player1Thrust2)
 	{
-		x = other.x + lengthdir_x(5, other.image_angle + 90) + lengthdir_x(20, other.image_angle - 180);
-		y = other.y + lengthdir_y(20, other.image_angle - 180) - lengthdir_y(5, other.image_angle - 90);
+		x = other.x + lengthdir_x(other.thrustYOffset, other.image_angle + 90) + lengthdir_x(other.thrustXOffset, other.image_angle - 180);
+		y = other.y + lengthdir_y(other.thrustXOffset, other.image_angle - 180) - lengthdir_y(other.thrustYOffset, other.image_angle - 90);
 		image_angle = other.image_angle;
 	}
 

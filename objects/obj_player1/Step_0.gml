@@ -177,7 +177,7 @@ if (missile == true)
 	if (missileAmmo <= 0) missile = false;
 }
 
-//show_debug_message(overheat);
+
 
 if (overheat < 10)									//cooldown weapon only if not overheated
 {
