@@ -35,7 +35,7 @@ if (gameOver == false)
 
 if (gameOver = true) and (takeSnapShot = true)
 {
-	
+	allObjects = 0;
 	var offset = 0;
 	for (var i = 0; i < instance_count; ++i)
 	{
