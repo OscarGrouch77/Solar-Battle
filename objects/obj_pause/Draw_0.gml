@@ -18,14 +18,14 @@ if(paused)
 	{
 		//draw menu box
 		draw_set_alpha(0.9);
-	    draw_rectangle(boxLeft, boxTop, boxRight, boxBot, 0);
+	    draw_rectangle(boxLeft, boxBot, boxRight, boxTop, 0);
 		draw_set_colour(c_white);
-		draw_rectangle(boxLeft, boxTop, boxRight, boxBot, 1);
+		draw_rectangle(boxLeft, boxBot, boxRight, boxTop, 1);
 		//draw contents of menu box
 		draw_set_valign(fa_top);
 		draw_set_font(fnt_menu);
 		draw_set_color(c_white);
-		draw_text(room_width * 0.5, boxTop + Vspacing, "PAUSED");
+		draw_text(room_width * 0.5, boxTop + Vspacing * 0.5, "PAUSED");
 		//draw menu buttons
 		draw_set_font(fnt_powerUp);
 		if (point_in_rectangle(mouse_x, mouse_y, room_width * 0.5 - string_width("QUIT TO MENU") * 0.5, boxTop + Vspacing * 3, room_width * 0.5 + string_width("QUIT TO MENU") * 0.5, boxTop + Vspacing * 3 + string_height("QUIT TO MENU")))

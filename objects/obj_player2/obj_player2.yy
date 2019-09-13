@@ -105,16 +105,6 @@
             "m_owner": "90614845-7168-480a-871d-31e6337a1d80"
         },
         {
-            "id": "260902aa-5b08-4edb-b170-baf55cac5d8e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "2c5d0b1b-dd54-4f0d-bb2a-c5bb9a9a1655",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "90614845-7168-480a-871d-31e6337a1d80"
-        },
-        {
             "id": "13cbfbff-4ea5-4a40-87c4-6006070da4f0",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -304,7 +294,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "True",
             "varName": "missile",
             "varType": 3
         },
@@ -318,7 +308,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "2",
             "varName": "missileAmmo",
             "varType": 1
         },

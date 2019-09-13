@@ -1,6 +1,4 @@
 /// set variables
-
-
 x = obj_sun.x - (room_width/4);
 y = obj_sun.y;
 
@@ -26,11 +24,3 @@ with (player1Thrust2) image_index = 5;
 //dimensions of sprite for sheild sizing
 width = bbox_right - bbox_left;
 height = bbox_bottom - bbox_top;
-
-
-
-//shadHP1[1] = 0;
-//shadHP1[0] = 0;
-
-//shadHP2[1] = 0;
-//shadHP2[0] = 0;
