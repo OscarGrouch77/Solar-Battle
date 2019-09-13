@@ -1,11 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//end game if esc pressed
-if (keyboard_check(vk_escape))
-{
-	game_end();
-}
+
 
 //makes cursor invisible if game in progress
 if (gameOver == false)

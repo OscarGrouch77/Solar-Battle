@@ -1,12 +1,7 @@
-/// @description Insert description here
+/// @description system for 2 player duel
 // You can write your code in this editor
 
 
-//end game if esc pressed
-if (keyboard_check(vk_escape))
-{
-	game_end();
-}
 
 //makes cursor invisible if game in progress
 
@@ -35,7 +30,7 @@ if (gameOver = false)
 
 if (gameOver = true) and (takeSnapShot = true)
 {
-	
+	allObjects = 0;
 	var offset = 0;
 	for (var i = 0; i < instance_count; ++i)
 	{
