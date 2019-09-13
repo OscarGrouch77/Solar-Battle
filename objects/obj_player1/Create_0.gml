@@ -9,6 +9,7 @@ thrustYOffset = 5;
 thrustXOffset = 16;
 switch(sprite_index)
 {
+	case spr_player1: thrustYOffset = 5; thrustXOffset = 24; break;
 	case spr_playerShipType2: thrustYOffset = 16; thrustXOffset = 28; break;
 	case spr_player1v2: thrustYOffset = 5; thrustXOffset = 19; break;
 	case spr_alien1: thrustYOffset = 9; thrustXOffset = 25; break;
