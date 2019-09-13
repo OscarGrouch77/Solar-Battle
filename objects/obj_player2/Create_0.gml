@@ -25,6 +25,10 @@ with (player2Thrust2) image_index = 5;
 width = bbox_right - bbox_left;
 height = bbox_bottom - bbox_top;
 
+//define engine sound
+eng = audio_play_sound(snd_engine2,0,1);
+audio_stop_sound(eng);
+
 //shadHP1[1] = 0;
 //shadHP1[0] = 0;
 

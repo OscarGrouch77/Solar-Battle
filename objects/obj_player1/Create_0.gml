@@ -24,3 +24,7 @@ with (player1Thrust2) image_index = 5;
 //dimensions of sprite for sheild sizing
 width = bbox_right - bbox_left;
 height = bbox_bottom - bbox_top;
+
+//define engine sound
+eng = audio_play_sound(snd_engine1,0,1);
+audio_stop_sound(eng);
