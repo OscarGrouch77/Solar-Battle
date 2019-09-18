@@ -10,5 +10,3 @@ draw_set_valign(fa_middle);
 draw_text(room_width/2, 100, "HIGH SCORES");
 draw_set_color(c_white);
 draw_highscore(room_width/2 - 200, 200, room_width/2 + 200, room_height/2 + 200);
-
-draw_text(10, 10, "HeLLo World");
