@@ -43,7 +43,7 @@ if (awardScore == true)
 	{
 		allObjects = 0;
 		var offset = 0;
-		for (var i = 0; i < instance_count; ++i)
+		for (var i = 0; i < instance_count; i++)
 		{
 			if (instance_find(all, i).sprite_index != -1)
 			{
@@ -58,7 +58,7 @@ if (awardScore == true)
 				allObjects[i - offset, 8] = instance_find(all, i).image_alpha;
 			}
 			else
-			++offset;
+			offset++;
 		}
 		gamePaused = true;
 		audio_stop_sound(snd_engine1);

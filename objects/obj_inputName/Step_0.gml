@@ -19,3 +19,6 @@ if(keyboard_check_pressed(vk_enter))
 	obj_survivalSystem.showHighScore = true;
 	instance_destroy();
 }
+
+textAlpha = textAlpha + alphaBounce;
+if (textAlpha <= 0.4) or (textAlpha >=1) alphaBounce = -alphaBounce;
