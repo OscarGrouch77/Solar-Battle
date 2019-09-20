@@ -41,7 +41,7 @@ if (thrusting == true){
 }
 
 if (reversing == true){
-	motion_add(image_angle, -thrust/2);
+	motion_add(image_angle, -thrust*0.5);
 }
 
 
@@ -77,7 +77,7 @@ if (disSun < 200)
 		
 	
 
-//state behaviours
+//state behaviours AI
 
 if (state == states1.idle)
 #region//idle behaviour
@@ -283,7 +283,7 @@ if (firing == true) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 	}
 	if (double == true)
@@ -294,7 +294,7 @@ if (firing == true) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet2
@@ -302,10 +302,10 @@ if (firing == true) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 	}
-	cooldown = 15;
+	cooldown = fireRate;
 	overheat = overheat + 2;
 	audio_sound_pitch(snd_pew,1.2);
 	audio_play_sound(snd_pew,0,0);

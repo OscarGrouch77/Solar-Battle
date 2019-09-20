@@ -667,6 +667,34 @@
             "value": "0",
             "varName": "aimTol",
             "varType": 0
+        },
+        {
+            "id": "7d571f10-8090-4e0f-9dae-f0cddca528fe",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "15",
+            "varName": "fireRate",
+            "varType": 0
+        },
+        {
+            "id": "83c4cc9a-b665-4ca5-9731-c65971c5187d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "spray",
+            "varType": 0
         }
     ],
     "solid": false,

@@ -309,6 +309,20 @@
             "varType": 3
         },
         {
+            "id": "8dccb6f6-132c-4326-9792-ee0fd8c523ae",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "missileActive",
+            "varType": 3
+        },
+        {
             "id": "d153f4a0-a389-4d8d-84ef-0f02c3951d36",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -393,7 +407,35 @@
             "varType": 5
         },
         {
-            "id": "8dccb6f6-132c-4326-9792-ee0fd8c523ae",
+            "id": "5d4ec1f4-a736-41c5-b838-adf15c1a8e4c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0.05",
+            "varName": "thrust",
+            "varType": 0
+        },
+        {
+            "id": "7c05c8fc-673f-4c53-b2f6-85789a8ad9f6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "15",
+            "varName": "fireRate",
+            "varType": 0
+        },
+        {
+            "id": "97c28320-7447-41c7-84f1-5e02c3219e7e",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -403,8 +445,8 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "missileActive",
-            "varType": 3
+            "varName": "spray",
+            "varType": 0
         }
     ],
     "solid": false,

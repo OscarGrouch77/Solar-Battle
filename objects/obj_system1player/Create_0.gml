@@ -11,6 +11,7 @@ takeSnapShot = false;
 dEnemy = obj_cpuDuelEasy;
 
 
+
 if (global.difficulty == 0) dEnemy = obj_cpuDuelEasy;
 if (global.difficulty == 1) dEnemy = obj_cpuDuelStd;
 if (global.difficulty == 2) dEnemy = obj_cpuDuelHard;

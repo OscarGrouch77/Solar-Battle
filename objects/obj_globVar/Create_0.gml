@@ -12,6 +12,7 @@ global.multiplier = 1;
 global.roundBonus = 0;
 global.roundEnd = false;
 global.name = "";
+global.p1Ship = spr_player1v2;
 enum gameType
 {
 	oneDuel,

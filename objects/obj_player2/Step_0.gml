@@ -12,12 +12,12 @@ image_angle+=((keyboard_check(global.p2Left)) - (keyboard_check(global.p2Right))
 
 if(keyboard_check(global.p2Thrust))					///thrust in the direction ship is pointing
 {	
-		motion_add(image_angle,.05);
+		motion_add(image_angle,thrust);
 }
 
 if(keyboard_check(global.p2Reverse))					///reverse thrust
 {	
-		motion_add(image_angle - 180,.025);
+		motion_add(image_angle - 180,thrust*0.5);
 }
 
 //// engine sounds	
@@ -102,7 +102,7 @@ if (keyboard_check(global.p2Fire)) and (cooldown <= 0)
 			sprite_index = spr_bullet1;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 	}
 	if (double == true)
@@ -114,7 +114,7 @@ if (keyboard_check(global.p2Fire)) and (cooldown <= 0)
 			sprite_index = spr_bullet1;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet2
@@ -123,10 +123,10 @@ if (keyboard_check(global.p2Fire)) and (cooldown <= 0)
 			sprite_index = spr_bullet1;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 	}
-	cooldown = 15;
+	cooldown = fireRate;
 	overheat = overheat + 2;
 	audio_sound_pitch(snd_pew2,random_range(0.9, 1.2));
 	audio_play_sound(snd_pew2,0,0);

@@ -31,12 +31,12 @@ image_angle+=(keyboard_check(global.p1Left) - keyboard_check(global.p1Right)) * 
 
 if(keyboard_check(global.p1Thrust))					///thrust in the direction ship is pointing
 {	
-	motion_add(image_angle,.05);
+	motion_add(image_angle, thrust);
 }
 		
 if(keyboard_check(global.p1Reverse))					///reverse thrust
 {	
-	motion_add(image_angle - 180,.025);
+	motion_add(image_angle - 180,thrust*0.5);
 }
 		
 //// engine sounds	
@@ -119,7 +119,7 @@ if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 	}
 	if (double == true)												//double bullets if double power up active
@@ -130,7 +130,7 @@ if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
 		with bullet2
@@ -138,10 +138,10 @@ if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 		}
 	}
-	cooldown = 15
+	cooldown = fireRate;
 	overheat = overheat + 2;
 	audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
 	audio_play_sound(snd_pew4,0,0);

@@ -41,7 +41,7 @@ if (thrusting == true){
 }
 
 if (reversing == true){
-	motion_add(image_angle, -thrust/2);
+	motion_add(image_angle, -thrust*0.5);
 }
 
 
@@ -283,7 +283,7 @@ if (firing == true) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 			sprite_index = spr_bullet1;
 		}
 	}
@@ -295,7 +295,7 @@ if (firing == true) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 			sprite_index = spr_bullet1;
 		}
 		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
@@ -304,11 +304,11 @@ if (firing == true) and (cooldown <= 0)
 			owner = other.id;
 			speed = other.speed;
 			direction = other.direction;
-			motion_add(other.playerDir, other.bulletSpeed);
+			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
 			sprite_index = spr_bullet1;
 		}
 	}
-	cooldown = 15;
+	cooldown = fireRate;
 	overheat = overheat + 2;
 	audio_sound_pitch(snd_pew2,1.2);
 	audio_play_sound(snd_pew2,0,0);

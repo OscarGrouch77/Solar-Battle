@@ -653,6 +653,34 @@
             "value": "0",
             "varName": "missileAmmo",
             "varType": 1
+        },
+        {
+            "id": "4b8a215c-c337-49d4-9ebf-5c4d9cd3a04b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "15",
+            "varName": "fireRate",
+            "varType": 0
+        },
+        {
+            "id": "f40c5daa-b866-4059-a8c0-141534d4108c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "spray",
+            "varType": 0
         }
     ],
     "solid": false,

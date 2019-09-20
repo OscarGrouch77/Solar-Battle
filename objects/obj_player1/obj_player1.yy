@@ -459,6 +459,48 @@
             "value": "0",
             "varName": "timer",
             "varType": 0
+        },
+        {
+            "id": "b82fcf1d-30ae-41c0-8ee3-bc84b475d200",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0.05",
+            "varName": "thrust",
+            "varType": 0
+        },
+        {
+            "id": "d409d2b0-38f0-4c95-94e9-5f1f7f3120be",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "15",
+            "varName": "fireRate",
+            "varType": 0
+        },
+        {
+            "id": "c9ba4c5e-10cc-4602-ad06-a5df1372db96",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "spray",
+            "varType": 0
         }
     ],
     "solid": false,

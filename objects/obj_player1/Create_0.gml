@@ -5,6 +5,7 @@ y = obj_sun.y;
 //sets position of rocket nozzle according to ship sprite
 thrustYOffset = 5;
 thrustXOffset = 16;
+sprite_index = global.p1Ship;
 switch(sprite_index)
 {
 	case spr_player1: thrustYOffset = 5; thrustXOffset = 24; break;

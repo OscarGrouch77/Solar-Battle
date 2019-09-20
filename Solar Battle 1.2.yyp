@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "04e121e2-b824-4f39-b6f4-6a26ba9b3a08",
+            "Value": {
+                "id": "2af08075-1985-4f8c-b747-fd4e7e5fd3e5",
+                "resourcePath": "objects\\obj_shipSelectp1\\obj_shipSelectp1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0615287f-8f8e-48f2-a4ab-999910072a98",
             "Value": {
                 "id": "85b81c82-0e62-4191-93c9-c9c231267590",
@@ -187,6 +195,14 @@
             "Value": {
                 "id": "270e7acc-530d-4239-9abd-89913266268a",
                 "resourcePath": "objects\\obj_doubleText\\obj_doubleText.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "15b3a063-f531-43ed-90cb-212326dddbf1",
+            "Value": {
+                "id": "7d838db7-5433-4c1d-9993-dba5bd241457",
+                "resourcePath": "objects\\obj_repairText\\obj_repairText.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -871,6 +887,14 @@
             }
         },
         {
+            "Key": "749916f0-9954-46d0-86b1-3d1c6a4d0149",
+            "Value": {
+                "id": "0a0af361-38e2-4128-b9b2-1560f200fcd6",
+                "resourcePath": "rooms\\rm_shipSelect1p\\rm_shipSelect1p.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "74b5c804-1ac8-4525-8dbb-05398ab1d653",
             "Value": {
                 "id": "ee0b64b4-a2ff-4bed-abc3-8ea1f429d679",
@@ -1083,6 +1107,14 @@
             "Value": {
                 "id": "fc731ebd-01a2-477b-bed4-76054964c69a",
                 "resourcePath": "objects\\obj_aim\\obj_aim.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8d8a30f3-dd64-4b59-83f0-50ce5706378c",
+            "Value": {
+                "id": "987ec846-8a6a-4a7b-9c82-ce0d5362c403",
+                "resourcePath": "objects\\obj_1000Text\\obj_1000Text.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1500,6 +1532,14 @@
                 "id": "eb247264-06ff-47c0-864f-16d9af4b1fd1",
                 "resourcePath": "sprites\\spr_thruster2\\spr_thruster2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cfc1ecee-cab4-46cf-80be-6b13832a1430",
+            "Value": {
+                "id": "cd15fb5a-8092-4684-bec5-baddf6dc6085",
+                "resourcePath": "objects\\obj_menuButton1PlayerOK\\obj_menuButton1PlayerOK.yy",
+                "resourceType": "GMObject"
             }
         },
         {
