@@ -1538,7 +1538,7 @@
             "Key": "cfc1ecee-cab4-46cf-80be-6b13832a1430",
             "Value": {
                 "id": "cd15fb5a-8092-4684-bec5-baddf6dc6085",
-                "resourcePath": "objects\\obj_menuButton1PlayerOK\\obj_menuButton1PlayerOK.yy",
+                "resourcePath": "objects\\obj_menuButton1PlayerStart\\obj_menuButton1PlayerStart.yy",
                 "resourceType": "GMObject"
             }
         },

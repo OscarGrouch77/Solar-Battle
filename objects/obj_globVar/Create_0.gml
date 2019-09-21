@@ -13,6 +13,9 @@ global.roundBonus = 0;
 global.roundEnd = false;
 global.name = "";
 global.p1Ship = spr_player1v2;
+global.p2Ship = spr_playerShipType2;
+
+
 enum gameType
 {
 	oneDuel,

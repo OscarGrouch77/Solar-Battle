@@ -7,6 +7,6 @@ if (point_in_rectangle(mouse_x, mouse_y, x, y, x + 140, y + 40))
 	{
 		global.difficulty = 1;
 		global.gameType = gameType.oneDuel;
-		room_goto(rm_game1p);
+		room_goto(rm_shipSelect1p);
 	}
 }

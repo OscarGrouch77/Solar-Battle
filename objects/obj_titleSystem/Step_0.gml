@@ -11,6 +11,7 @@ if (keyboard_check_pressed(vk_escape))
 		case rm_highscore: room_goto(rm_settings); break;
 		case rm_duelTypeSelect: room_goto(rm_gameSelect); break;
 		case rm_difficultySelect: room_goto(rm_duelTypeSelect); break;
+		case rm_shipSelect1p: room_goto(rm_difficultySelect); break;
 	}
 }
 

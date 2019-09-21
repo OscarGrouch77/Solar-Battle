@@ -13,5 +13,14 @@ if (mouse_check_button_pressed(mb_left))
 	}
 }
 
+if (keyboard_check_pressed(global.p1Left))
+{
+	choice = choice - 1;
+}
+if (keyboard_check_pressed(global.p1Right))
+{
+	choice = choice + 1;
+}
+
 if (choice > array_height_2d(ship) - 1) choice = 0;
 if (choice < 0) choice = array_height_2d(ship) - 1;
