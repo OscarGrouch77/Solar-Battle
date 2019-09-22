@@ -15,3 +15,10 @@ ship[0,0] = 12;
 choice = 0;
 
 Vcentre = room_width/3;
+
+confirm = instance_create_layer(Vcentre, 700, "Ships", obj_menuButtonGeneric);
+with confirm
+{
+	buttonText = "CONFIRM";
+	roomTarget = rm_game1p;
+}
