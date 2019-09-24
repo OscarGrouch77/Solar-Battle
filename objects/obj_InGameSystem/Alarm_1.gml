@@ -1,4 +1,4 @@
-/// @description checks for player 2 victory
+/// @description checks for player 1 victory
 // You can write your code in this editor
 
 

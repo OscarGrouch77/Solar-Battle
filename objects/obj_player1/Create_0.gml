@@ -8,10 +8,10 @@ thrustXOffset = 16;
 sprite_index = global.p1Ship;
 switch(sprite_index)
 {
-	case spr_player1: thrustYOffset = 5; thrustXOffset = 24; break;
-	case spr_playerShipType2: thrustYOffset = 16; thrustXOffset = 28; break;
-	case spr_player1v2: thrustYOffset = 5; thrustXOffset = 19; break;
-	case spr_alien1: thrustYOffset = 9; thrustXOffset = 25; break;
+	case spr_player1: thrustYOffset = 5; thrustXOffset = 24; thrust = 0.07; fireRate = 15; spray = 0; missileAmmo = 0; missile = false; break;
+	case spr_playerShipType2: thrustYOffset = 16; thrustXOffset = 28; thrust = 0.06; fireRate = 10; spray = 10; missileAmmo = 0; missile = false; break;
+	case spr_player1v2: thrustYOffset = 5; thrustXOffset = 19; thrust = 0.05; fireRate = 13; spray = 5; missileAmmo = 2; missile = true; break;
+	case spr_alien1: thrustYOffset = 9; thrustXOffset = 25; thrust = 0.07; fireRate = 10; spray = 10; missileAmmo = 0 missile = false; break;
 }
 
 
