@@ -43,7 +43,7 @@ if(instance_exists(enemy))
 			aimAt = point_direction(0,0,aimX,aimY);
 		
 			//firing if close enough - 100 is bullet lifetime - aimTol is aim tolerance
-			if (timeToHit <= 110)
+			if (timeToHit <= bulletLife + 10)
 				{
 					if (abs(angle_difference(image_angle, aimAt)) < aimTol)
 					{
@@ -121,7 +121,7 @@ if(instance_exists(enemy))
 			aimAt = point_direction(x, y, aimX5, aimY5);
 				
 			//firing if close enough - 100 is bullet lifetime
-			if (timeToHit5 <= 110)
+			if (timeToHit5 <= bulletLife + 10)
 			{
 				if (abs(angle_difference(image_angle, aimAt)) < aimTol)
 				{
@@ -202,7 +202,7 @@ if(instance_exists(enemy))
 		aimAt = point_direction(x, y, aimX5, aimY5);
 				
 		//firing if close enough - 100 is bullet lifetime
-		if (timeToHit5 <= 110)
+		if (timeToHit5 <= bulletLife + 10)
 		{
 			if (abs(angle_difference(image_angle, aimAt)) < aimTol)
 			{
@@ -271,7 +271,7 @@ if(instance_exists(enemy))
 			aimAt = point_direction(x, y, aimX4, aimY4);
 				
 			//firing if close enough - 100 is bullet lifetime
-			if (timeToHit4 <= 110)
+			if (timeToHit4 <= bulletLife + 10)
 			{
 				if (abs(angle_difference(image_angle, aimAt)) < aimTol)
 				{
@@ -333,7 +333,7 @@ if(instance_exists(enemy))
 		aimAt = point_direction(x, y, aimX3, aimY3);
 				
 		//firing if close enough - 100 is bullet lifetime
-		if (timeToHit3 <= 110)
+		if (timeToHit3 <= bulletLife + 10)
 		{
 			if (abs(angle_difference(image_angle, aimAt)) < aimTol)
 			{
@@ -386,7 +386,7 @@ if(instance_exists(enemy))
 		aimAt = point_direction(x, y, aimX2, aimY2);
 				
 		//firing if close enough - 100 is bullet lifetime
-		if (timeToHit2 <= 110)
+		if (timeToHit2 <= bulletLife + 10)
 		{
 			if (abs(angle_difference(image_angle, aimAt)) < aimTol)
 			{

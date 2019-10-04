@@ -12,6 +12,7 @@ shield = false;
 double = false;
 supercool = false;
 bulletSpeed = 8;
+bulletLife = 100;
 chosen = false;
 
 //variables for AI

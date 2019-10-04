@@ -4,18 +4,19 @@
     "mvc": "1.0",
     "name": "obj_cpuSurvivalEasy",
     "eventList": [
-        
+        {
+            "id": "9b77812b-d22f-4ad4-9708-5d205b0dd1a1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "0ff0c153-27b8-4bdd-bc84-f2ef8878cfb2"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
-        {
-            "id": "51621a78-b45b-4145-a66d-4d15025d8fdc",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "33642783-fbd4-4b37-955d-8d7b28f01beb",
-            "propertyId": "a69e5cc4-6c1f-456d-ba56-3cd4063db7f3",
-            "value": "3"
-        },
         {
             "id": "6077dd86-2e93-4071-b803-ce42701d798e",
             "modelName": "GMOverriddenProperty",
@@ -63,6 +64,14 @@
             "objectId": "33642783-fbd4-4b37-955d-8d7b28f01beb",
             "propertyId": "a10a81ac-4cf0-44fd-a020-c92f7f8d854d",
             "value": "0.02"
+        },
+        {
+            "id": "b57fe475-f077-401c-8e75-f27adbb7af80",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "33642783-fbd4-4b37-955d-8d7b28f01beb",
+            "propertyId": "a69e5cc4-6c1f-456d-ba56-3cd4063db7f3",
+            "value": "3"
         }
     ],
     "parentObjectId": "33642783-fbd4-4b37-955d-8d7b28f01beb",

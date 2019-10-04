@@ -14,6 +14,6 @@ ship[0,0] = 12;
 
 choice = 0;
 
-Vcentre = room_width/3;
+Vcentre = room_width/3 * 2;
 
 

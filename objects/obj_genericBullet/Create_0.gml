@@ -12,4 +12,5 @@ with glow
 	owner = other.id;
 }
 
-alarm[0] = bulletLife;
+alarm[1] = 1;
+

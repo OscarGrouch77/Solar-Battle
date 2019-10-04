@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "0fd107c2-91e4-4c04-b2d7-e1e4b3f18988",
+            "Value": {
+                "id": "e89f0162-06d4-4c62-835d-b70fc52b8520",
+                "resourcePath": "rooms\\rm_shipSelect2p\\rm_shipSelect2p.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "0ff0c153-27b8-4bdd-bc84-f2ef8878cfb2",
             "Value": {
                 "id": "d121024a-7cae-4ee4-9af1-d6b00c1f5509",
@@ -335,6 +343,14 @@
             }
         },
         {
+            "Key": "2ec00385-9980-48c4-b427-7df4a538fe1d",
+            "Value": {
+                "id": "2cd482ad-ddda-47ea-aa7c-c1b04910944f",
+                "resourcePath": "objects\\obj_menuButton2PlayerStart\\obj_menuButton2PlayerStart.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2fd5c857-86f3-453c-a98e-f4e738b88599",
             "Value": {
                 "id": "c2de0e11-9908-455c-ab39-114c0fbaae29",
@@ -436,6 +452,14 @@
                 "id": "f3e94970-bbcb-4644-b8ab-fab2e717fa5d",
                 "resourcePath": "objects\\obj_laser1\\obj_laser1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "36ae038a-9276-4104-b7d8-537fa7983b84",
+            "Value": {
+                "id": "f36518fc-5ce6-4a15-b6d0-f6ca01962ced",
+                "resourcePath": "rooms\\rm_shipSelectSurvival\\rm_shipSelectSurvival.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1479,6 +1503,14 @@
             }
         },
         {
+            "Key": "c84aae19-047f-464c-aaa7-6ce357324f56",
+            "Value": {
+                "id": "03ac0746-dc52-4d9c-9a1a-be6ffbf61268",
+                "resourcePath": "objects\\obj_menuButtonSurvivalStart\\obj_menuButtonSurvivalStart.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c919bde4-522d-4251-898b-c10224a2a027",
             "Value": {
                 "id": "fbfa23f1-ec2a-4a6c-b110-542ff299ea8a",
@@ -1516,6 +1548,14 @@
                 "id": "ae51596a-2585-442d-84e0-04ca9829f3c6",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "ccce307d-e8a1-4b50-8d85-3715f7a52fbd",
+            "Value": {
+                "id": "2a035192-662f-43ff-b21b-f4f8cc121b0d",
+                "resourcePath": "objects\\obj_shipSelectp2\\obj_shipSelectp2.yy",
+                "resourceType": "GMObject"
             }
         },
         {

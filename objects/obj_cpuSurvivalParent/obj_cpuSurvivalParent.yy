@@ -389,6 +389,20 @@
             "varType": 0
         },
         {
+            "id": "fc78b0cf-ae70-4178-8eab-593aecfbbe8d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "100",
+            "varName": "bulletLife",
+            "varType": 0
+        },
+        {
             "id": "d693fae3-35f2-47f4-91da-5bcb9891a25f",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
