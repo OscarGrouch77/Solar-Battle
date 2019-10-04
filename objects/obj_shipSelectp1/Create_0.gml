@@ -14,6 +14,11 @@ ship[0,0] = 12;
 
 choice = 0;
 
-Vcentre = room_width/3;
+if (global.gameType == gameType.twoDuel)
+{
+	Vcentre = room_width/3;
+}
+else Vcentre = room_width*0.5;
 
-
+selectButton = instance_create_layer(Vcentre, 650, "Ships", obj_menuButtonSelect1);
+lockedIn = false;

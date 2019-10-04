@@ -37,10 +37,11 @@ if (gameOver = false) and (global.roundEnd == false)
 	}
 }
 
+//create highscore buttons
 if (showHighScore == true)
 {
-	instance_create_layer(x,y, "UI", obj_menuButtonExit);
-	instance_create_layer(x,y, "UI", obj_menuButtonTryAgain);
+	if !(instance_exists(obj_menuButtonExit)) instance_create_layer(x,y, "UI", obj_menuButtonExit);
+	if !(instance_exists(obj_menuButtonTryAgain)) instance_create_layer(x,y, "UI", obj_menuButtonTryAgain);
 }
 
 

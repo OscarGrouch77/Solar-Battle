@@ -1135,6 +1135,14 @@
             }
         },
         {
+            "Key": "8cf68960-557a-4035-b3fb-6f4a8db6a958",
+            "Value": {
+                "id": "1a87699f-3ff6-4b56-8a78-5f6d4f841127",
+                "resourcePath": "objects\\obj_menuButtonGenericStart\\obj_menuButtonGenericStart.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8d8a30f3-dd64-4b59-83f0-50ce5706378c",
             "Value": {
                 "id": "987ec846-8a6a-4a7b-9c82-ce0d5362c403",
@@ -1599,6 +1607,14 @@
             }
         },
         {
+            "Key": "d311b398-ae2c-4bc9-88b8-e73c65389ace",
+            "Value": {
+                "id": "57d4a14e-9e3d-41f8-b804-14f356ced8ee",
+                "resourcePath": "objects\\obj_startController\\obj_startController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d534dce6-703f-45fb-a5fe-69e83905aa9d",
             "Value": {
                 "id": "d6ae06be-3354-414e-ba6c-1acd8fad6c74",
@@ -1676,6 +1692,14 @@
                 "id": "88d69814-20bb-437d-9df2-38e5e49a1961",
                 "resourcePath": "scripts\\scr_genericExplosion\\scr_genericExplosion.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "db3fad85-d139-48f1-b963-fa6502c09163",
+            "Value": {
+                "id": "599eaf3a-d501-4021-b950-2d5c1345ffce",
+                "resourcePath": "objects\\obj_menuButtonSelect1\\obj_menuButtonSelect1.yy",
+                "resourceType": "GMObject"
             }
         },
         {

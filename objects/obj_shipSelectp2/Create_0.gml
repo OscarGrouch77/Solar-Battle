@@ -16,4 +16,5 @@ choice = 0;
 
 Vcentre = room_width/3 * 2;
 
-
+selectButton = instance_create_layer(Vcentre, 650, "Ships", obj_menuButtonSelect1);
+lockedIn = false;

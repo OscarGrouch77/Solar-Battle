@@ -1,4 +1,4 @@
-
+//@description must create a variable "confirm" set to true in the if statement that this scr is called from
 //@argument text string 
 var text = argument0;
 var Hspacing = 35;
