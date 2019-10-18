@@ -607,6 +607,14 @@
             }
         },
         {
+            "Key": "4bb3a109-8fbf-4eb3-b26b-9c5a0ac79132",
+            "Value": {
+                "id": "6e55383e-a2d0-48fe-93b2-d997a8f31654",
+                "resourcePath": "sprites\\spr_railBullet\\spr_railBullet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4e7e5bfb-0025-40ea-83ad-45c555f1aa1a",
             "Value": {
                 "id": "4aeda369-3af4-4fd6-a057-21c93444b281",
