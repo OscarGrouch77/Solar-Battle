@@ -5,7 +5,7 @@ if (global.gameType == gameType.oneDuel)
 {
 	if (obj_shipSelectp1.lockedIn) and !(instance_exists(obj_menuButtonGenericStart))
 	{
-		instance_create_layer(room_width*0.5, room_height*0.8, "Ships", obj_menuButtonGenericStart);
+		instance_create_layer(room_width*0.05, room_height*0.8, "Ships", obj_menuButtonGenericStart);
 	}
 	if !(obj_shipSelectp1.lockedIn)
 	{
@@ -17,7 +17,7 @@ if (global.gameType == gameType.survival)
 {
 	if (obj_shipSelectp1.lockedIn) and !(instance_exists(obj_menuButtonGenericStart))
 	{
-		instance_create_layer(room_width*0.5, room_height*0.8, "Ships", obj_menuButtonGenericStart);
+		instance_create_layer(room_width*0.05, room_height*0.8, "Ships", obj_menuButtonGenericStart);
 	}
 	if !(obj_shipSelectp1.lockedIn)
 	{
@@ -31,7 +31,7 @@ if (global.gameType == gameType.twoDuel)
 	{
 		if !(instance_exists(obj_menuButtonGenericStart))
 		{
-			instance_create_layer(room_width*0.5, room_height*0.8, "Ships", obj_menuButtonGenericStart);
+			instance_create_layer(room_width*0.05, room_height*0.8, "Ships", obj_menuButtonGenericStart);
 		}
 	}
 	else instance_destroy(obj_menuButtonGenericStart);

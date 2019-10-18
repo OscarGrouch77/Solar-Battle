@@ -722,7 +722,7 @@
             "Key": "5addae0c-7646-42e5-8f03-473270f21658",
             "Value": {
                 "id": "2a4d9cec-8f4e-46e3-8d64-743123eb1558",
-                "resourcePath": "sprites\\spr_player1v2\\spr_player1v2.yy",
+                "resourcePath": "sprites\\spr_axion\\spr_axion.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -802,7 +802,7 @@
             "Key": "63a27ede-78a7-4b9b-98c1-c5b01f3d3c8b",
             "Value": {
                 "id": "1ab2019c-816a-494a-ba76-fdf9c283e645",
-                "resourcePath": "sprites\\spr_alien1\\spr_alien1.yy",
+                "resourcePath": "sprites\\spr_arachnid\\spr_arachnid.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1346,7 +1346,7 @@
             "Key": "b68840cd-38ae-4db5-942d-938e268c0eb7",
             "Value": {
                 "id": "6f03c2e8-e5a8-4014-81fd-7e319f0b291f",
-                "resourcePath": "sprites\\spr_player1\\spr_player1.yy",
+                "resourcePath": "sprites\\spr_longbow\\spr_longbow.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1615,6 +1615,14 @@
             }
         },
         {
+            "Key": "d47b0790-4e5c-4fa2-932c-ddb83427e8c0",
+            "Value": {
+                "id": "91c10389-0df3-4601-a318-e0ed8e0d77fa",
+                "resourcePath": "fonts\\fnt_easyRead1\\fnt_easyRead1.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "d534dce6-703f-45fb-a5fe-69e83905aa9d",
             "Value": {
                 "id": "d6ae06be-3354-414e-ba6c-1acd8fad6c74",
@@ -1698,7 +1706,7 @@
             "Key": "db3fad85-d139-48f1-b963-fa6502c09163",
             "Value": {
                 "id": "599eaf3a-d501-4021-b950-2d5c1345ffce",
-                "resourcePath": "objects\\obj_menuButtonSelect1\\obj_menuButtonSelect1.yy",
+                "resourcePath": "objects\\obj_menuButtonLockIn\\obj_menuButtonLockIn.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1850,7 +1858,7 @@
             "Key": "f3536953-cbdf-4b6c-9ba7-095e875c8f58",
             "Value": {
                 "id": "03aa800c-352d-4cde-87bd-e64ff74c0b68",
-                "resourcePath": "sprites\\spr_playerShipType2\\spr_playerShipType2.yy",
+                "resourcePath": "sprites\\spr_brawler\\spr_brawler.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1884,6 +1892,14 @@
                 "id": "8e5f864b-6210-4fc0-8ab9-4e48fbb272e4",
                 "resourcePath": "sprites\\spr_1playerSelect\\spr_1playerSelect.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f6fc2b71-876d-4784-a1d6-2d94926a6178",
+            "Value": {
+                "id": "258e615f-c5a3-4b3e-918a-fade217597ab",
+                "resourcePath": "fonts\\fnt_stats\\fnt_stats.yy",
+                "resourceType": "GMFont"
             }
         },
         {

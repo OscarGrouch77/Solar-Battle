@@ -15,10 +15,10 @@ thrustXOffset = 16;
 //changes variables according to ship sprite
 switch(sprite_index)
 {
-	case spr_player1: thrustYOffset = 5; thrustXOffset = 24; thrust = 0.07; fireRate = 16; spray = 0; missileAmmo = 0; missile = false; bulletSpeed = 9; bulletLife = 150; break;
-	case spr_playerShipType2: thrustYOffset = 16; thrustXOffset = 28; thrust = 0.06; fireRate = 10; spray = 7; missileAmmo = 0; missile = false; bulletSpeed = 6.5; break;
-	case spr_player1v2: thrustYOffset = 5; thrustXOffset = 19; thrust = 0.05; fireRate = 13; spray = 3; missileAmmo = 2; missile = true; bulletSpeed = 8; break;
-	case spr_alien1: thrustYOffset = 9; thrustXOffset = 25; thrust = 0.07; fireRate = 12; spray = 10; missileAmmo = 0 missile = false; bulletSpeed = 6; break;
+	case spr_axion: thrustYOffset = 5; thrustXOffset = 19; thrust = global.shipStats[0,2]/100; fireRate = 30 - (global.shipStats[0,3]*3); spray = 10 - global.shipStats[0,5]; missileAmmo = 2; missile = true; bulletSpeed = 8; bulletLife = 100; break;
+	case spr_brawler: thrustYOffset = 16; thrustXOffset = 28; thrust = global.shipStats[1,2]/100; fireRate = 30 - (global.shipStats[1,3]*2); spray = 10 - global.shipStats[1,5]; missileAmmo = 0; missile = false; bulletSpeed = 6.5; bulletLife = 100; break;
+	case spr_longbow: thrustYOffset = 5; thrustXOffset = 24; thrust = global.shipStats[2,2]/100; fireRate = 30 - (global.shipStats[2,3]*2); spray = 10 - global.shipStats[2,5]; missileAmmo = 0; missile = false; bulletSpeed = 12; bulletLife = 150; break;
+	case spr_arachnid: thrustYOffset = 9; thrustXOffset = 25; thrust = global.shipStats[3,2]/100; fireRate = 30 - (global.shipStats[3,3]*2); spray = 10 - global.shipStats[3,5]; missileAmmo = 0 missile = false; bulletSpeed = 6; bulletLife = 100; break;
 }
 
 //create instances of engine thrusters

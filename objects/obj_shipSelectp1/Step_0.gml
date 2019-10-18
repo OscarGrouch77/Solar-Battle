@@ -5,12 +5,12 @@
 
 if (mouse_check_button_pressed(mb_left))
 {
-	if (point_in_triangle(mouse_x, mouse_y, Vcentre - 250, 400, Vcentre - 220, 350, Vcentre - 220, 450))
+	if (point_in_triangle(mouse_x, mouse_y, Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280))
 	{
 		selectButton.select = false;
 		choice = choice - 1;
 	}
-	if (point_in_triangle(mouse_x, mouse_y, Vcentre + 250, 400, Vcentre + 220, 350, Vcentre + 220, 450))
+	if (point_in_triangle(mouse_x, mouse_y, Vcentre + 250, Vtop + 230, Vcentre + 220, Vtop + 180, Vcentre + 220, Vtop + 280))
 	{
 		selectButton.select = false;
 		choice = choice + 1;

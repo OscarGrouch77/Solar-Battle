@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_set_font(fnt_scoreBig);
-if (point_in_rectangle(mouse_x, mouse_y, x - string_width("START")*0.5, y - string_height("START")*0.5, x + string_width("START")*0.5, y + string_height("START")*0.5))
+if (point_in_rectangle(mouse_x, mouse_y, x, y - string_height("START")*0.5, x + string_width("START"), y + string_height("START")*0.5))
 {
 	if (mouse_check_button_pressed(mb_left))
 	{

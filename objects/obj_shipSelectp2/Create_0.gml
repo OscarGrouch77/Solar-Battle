@@ -3,18 +3,27 @@
 
 
 //initialise 2d array of ship sprite and Y offsets
-ship[3,1] = spr_alien1;
+ship[3,1] = spr_arachnid;
 ship[3,0] = 0;
-ship[2,1] = spr_playerShipType2;
-ship[2,0] = 0
-ship[1,1] = spr_player1v2;
-ship[1,0] = 10;
-ship[0,1] = spr_player1;
-ship[0,0] = 12;
+ship[2,1] = spr_longbow;
+ship[2,0] = 12;
+ship[1,1] = spr_brawler;
+ship[1,0] = 0;
+ship[0,1] = spr_axion;
+ship[0,0] = 10;
 
 choice = 0;
 
 Vcentre = room_width/3 * 2;
+Vtop = 90;
 
-selectButton = instance_create_layer(Vcentre, 650, "Ships", obj_menuButtonSelect1);
+//create "lock in" button and lockedIn variable
+selectButton = instance_create_layer(Vcentre, room_height - 130, "Ships", obj_menuButtonLockIn);
 lockedIn = false;
+
+//ship stat variables
+thrustLength = 0;
+rateLength = 0;
+rangeLength = 0;
+accuracyLength = 0;
+agilityLength = 0;
