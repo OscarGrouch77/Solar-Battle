@@ -8,6 +8,11 @@ if (gamePaused == true)
 	draw_set_font(fnt_menu);
 	draw_set_color(c_white);
     draw_sprite_ext(screenShot,0,0,0,1,1,0,c_white,1);
+	draw_sprite(spr_sun, 1, room_width*0.5, room_height*0.5);
+	draw_sprite(spr_suntexture, 1, room_width*0.5, room_height*0.5);
+	draw_sprite_ext(spr_sunGlow3, 1, room_width*0.5, room_height*0.5, 0.3, 0.3, 0, c_white, 0.8);
+	draw_sprite_ext(spr_sunGlow3, 1, room_width*0.5, room_height*0.5, 1, 1, 0, c_white, 0.5);
+	draw_sprite_ext(spr_orangeGlowBig, 1, room_width*0.5, room_height*0.5, 2, 2, 0, c_white, 0.8);
 	//dim screenshot
 	draw_set_colour(c_black);
 	draw_set_alpha(0.5);
