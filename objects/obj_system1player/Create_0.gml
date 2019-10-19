@@ -9,6 +9,7 @@ gamePaused = false;
 winner = 0;
 takeSnapShot = false;
 dEnemy = obj_cpuDuelEasy;
+screenShot = -1;
 
 
 

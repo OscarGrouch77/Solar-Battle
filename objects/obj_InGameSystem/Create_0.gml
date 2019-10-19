@@ -5,4 +5,5 @@ randomize();
 gameOver = false;
 gamePaused = false;
 winner = 0;
-takeSnapShot = false
+takeSnapShot = false;
+screenShot = -1;

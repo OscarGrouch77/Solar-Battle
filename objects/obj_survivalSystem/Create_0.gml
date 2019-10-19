@@ -17,4 +17,5 @@ do
 		randY1 = irandom(room_height);
 	}
 	until (point_distance(randX1, randY1, obj_sun.x, obj_sun.y) > 200)
-	instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvival);
+instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvival);
+screenShot = -1;

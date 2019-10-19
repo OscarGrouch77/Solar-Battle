@@ -8,3 +8,4 @@ gameActive = false;
 takeSnapShot = false;
 gamePaused = false;
 timer = 0;
+screenShot = -1;

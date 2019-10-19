@@ -5,31 +5,29 @@
 //draws screen capture and dims for pause screen
 if (gamePaused = true)
 {
-	for (var i = 0; i < array_height_2d(allObjects); ++i)
-	{
-		draw_sprite_ext
-		(
-		allObjects[i, 0],
-		allObjects[i, 1],
-		allObjects[i, 2],
-		allObjects[i, 3],
-		allObjects[i, 4],
-		allObjects[i, 5],
-		allObjects[i, 6],
-		allObjects[i, 7],
-		allObjects[i, 8]
-		);	
-	}
-	draw_set_color(c_black);
-	draw_set_alpha(0.5);
-	draw_rectangle(0, 0, room_width, room_height, false);
+	//draw screenshot
 	draw_set_alpha(1);
+	draw_set_font(fnt_menu);
+	draw_set_color(c_white);
+    draw_sprite_ext(screenShot,0,0,0,1,1,0,c_white,1);
+	//dim screenshot
+	draw_set_colour(c_black);
+	draw_set_alpha(0.5);
+    draw_rectangle(0, 0, room_width, room_height, 0);
+}
+else
+{
+	if(sprite_exists(screenShot))
+		{
+			sprite_delete(screenShot);
+		}
 }
 
 
 //checks if winner or draw and displays message
 if (gameOver == true) and (winner == 1)
 {
+	draw_set_alpha(1);
 	draw_set_font(fnt_title);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_center);
@@ -40,6 +38,7 @@ if (gameOver == true) and (winner == 1)
 
 if (gameOver == true) and (winner == 2)
 {
+	draw_set_alpha(1);
 	draw_set_font(fnt_title);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_center);
@@ -50,6 +49,7 @@ if (gameOver == true) and (winner == 2)
 
 if (gameOver == true) and (winner == 0)
 {
+	draw_set_alpha(1);
 	draw_set_font(fnt_title);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_center);
@@ -60,6 +60,7 @@ if (gameOver == true) and (winner == 0)
 //displayed tallyed scores
 if (gameOver == true)
 {
+	draw_set_alpha(1);
 	draw_set_font(fnt_title);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_center);
@@ -68,6 +69,7 @@ if (gameOver == true)
 	draw_text_transformed((room_width/2) + 400, room_height/2, global.scorePlayer2, 1, 1, 0);
 }
 
+//drawing missile ammo counters
 if (instance_exists(obj_player1))
 {
 	for (var i = 0; i < obj_player1.missileAmmo; i++)

@@ -30,27 +30,10 @@ if (gameOver = false)
 
 if (gameOver = true) and (takeSnapShot = true)
 {
-	allObjects = 0;
-	var offset = 0;
-	for (var i = 0; i < instance_count; ++i)
-	{
-		if (instance_find(all, i).sprite_index != -1)
-		{
-			allObjects[i - offset, 0] = instance_find(all, i).sprite_index;
-			allObjects[i - offset, 1] = instance_find(all, i).image_index;
-			allObjects[i - offset, 2] = instance_find(all, i).x;
-			allObjects[i - offset, 3] = instance_find(all, i).y;
-			allObjects[i - offset, 4] = instance_find(all, i).image_xscale;
-			allObjects[i - offset, 5] = instance_find(all, i).image_yscale;
-			allObjects[i - offset, 6] = instance_find(all, i).image_angle;
-			allObjects[i - offset, 7] = instance_find(all, i).image_blend;
-			allObjects[i - offset, 8] = instance_find(all, i).image_alpha;
-		}
-		else
-			 ++offset;
-	}
+	audio_pause_all();
 	gamePaused = true;
-	instance_deactivate_all(true);
+	screenShot = sprite_create_from_surface(application_surface, 0, 0, room_width, room_height, 0, 0, 0, 0);
+	instance_deactivate_all(1);
 	instance_create_layer(room_width/2, (room_height/2) + 150, "Instances", obj_menuButtonAnotherRound);
 	instance_create_layer(room_width/2, (room_height/2) + 200, "Instances", obj_menuButtonExit);
 	takeSnapShot = false	
