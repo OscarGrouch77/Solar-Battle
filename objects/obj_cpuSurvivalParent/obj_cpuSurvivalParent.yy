@@ -695,6 +695,20 @@
             "value": "0",
             "varName": "spray",
             "varType": 0
+        },
+        {
+            "id": "17501940-82f7-404e-9d92-8245a048cf5d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "2",
+            "varName": "turnSpeed",
+            "varType": 0
         }
     ],
     "solid": false,

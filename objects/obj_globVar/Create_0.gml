@@ -29,7 +29,7 @@ global.gameType = gameType.oneDuel;
 //Alien Tech - Arachnid
 global.shipStats[3,8] = "The Arachnid is an Alien craft with advanced, and mysterious technology. Powerful thrusters and high rate of fire make the Arachnid ideal as a close range scrapper. Can charge shot for extra range and accuracy."
 global.shipStats[3,7] = 10
-global.shipStats[3,6] = 5
+global.shipStats[3,6] = 6
 global.shipStats[3,5] = 2
 global.shipStats[3,4] = 5
 global.shipStats[3,3] = 7
@@ -49,7 +49,7 @@ global.shipStats[2,0] = "Longbow"
 //Assault - Brawler
 global.shipStats[1,8] = "The Brawler is designed to get close to an enemy and unleash hell. This ship has high rate of fire, and powerful thrusters, but lacks range and accuracy. For best results - wait until you see the whites of their eyes!"
 global.shipStats[1,7] = 10
-global.shipStats[1,6] = 8
+global.shipStats[1,6] = 7
 global.shipStats[1,5] = 3
 global.shipStats[1,4] = 2
 global.shipStats[1,3] = 9
@@ -59,7 +59,7 @@ global.shipStats[1,0] = "Brawler"
 //Generalist - Axion
 global.shipStats[0,8] = "The Axion is a good starter ship: an all-rounder with good thrust, rate of fire, and accuracy. Jack of all trades, master of none. Comes loaded with two homing missiles as standard."
 global.shipStats[0,7] = 10
-global.shipStats[0,6] = 6
+global.shipStats[0,6] = 5
 global.shipStats[0,5] = 8
 global.shipStats[0,4] = 6
 global.shipStats[0,3] = 5
