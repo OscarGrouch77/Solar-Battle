@@ -32,3 +32,6 @@ rateLength = 0;
 rangeLength = 0;
 accuracyLength = 0;
 agilityLength = 0;
+
+//tool tip
+showTip = false;

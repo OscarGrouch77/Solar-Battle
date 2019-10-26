@@ -1,6 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (global.shipStats[choice,9] == 1)
+{
+	selectButton.active = true;
+	showTip = false;
+}
+else 
+{
+	selectButton.active = false;
+	if (point_in_rectangle(mouse_x, mouse_y, Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430))
+	{
+		showTip = true;
+	}
+	else showTip = false;
+}
 
 
 if (mouse_check_button_pressed(mb_left))

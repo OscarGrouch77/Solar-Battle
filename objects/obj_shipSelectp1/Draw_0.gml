@@ -23,13 +23,23 @@ if (selectButton.select = false)
 }
 else
 {
-	draw_set_colour(c_green);
+	draw_set_colour(c_lime);
 }
 draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 0);
 draw_set_alpha(1);
 draw_set_color(c_white);
 draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 1);
 draw_sprite_ext(ship[choice,1], 0, Vcentre, Vtop + 230 + ship[choice,0] *6, 6, 6, 90, c_white, 1);
+if (global.shipStats[choice,9] == false)
+{
+	draw_set_alpha(0.8);
+	draw_set_color(c_black);
+	draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 0);
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+	draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 1);
+	draw_sprite_ext(spr_lock, 1, Vcentre, Vtop + 230, 6, 6, 0, c_white, 1);
+}
 
 //draw change selection triangles
 if (point_in_triangle(mouse_x, mouse_y, Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280)or (keyboard_check(global.p1Left)))
@@ -161,3 +171,22 @@ draw_set_halign(fa_left);
 draw_set_font(fnt_easyRead1);
 draw_set_color(c_ltgray);
 draw_text_ext(Vcentre - 300, topY + 6* lineSpace, global.shipStats[choice,8], string_height("M"), 600);
+
+//draw tool tip showing unlock conditions
+if (showTip == true)
+{
+	draw_set_font(fnt_easyRead1);
+	var Hspace = 5;
+	var Vspace = 5;
+	var tipWidth = 300;
+	var tipHeight = string_height_ext(global.shipStats[choice,10], -1, tipWidth);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	draw_set_colour(c_black);
+	draw_set_alpha(0.8);
+	draw_rectangle(mouse_x, mouse_y, mouse_x + tipWidth + Hspace*2, mouse_y - (tipHeight + Vspace *2), 0);
+	draw_set_colour(c_white);
+	draw_set_alpha(1);
+	draw_rectangle(mouse_x, mouse_y, mouse_x + tipWidth+ Hspace*2, mouse_y - (tipHeight + Vspace *2), 1);
+	draw_text_ext(mouse_x + Hspace + tipWidth*0.5, mouse_y - Vspace, global.shipStats[choice,10], -1, tipWidth);
+}

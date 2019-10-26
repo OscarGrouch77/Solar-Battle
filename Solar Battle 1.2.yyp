@@ -1447,6 +1447,14 @@
             }
         },
         {
+            "Key": "c0895874-5f9c-4ee7-8c8f-5d9777170939",
+            "Value": {
+                "id": "f642f92c-6811-4bbc-9738-45c621a11c5b",
+                "resourcePath": "sprites\\spr_lock\\spr_lock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c197f689-01c9-4a55-a1af-b8cd86faef2c",
             "Value": {
                 "id": "f96dc861-f58e-4f66-8fc9-2a5c61c5501a",

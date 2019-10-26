@@ -74,6 +74,7 @@ if (awardScore == true)
 			global.roundBonus = max(global.roundBonus - scrInc, 0);
 		}
 		else
+		//initiate next round
 		{	
 			timer++
 			if (timer>180)
@@ -85,6 +86,7 @@ if (awardScore == true)
 					awardScore = false;
 					gamePaused = false;
 					global.roundNumber++;
+					global.checkProgress = true;    //checks progress in globVar
 					global.multiplier = startMulti;
 					global.multiplier++;
 					global.roundBonus = round(max(100, ((global.roundNumber * 100))))
