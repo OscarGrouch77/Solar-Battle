@@ -1271,6 +1271,14 @@
             }
         },
         {
+            "Key": "a1691be5-fa4b-4dbb-a3c2-6458bcc633d2",
+            "Value": {
+                "id": "3a0339cb-3090-4f84-8546-584257ca7f2b",
+                "resourcePath": "sprites\\spr_axionSpawn\\spr_axionSpawn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a1a13d83-3d2e-4860-a9d6-4f03019b749b",
             "Value": {
                 "id": "ff8e888d-1ccb-49cf-b03e-c41a8a79c7bc",
