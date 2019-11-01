@@ -71,19 +71,41 @@ if (powerUp == 2)
 
 if (powerUp == 3)
 {
-	if (missileAmmo < 8)
+	//longbow code for EMP replaces missile code
+	if(sprite_index == spr_longbow)
 	{
-		instance_create_layer(x, y - 16, "Ambient", obj_missileText);
-		missileAmmo = min(missileAmmo + 2, 8);
-		missile = true;
+		if (empAmmo < 8)
+		{
+			instance_create_layer(x, y - 16, "Ambient", obj_empText);
+			empAmmo = min(empAmmo + 2, 8);
+			emp = true;
+		}
+		else
+		{
+			switch (global.gameType)
+			{
+				case gameType.survival: score = score + (global.roundNumber * 1000); instance_create_layer(x, y - 16, "Ambient", obj_1000Text);break;
+				case gameType.oneDuel: healing = true; instance_create_layer(x, y - 16, "Ambient", obj_repairText);break;
+				case gameType.twoDuel: healing = true; instance_create_layer(x, y - 16, "Ambient", obj_repairText);break;
+			}
+		}
 	}
 	else
 	{
-		switch (global.gameType)
+		if (missileAmmo < 8)
 		{
-			case gameType.survival: score = score + (global.roundNumber * 1000); instance_create_layer(x, y - 16, "Ambient", obj_1000Text);break;
-			case gameType.oneDuel: healing = true; instance_create_layer(x, y - 16, "Ambient", obj_repairText);break;
-			case gameType.twoDuel: healing = true; instance_create_layer(x, y - 16, "Ambient", obj_repairText);break;
+			instance_create_layer(x, y - 16, "Ambient", obj_missileText);
+			missileAmmo = min(missileAmmo + 2, 8);
+			missile = true;
+		}
+		else
+		{
+			switch (global.gameType)
+			{
+				case gameType.survival: score = score + (global.roundNumber * 1000); instance_create_layer(x, y - 16, "Ambient", obj_1000Text);break;
+				case gameType.oneDuel: healing = true; instance_create_layer(x, y - 16, "Ambient", obj_repairText);break;
+				case gameType.twoDuel: healing = true; instance_create_layer(x, y - 16, "Ambient", obj_repairText);break;
+			}
 		}
 	}
 }

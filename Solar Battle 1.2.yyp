@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "290747c8-e629-406e-a12d-306b7de19d2a",
+            "Value": {
+                "id": "e12b05fd-ead8-471a-aee4-db0a80481a47",
+                "resourcePath": "sprites\\spr_empGlobe2\\spr_empGlobe2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "29c76589-2c5f-457a-a3e3-9828bf274caf",
             "Value": {
                 "id": "a45338d8-bd82-4d86-a8b2-47767ca8c3d2",
@@ -604,6 +612,14 @@
                 "id": "5baad7ef-001c-47cc-94ca-a7f58485a988",
                 "resourcePath": "scripts\\scr_spawn\\scr_spawn.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "48c1c12b-1bc4-49af-99fe-bce26d13653c",
+            "Value": {
+                "id": "11a6c000-e737-4438-b2a9-18c42a1f7658",
+                "resourcePath": "objects\\obj_empText\\obj_empText.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1503,6 +1519,14 @@
             }
         },
         {
+            "Key": "c3718490-0be1-4a01-bb1d-e5149a04b9c0",
+            "Value": {
+                "id": "8e93ae20-ea19-43e9-bc9b-65afb8f1ec2d",
+                "resourcePath": "sprites\\spr_empGlobe\\spr_empGlobe.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c50e8951-ad18-477d-a970-91e3a9c0f9b0",
             "Value": {
                 "id": "1bf390f9-533a-4a07-a6ba-ac153606e2d3",
@@ -1540,6 +1564,14 @@
                 "id": "03ac0746-dc52-4d9c-9a1a-be6ffbf61268",
                 "resourcePath": "objects\\obj_menuButtonSurvivalStart\\obj_menuButtonSurvivalStart.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c8a8ce60-0040-4b86-a6b0-357ee876f839",
+            "Value": {
+                "id": "7f892ac0-0a02-4184-ae35-84fb99e32511",
+                "resourcePath": "sounds\\snd_emp\\snd_emp.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1964,6 +1996,14 @@
                 "id": "083f46ab-345b-4933-b799-6d0a7a044241",
                 "resourcePath": "scripts\\scr_cpuShipExplosion\\scr_cpuShipExplosion.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fc727862-da8a-444c-9cf2-8a10301307cd",
+            "Value": {
+                "id": "487cf605-9de6-45be-af26-2754d6ae8be8",
+                "resourcePath": "objects\\obj_genericEmp\\obj_genericEmp.yy",
+                "resourceType": "GMObject"
             }
         },
         {

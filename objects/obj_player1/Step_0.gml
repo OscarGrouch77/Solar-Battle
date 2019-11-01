@@ -177,6 +177,19 @@ if (missile == true)
 	if (missileAmmo <= 0) missile = false;
 }
 
+//firing EMP
+if (emp == true)
+{
+	if (keyboard_check(global.p1AltFire)) and (empActive = false)
+	{
+		empActive = true;
+		var myEmp = instance_create_layer(x,y,"Ambient",obj_genericEmp);
+		myEmp.owner = id;
+		empAmmo -= 1;
+	}
+	if (empAmmo <= 0) emp = false;
+}
+
 
 
 if (overheat < 10)									//cooldown weapon only if not overheated
