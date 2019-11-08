@@ -13,7 +13,10 @@
         "9764082e-e12b-4f8d-85a2-7a062c7c700c",
         "c197f689-01c9-4a55-a1af-b8cd86faef2c",
         "0a0f6ee4-10f6-4c70-a8e0-a22cb20dcdab",
-        "3dbaa843-3c77-49ef-a82f-14a1d8ce977c"
+        "3dbaa843-3c77-49ef-a82f-14a1d8ce977c",
+        "f9c93cca-7b3c-48a0-b03c-dba1131e4e74",
+        "2eaa1d2c-5531-4fee-a46c-e9526acc38ca",
+        "87408de1-bebc-4589-9ac0-3952717d760a"
     ],
     "filterType": "user",
     "folderName": "Particle Systems",

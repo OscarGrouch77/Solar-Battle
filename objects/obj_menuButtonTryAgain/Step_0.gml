@@ -11,3 +11,11 @@ if (point_in_rectangle(mouse_x, mouse_y, x - 70, y, x + 70, y + 40))
 		room_restart();
 	}
 }
+
+if (keyboard_check_pressed(global.p1Fire))
+{
+	obj_survivalSystem.showHighScore = false;
+	global.roundNumber = 1;
+	audio_stop_all();
+	room_restart();
+}

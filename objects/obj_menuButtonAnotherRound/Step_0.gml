@@ -10,7 +10,7 @@ if (point_in_rectangle(mouse_x, mouse_y, x - 115, y, x + 115, y + 40))
 	}
 }
 
-if (keyboard_check_pressed(vk_anykey))
+if (keyboard_check_pressed(global.p1Fire)) or (keyboard_check_pressed(global.p2Fire))
 {
 	audio_stop_all();
 	room_restart();
