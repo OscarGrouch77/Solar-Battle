@@ -26,4 +26,16 @@ part_type_size(hitGlow, 0.05, 0.2, -0.003, 0.02);
 part_type_speed(hitGlow, 0, 4, -0.04, 0.1);
 part_type_blend(hitGlow, true);
 
+disableSpark = part_type_create();
+
+part_type_shape(disableSpark, pt_shape_spark);
+part_type_color2(disableSpark, c_white, c_blue);
+part_type_alpha2(disableSpark, 0.8, 0);
+part_type_direction(disableSpark, 0, 359, 0, 35);
+part_type_life(disableSpark, 20, 40);
+part_type_size(disableSpark, 0.1, 0.15, -0.003, 0.02);
+part_type_speed(disableSpark, 0, 4, -0.06, 0.2);
+part_type_blend(disableSpark, true);
+part_type_orientation(disableSpark, 0, 359, 0, 0, true);
+
 

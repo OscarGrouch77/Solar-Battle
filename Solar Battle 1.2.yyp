@@ -887,6 +887,14 @@
             }
         },
         {
+            "Key": "66bb6843-9556-40a9-a167-8b14f18d79ce",
+            "Value": {
+                "id": "f15013e8-cd23-41c3-a587-40213a2ccc0d",
+                "resourcePath": "scripts\\scr_empDisable\\scr_empDisable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6a5e7876-41f2-4dde-9037-7ec9867bb7e6",
             "Value": {
                 "id": "936d9f18-4e68-471a-b4c8-a2f44bd0a23d",
@@ -2069,6 +2077,7 @@
         "324587ac-79dd-4c43-9d58-b00e8204bab7",
         "7a78c893-de17-49bd-8d21-b09c9c05915a",
         "85286a80-8e49-4911-bd12-061e5062986a",
+        "66bb6843-9556-40a9-a167-8b14f18d79ce",
         "331a8721-fec6-4fea-a6dd-dd5cb144e7ea",
         "d69d9851-4e2c-4804-bb19-f85331317fb8",
         "f9ce0336-0d52-4178-901a-537ded455423",

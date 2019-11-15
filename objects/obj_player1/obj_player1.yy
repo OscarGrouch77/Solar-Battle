@@ -203,6 +203,36 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
+        },
+        {
+            "id": "da95f954-d6df-433a-9d40-0304f0ad7dd0",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "fc727862-da8a-444c-9cf2-8a10301307cd",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
+        },
+        {
+            "id": "dc4e81ea-2255-47f8-ab1c-c45c457ac5e5",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 6,
+            "eventtype": 2,
+            "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
+        },
+        {
+            "id": "737a9ff5-b5eb-43aa-884b-84fd4a843ce6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 7,
+            "eventtype": 2,
+            "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -585,6 +615,48 @@
             "value": "0",
             "varName": "empRange",
             "varType": 0
+        },
+        {
+            "id": "b25c41c8-2954-430a-a352-cbb245b8b848",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "disabled",
+            "varType": 3
+        },
+        {
+            "id": "56425574-eb13-4956-b66a-5747b68aacbb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "rotDrift",
+            "varType": 0
+        },
+        {
+            "id": "f5c126ff-dbfc-467a-b9b2-91e00aa21f82",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "shootAble",
+            "varType": 3
         }
     ],
     "solid": false,

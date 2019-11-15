@@ -173,6 +173,26 @@
             "enumb": 0,
             "eventtype": 8,
             "m_owner": "33642783-fbd4-4b37-955d-8d7b28f01beb"
+        },
+        {
+            "id": "6f025565-2934-4046-856e-5ff7cbdd4a18",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "fc727862-da8a-444c-9cf2-8a10301307cd",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "33642783-fbd4-4b37-955d-8d7b28f01beb"
+        },
+        {
+            "id": "4d660c87-31a8-42e6-a1fd-6b890e71f0ab",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 4,
+            "eventtype": 2,
+            "m_owner": "33642783-fbd4-4b37-955d-8d7b28f01beb"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -708,6 +728,34 @@
             "resourceFilter": 1023,
             "value": "2",
             "varName": "turnSpeed",
+            "varType": 0
+        },
+        {
+            "id": "1fba9d2b-7047-4616-a23d-5c8939476b91",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "disabled",
+            "varType": 3
+        },
+        {
+            "id": "26a9ee17-5ce5-4759-9b4e-256bb534839e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 2,
+            "rangeMin": -2,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "rotDrift",
             "varType": 0
         }
     ],

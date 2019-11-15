@@ -25,23 +25,32 @@ scr_gravityForce(x, y);
 move_wrap(true, true, 0);
 
 //AI rotating controller
+if (disabled == false)
+{
+	if (rotate == 1){
+		image_angle += 2;
+	}
 
-if (rotate == 1){
-	image_angle += 2;
+	if (rotate == -1){
+		image_angle -= 2;
+	}
 }
-
-if (rotate == -1){
-	image_angle -= 2;
+else 
+{
+	image_angle += rotDrift;
 }
 
 //AI thrusting controller
 
-if (thrusting == true){
-	motion_add(image_angle, thrust);
-}
+if (disabled == false)
+{
+	if (thrusting == true){
+		motion_add(image_angle, thrust);
+	}
 
-if (reversing == true){
-	motion_add(image_angle, -thrust*0.5);
+	if (reversing == true){
+		motion_add(image_angle, -thrust*0.5);
+	}
 }
 
 
@@ -142,9 +151,12 @@ if (state == states1.orbit)
 	scr_rotateTo(targetAngle);
 	
 	//cheating cpu assistance to avoid sun at skl level above 5
-	if (skl > 5)
+	if (disabled == false)
 	{
-		motion_add(targetAngle, 0.02);
+		if (skl > 5)
+		{
+			motion_add(targetAngle, 0.02);
+		}
 	}
 	
 	if (abs(angle_difference(image_angle, targetAngle)) <= 40)
@@ -272,46 +284,48 @@ if (state == states1.attack)
 //shooting
 
 
-
-if (firing == true) and (cooldown <= 0)
+if (disabled == false)
 {
-	if (double == false)
+	if (firing == true) and (cooldown <= 0)
 	{
-		var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
-		with bullet
+		if (double == false)
 		{
-			owner = other.id;
-			speed = other.speed;
-			direction = other.direction;
-			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
-			sprite_index = spr_bullet1;
+			var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
+			with bullet
+			{
+				owner = other.id;
+				speed = other.speed;
+				direction = other.direction;
+				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				sprite_index = spr_bullet1;
+			}
 		}
+		if (double == true)
+		{
+			var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+			with bullet1
+			{
+				owner = other.id;
+				speed = other.speed;
+				direction = other.direction;
+				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				sprite_index = spr_bullet1;
+			}
+			var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+			with bullet2
+			{
+				owner = other.id;
+				speed = other.speed;
+				direction = other.direction;
+				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				sprite_index = spr_bullet1;
+			}
+		}
+		cooldown = fireRate;
+		overheat = overheat + 2;
+		audio_sound_pitch(snd_pew2,1.2);
+		audio_play_sound(snd_pew2,0,0);
 	}
-	if (double == true)
-	{
-		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
-		with bullet1
-		{
-			owner = other.id;
-			speed = other.speed;
-			direction = other.direction;
-			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
-			sprite_index = spr_bullet1;
-		}
-		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
-		with bullet2
-		{
-			owner = other.id;
-			speed = other.speed;
-			direction = other.direction;
-			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
-			sprite_index = spr_bullet1;
-		}
-	}
-	cooldown = fireRate;
-	overheat = overheat + 2;
-	audio_sound_pitch(snd_pew2,1.2);
-	audio_play_sound(snd_pew2,0,0);
 }
 
 if (overheat <= 10)
@@ -338,18 +352,20 @@ if (overheat < 10)									//cooldown weapon only if not overheated
 //Engine sounds
 
 
-
-if(thrusting == true)					
-{	
-		if !(audio_is_playing(snd_engine2))
-		{	
-			eng = audio_play_sound(snd_engine2,0,1);		///sets variable for engine sound
-			audio_sound_pitch(eng, 0.8);						//sets pitch of eng sound
-			audio_sound_gain(eng,0,0);						///sets volume of engine to 0
-			audio_sound_gain(eng,0.1,1000);					///fades in and plays engine sound
-			oldThrusting = true;
-		}
-}	
+if (disabled == false)
+{
+	if(thrusting == true)					
+	{	
+			if !(audio_is_playing(snd_engine2))
+			{	
+				eng = audio_play_sound(snd_engine2,0,1);		///sets variable for engine sound
+				audio_sound_pitch(eng, 0.8);						//sets pitch of eng sound
+				audio_sound_gain(eng,0,0);						///sets volume of engine to 0
+				audio_sound_gain(eng,0.1,1000);					///fades in and plays engine sound
+				oldThrusting = true;
+			}
+	}
+}
 
 if (oldThrusting == true) and (thrusting == false)						
 {	
@@ -371,6 +387,19 @@ if (oldThrusting == false) and (thrusting == true)
 		audio_stop_sound(snd_engine2);					///stops engine sound playing if thrusting starts
 	}	
 
+
+//emit sparks if disabled
+if (disabled == true)
+{
+	var sparking = random_range(0, 10);
+	if (sparking >= 9.5)
+	{
+		var xx = x + random_range(-20, 20);
+		var yy = y + random_range(-20, 20);
+		scr_empDisable(xx, yy);
+	}
+}
+	
 	
 //destroy if HP = 0
 

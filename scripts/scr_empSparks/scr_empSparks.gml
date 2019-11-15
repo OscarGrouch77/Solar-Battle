@@ -9,4 +9,4 @@ var bottom = argument5;
 
 
 part_emitter_region(empPartSys.empSparks, empSparkEm, left, right, top, bottom, ps_shape_ellipse, ps_distr_invgaussian);
-part_emitter_burst(obj_partSysEmpSparks.empSparks, empSparkEm, obj_partSysEmpSparks.spark, 300);
+part_emitter_burst(empPartSys.empSparks, empSparkEm, empPartSys.spark, 30);

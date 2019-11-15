@@ -13,10 +13,9 @@ if (fade == false)
 	image_alpha = alpha + (random_range(-alpha*0.1, alpha*0.1));
 	
 	//scale change
-	scale = min(scale + (maxScale-scale)*0.1, maxScale);
+	scale = min(scale + ((maxScale-scale)*0.1), maxScale);
 	
 	//particle emitter stuff
-	EMPMaxRad = 512;
 	leftEdgeX = x - (EMPMaxRad*scale*0.49);
 	rightEdgeX = x + (EMPMaxRad*scale*0.49);
 	topEdgeY = y - (EMPMaxRad*scale*0.49);
@@ -36,7 +35,17 @@ else
 	
 	//scale fade
 	scale -= 0.01;
+	
+	//particle emitter stuff
+	leftEdgeX = x - (EMPMaxRad*scale*0.49);
+	rightEdgeX = x + (EMPMaxRad*scale*0.49);
+	topEdgeY = y - (EMPMaxRad*scale*0.49);
+	bottomEdgeY = y + (EMPMaxRad*scale*0.49);
+
+	scr_empSparks(x,y, leftEdgeX, rightEdgeX, topEdgeY, bottomEdgeY);
 }
+
+
 
 if(instance_exists(owner))
 {

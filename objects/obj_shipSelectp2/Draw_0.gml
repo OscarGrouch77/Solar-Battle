@@ -17,7 +17,7 @@ if (selectButton.select = false)
 }
 else
 {
-	draw_set_colour(c_green);
+	draw_set_colour(c_lime);
 }
 draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 0);
 draw_set_alpha(1);

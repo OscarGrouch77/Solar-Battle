@@ -25,30 +25,36 @@ if (global.gameType == gameType.twoDuel)
 scr_gravityForce(x,y);
 
 //movement
+if (disabled == false)
+{
+	image_angle+=(keyboard_check(global.p1Left) - keyboard_check(global.p1Right)) * turnSpeed;	///rotating the ship
 
-image_angle+=(keyboard_check(global.p1Left) - keyboard_check(global.p1Right)) * turnSpeed;	///rotating the ship
+	if(keyboard_check(global.p1Thrust))					///thrust in the direction ship is pointing
+	{	
+		motion_add(image_angle, thrust);
+	}
 
-
-if(keyboard_check(global.p1Thrust))					///thrust in the direction ship is pointing
-{	
-	motion_add(image_angle, thrust);
-}
 		
-if(keyboard_check(global.p1Reverse))					///reverse thrust
-{	
-	motion_add(image_angle - 180,thrust*0.5);
+	if(keyboard_check(global.p1Reverse))					///reverse thrust
+	{	
+		motion_add(image_angle - 180,thrust*0.5);
+	}
 }
 		
 //// engine sounds	
-if(keyboard_check(global.p1Thrust))					
-{	
-		if !(audio_is_playing(snd_engine1))
-		{	
-			eng = audio_play_sound(snd_engine1,0,1);		///sets variable for engine sound
-			audio_sound_pitch(eng, 1);						//sets pitch of eng sound
-			audio_sound_gain(eng,0,0);						///sets volume of engine to 0
-			audio_sound_gain(eng,1,1000);				///fades in and plays engine sound
-		}	
+
+if (disabled == false)
+{
+	if(keyboard_check(global.p1Thrust))					
+	{	
+			if !(audio_is_playing(snd_engine1))
+			{	
+				eng = audio_play_sound(snd_engine1,0,1);		///sets variable for engine sound
+				audio_sound_pitch(eng, 1);						//sets pitch of eng sound
+				audio_sound_gain(eng,0,0);						///sets volume of engine to 0
+				audio_sound_gain(eng,1,1000);				///fades in and plays engine sound
+			}	
+	}
 }
 
 if (keyboard_check_released(global.p1Thrust))							
@@ -65,22 +71,24 @@ if (keyboard_check_released(global.p1Thrust))
 		}
 }
 
-if (keyboard_check_pressed(global.p1Thrust))
+if (keyboard_check_pressed(global.p1Thrust)) or (disabled == true)
 	{
 		audio_stop_sound(snd_engine1);					///stops engine sound playing if "W" pressed
 	}	
 
 //reverse thrust sounds
-
-if(keyboard_check(global.p1Reverse))					
-{	
-		if !(audio_is_playing(snd_engine1))
-		{	
-			eng = audio_play_sound(snd_engine1,0,1);		///sets variable for engine sound
-			audio_sound_pitch(eng, 1.3);					//sets pitch of eng sound
-			audio_sound_gain(eng,0,0);						///sets volume of engine to 0
-			audio_sound_gain(eng,0.8,1000);				///fades in and plays engine sound
-		}	
+if (disabled == false)
+{
+	if(keyboard_check(global.p1Reverse))					
+	{	
+			if !(audio_is_playing(snd_engine1))
+			{	
+				eng = audio_play_sound(snd_engine1,0,1);		///sets variable for engine sound
+				audio_sound_pitch(eng, 1.3);					//sets pitch of eng sound
+				audio_sound_gain(eng,0,0);						///sets volume of engine to 0
+				audio_sound_gain(eng,0.8,1000);				///fades in and plays engine sound
+			}	
+	}
 }
 
 if (keyboard_check_released(global.p1Reverse))							
@@ -98,7 +106,7 @@ if (keyboard_check_released(global.p1Reverse))
 		}
 }
 
-if (keyboard_check_pressed(global.p1Reverse))
+if (keyboard_check_pressed(global.p1Reverse)) or (disabled == true)
 	{
 		audio_stop_sound(snd_engine1);					///stops engine sound playing if "W" pressed
 	}	
@@ -109,42 +117,45 @@ move_wrap(true, true, 0);								//wrap around edges of room
 
 //shooting
 
-if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
+if (disabled == false) and (shootAble == true)
 {
-	if (double == false)
+	if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
 	{
-		var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
-		with bullet
+		if (double == false)
 		{
-			owner = other.id;
-			speed = other.speed;
-			direction = other.direction;
-			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+			var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
+			with bullet
+			{
+				owner = other.id;
+				speed = other.speed;
+				direction = other.direction;
+				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+			}
 		}
+		if (double == true)												//double bullets if double power up active
+		{
+			var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+			with bullet1
+			{
+				owner = other.id;
+				speed = other.speed;
+				direction = other.direction;
+				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+			}
+			var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+			with bullet2
+			{
+				owner = other.id;
+				speed = other.speed;
+				direction = other.direction;
+				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+			}
+		}
+		cooldown = fireRate;
+		overheat = overheat + 2;
+		audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
+		audio_play_sound(snd_pew4,0,0);
 	}
-	if (double == true)												//double bullets if double power up active
-	{
-		var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
-		with bullet1
-		{
-			owner = other.id;
-			speed = other.speed;
-			direction = other.direction;
-			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
-		}
-		var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
-		with bullet2
-		{
-			owner = other.id;
-			speed = other.speed;
-			direction = other.direction;
-			motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
-		}
-	}
-	cooldown = fireRate;
-	overheat = overheat + 2;
-	audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
-	audio_play_sound(snd_pew4,0,0);
 }
 
 if (overheat <= 10)
@@ -163,31 +174,35 @@ if (overheat > 10) and (alarm[1] == -1)				//gun overheated starts alarm 1
 }
 
 //shooting missile
-
-if (missile == true)
+if (disabled == false) and (shootAble == true)
 {
-	if (keyboard_check(global.p1AltFire)) and (missileActive = false)
+	if (missile == true)
 	{
-		missileActive = true;
-		var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
-		myMissile.owner = id;
-		myMissile.target = instance_nearest(x, y, enemy);
-		missileAmmo -= 1;
+		if (keyboard_check(global.p1AltFire)) and (missileActive = false)
+		{
+			missileActive = true;
+			var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
+			myMissile.owner = id;
+			myMissile.target = instance_nearest(x, y, enemy);
+			missileAmmo -= 1;
+		}
+		if (missileAmmo <= 0) missile = false;
 	}
-	if (missileAmmo <= 0) missile = false;
-}
 
-//firing EMP
-if (emp == true)
-{
-	if (keyboard_check(global.p1AltFire)) and (empActive = false)
+	//firing EMP
+	if (emp == true)
 	{
-		empActive = true;
-		var myEmp = instance_create_layer(x,y,"Ambient",obj_genericEmp);
-		myEmp.owner = id;
-		empAmmo -= 1;
+		if (keyboard_check(global.p1AltFire)) and (empActive = false)
+		{
+			empActive = true;
+			var myEmp = instance_create_layer(x,y,"Ambient",obj_genericEmp);
+			myEmp.owner = id;
+			empAmmo -= 1;
+			shootAble = false;
+			alarm[7] = 360;
+		}
+		if (empAmmo <= 0) emp = false;
 	}
-	if (empAmmo <= 0) emp = false;
 }
 
 
@@ -197,6 +212,17 @@ if (overheat < 10)									//cooldown weapon only if not overheated
 	cooldown = max((cooldown-1), 0);
 }
 
+//emit sparks if disabled
+if (disabled == true)
+{
+	var sparking = random_range(0, 10);
+	if (sparking >= 9.5)
+	{
+		var xx = x + random_range(-20, 20);
+		var yy = y + random_range(-20, 20);
+		scr_empDisable(xx, yy);
+	}
+}
 
 if (hp <= 0)										//destroy
 {

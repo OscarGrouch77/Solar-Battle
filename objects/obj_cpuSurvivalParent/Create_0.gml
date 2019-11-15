@@ -67,3 +67,5 @@ if (acc < 2)
 	aimTol = 15;
 }
 else aimTol = 5;
+
+rotDrift = random_range(-1, 1);

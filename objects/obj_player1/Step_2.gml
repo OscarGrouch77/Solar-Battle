@@ -19,7 +19,7 @@ with (player1Thrust2)
 
 //display thruster if thrusting
 
-if keyboard_check(global.p1Thrust)
+if keyboard_check(global.p1Thrust) && (disabled == false)
 {
 
 	with (player1Thrust1)

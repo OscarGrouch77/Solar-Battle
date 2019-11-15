@@ -18,12 +18,12 @@ switch(sprite_index)
 	case spr_arachnid: thrustYOffset = 9; thrustXOffset = 25; thrust = global.shipStats[3,2]/100; fireRate = 30 - (global.shipStats[3,3]*2); spray = 10 - global.shipStats[3,5]; missileAmmo = 0 missile = false; bulletSpeed = 6; bulletLife = 100; turnSpeed = global.shipStats[3,6]*0.4; break;
 }
 
-//create emp particle system if sprite is longbow
 
 
 
 
 
+//create thruster instances
 player1Thrust1 = instance_create_layer(x + lengthdir_x(thrustYOffset, playerDir - 90) + lengthdir_x(thrustXOffset, playerDir - 180), y + lengthdir_y(thrustXOffset, playerDir - 180) + lengthdir_y(thrustYOffset, playerDir - 90), "Instances", obj_thruster);
 player1Thrust2 = instance_create_layer(x + lengthdir_x(thrustYOffset, playerDir + 90) + lengthdir_x(thrustXOffset, playerDir - 180), y + lengthdir_y(thrustXOffset, playerDir - 180) - lengthdir_y(thrustYOffset, playerDir - 90), "Instances", obj_thruster);
 with (player1Thrust1) image_index = 5;

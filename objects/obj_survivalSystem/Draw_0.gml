@@ -46,4 +46,9 @@ if (instance_exists(obj_player1))
 		var misOffset = 15;
 		draw_sprite_ext(spr_missile, 0, 30 + (misOffset * i), 30, 1, 1, 90, c_white, 1);
 	}
+	for (var i = 0; i < obj_player1.empAmmo; i++)
+	{
+		var misOffset = 20;
+		draw_sprite_ext(spr_empGlobeBig, 0, 30 + (misOffset * i), 30, 0.03, 0.03, 0, c_white, 1);
+	}
 }	
