@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "191a2252-d4bc-4187-85bc-1ab20f2dd2f6",
+            "Value": {
+                "id": "0750e97e-fed0-4f89-a15c-8bc742e0b3f7",
+                "resourcePath": "shaders\\shd_magnify\\shd_magnify.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "1be7d196-161c-4414-a5d3-8c6defffb5ea",
             "Value": {
                 "id": "160239b0-0cac-4d43-997e-f5e124d00da6",

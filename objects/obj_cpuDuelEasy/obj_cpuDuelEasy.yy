@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_cpuDuelEasy",
     "eventList": [
-        
+        {
+            "id": "280e674a-a7e5-4f2c-ba1f-ce984bc41d09",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "bbe030bf-eca2-4582-be2f-2da41a336a46"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
