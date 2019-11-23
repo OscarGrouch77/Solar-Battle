@@ -44,7 +44,10 @@ if (keyboard_check_pressed(global.p1Right))
 
 if (keyboard_check_pressed(global.p1Fire))
 {
-	selectButton.select = !selectButton.select;
+	if (selectButton.select == false)
+	{
+		selectButton.select = !selectButton.select;
+	}
 }
 
 if (selectButton.select == false)

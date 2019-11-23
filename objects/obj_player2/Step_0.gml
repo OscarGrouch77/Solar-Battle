@@ -8,7 +8,7 @@ scr_gravityForce(x,y);
 ///movement
 if (disabled == false)
 {
-	image_angle+=((keyboard_check(global.p2Left)) - (keyboard_check(global.p2Right))) * 2;	///rotating the ship
+	image_angle+=((keyboard_check(global.p2Left)) - (keyboard_check(global.p2Right))) * turnSpeed;	///rotating the ship
 
 
 	if(keyboard_check(global.p2Thrust))					///thrust in the direction ship is pointing

@@ -2,10 +2,10 @@
 // You can write your code in this editor
 
 timer++;
-
+move_wrap(true, true, 0);
 image_xscale = scale;
 image_yscale = scale;
-size			= sprite_width - (512 * scale); // 512 is about the distance from the wprite border to the lens border
+size			= sprite_width - (512 * scale); // 512 is about the distance from the sprite border to the lens border
 half_size		= size * 0.5;
 
 if (fade == false)

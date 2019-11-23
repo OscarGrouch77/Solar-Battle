@@ -14,3 +14,22 @@ if (point_in_rectangle(mouse_x, mouse_y, x, y - string_height("START")*0.5, x + 
 		room_goto(target);
 	}
 }
+
+
+if (global.gameType == gameType.twoDuel)
+{
+	if (obj_shipSelectp1.lockedIn == true) && (obj_shipSelectp2.lockedIn == true)
+	{
+		if (keyboard_check_pressed(global.p1Fire)) || (keyboard_check_pressed(global.p2Fire))
+		{
+			global.p1Ship = obj_shipSelectp1.ship[obj_shipSelectp1.choice,1];
+			global.p2Ship = obj_shipSelectp2.ship[obj_shipSelectp2.choice,1];
+			room_goto(target);
+		}
+	}
+}
+else
+if (keyboard_check_pressed(global.p1Fire)){
+	global.p1Ship = obj_shipSelectp1.ship[obj_shipSelectp1.choice,1];
+	room_goto(target);
+}

@@ -4,8 +4,6 @@
 
 if (instance_exists(obj_player1))
 {
-	
-
 	var heat = obj_player1.overheat
 
 	var colour = c_yellow
@@ -15,6 +13,12 @@ if (instance_exists(obj_player1))
 	if (heat > 8) colour = c_red;
 
 	draw_line_width_colour(obj_player1.x, obj_player1.y + 17, obj_player1.x, obj_player1.y + 20, obj_player1.overheat*3, colour, colour);
+	if (obj_player1.shootAble == false)
+	{
+		draw_set_alpha(pulse);
+		draw_line_width_color(obj_player1.x, obj_player1.y + 17, obj_player1.x, obj_player1.y + 20, 30, c_red, c_red);
+		draw_set_alpha(1);
+	}
 }
 
 else

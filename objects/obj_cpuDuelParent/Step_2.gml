@@ -18,7 +18,7 @@ with (cpuDemo1Thrust2)
 
 //dispaly thruster if thrusting
 
-if (thrusting = true)
+if (thrusting = true) && (disabled == false)
 {
 
 	with (cpuDemo1Thrust1)
