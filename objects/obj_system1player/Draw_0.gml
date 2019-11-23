@@ -87,3 +87,10 @@ if (instance_exists(obj_player1))
 		draw_sprite_ext(spr_empGlobeBig, 0, 30 + (misOffset * i), 30, 0.03, 0.03, 0, c_white, 1);
 	}
 }	
+
+if (instance_exists(obj_player1))
+{
+	draw_sprite(spr_healthCross,0, 30, 60);
+	draw_set_font(fnt_stats);
+	draw_text(50, 60, string(obj_player1.hp));
+}

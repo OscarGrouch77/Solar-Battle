@@ -220,5 +220,17 @@ if (hp <= 0)										//destroy
 	instance_destroy();								
 }
 
-
+if (healing == true)
+{
+	timer++
+	repair = instance_create_layer(x, y, "topParticle", obj_partSysHealthGain);
+	scr_healthGain(x, y, repair);
+	if (timer > 120)
+	{
+		timer = 0;
+		hp++;
+		healing = false;
+		instance_destroy(repair);
+	}
+}
 

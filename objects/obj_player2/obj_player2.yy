@@ -603,6 +603,20 @@
             "value": "True",
             "varName": "shootAble",
             "varType": 3
+        },
+        {
+            "id": "69a10f1c-0f3f-4d7b-bac5-4e262c01c8f2",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "healing",
+            "varType": 3
         }
     ],
     "solid": false,
