@@ -13,7 +13,7 @@ lifeTime = 60;
 alarm[0] = lifeTime;
 timer = 0;
 fade = false;
-audio_play_sound(snd_emp, 1, 0);
+audio_play_sound(snd_emp, 2, 0);
 
 //create part sys for sparks
 empPartSys = instance_create_layer(x, y, "topParticle", obj_partSysEmpSparks);
