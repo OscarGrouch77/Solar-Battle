@@ -90,7 +90,7 @@ if (instance_exists(obj_player1))
 
 if (instance_exists(obj_player1))
 {
-	draw_sprite(spr_healthCross,0, 30, 60);
+	draw_sprite(spr_armour,0, 30, 60);
 	draw_set_font(fnt_stats);
 	draw_text(50, 60, string(obj_player1.hp));
 }

@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "24847d94-6b52-46a4-9c65-c25c61d773db",
+            "Value": {
+                "id": "db1a7dbd-794b-40c2-942f-146fcde4388b",
+                "resourcePath": "sprites\\spr_armour\\spr_armour.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "26f861b1-676c-4862-a0d9-8b6de65ec5dd",
             "Value": {
                 "id": "f708243c-5531-45e9-ac0f-0b8c69c145aa",
@@ -1179,6 +1187,14 @@
             "Value": {
                 "id": "2d367751-4fc4-43e7-acb9-cee95771e462",
                 "resourcePath": "objects\\obj_genericMissile\\obj_genericMissile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8a86378f-c11c-4b3d-8d87-6c830e3cd71f",
+            "Value": {
+                "id": "ef4fed98-7b43-4dc1-9bf1-5a7cebc0856e",
+                "resourcePath": "objects\\obj_chargedShot\\obj_chargedShot.yy",
                 "resourceType": "GMObject"
             }
         },

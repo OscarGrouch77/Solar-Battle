@@ -119,42 +119,139 @@ move_wrap(true, true, 0);								//wrap around edges of room
 
 if (disabled == false) and (shootAble == true)
 {
-	if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
+	if !(sprite_index == spr_arachnid)												//can fire by holding down fire button if not arachnoid
 	{
-		if (double == false)
+		if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
 		{
-			var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
-			with bullet
+			if (double == false)
 			{
-				owner = other.id;
-				speed = other.speed;
-				direction = other.direction;
-				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
+				with bullet
+				{
+					owner = other.id;
+					speed = other.speed;
+					direction = other.direction;
+					motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				}
 			}
+			if (double == true)												//double bullets if double power up active
+			{
+				var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+				with bullet1
+				{
+					owner = other.id;
+					speed = other.speed;
+					direction = other.direction;
+					motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				}
+				var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+				with bullet2
+				{
+					owner = other.id;
+					speed = other.speed;
+					direction = other.direction;
+					motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				}
+			}
+			cooldown = fireRate;
+			overheat = overheat + 2;
+			audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
+			audio_play_sound(snd_pew4,0,0);
 		}
-		if (double == true)												//double bullets if double power up active
+		
+	}
+	else																			//firing code for Arachnoid
+	{
+		if (keyboard_check_pressed(global.p1Fire)) and (cooldown <= 0)
 		{
-			var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
-			with bullet1
+			if (double == false)
 			{
-				owner = other.id;
-				speed = other.speed;
-				direction = other.direction;
-				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
+				with bullet
+				{
+					owner = other.id;
+					speed = other.speed;
+					direction = other.direction;
+					motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				}
 			}
-			var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
-			with bullet2
+			if (double == true)												//double bullets if double power up active
 			{
-				owner = other.id;
-				speed = other.speed;
-				direction = other.direction;
-				motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+				with bullet1
+				{
+					owner = other.id;
+					speed = other.speed;
+					direction = other.direction;
+					motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				}
+				var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+				with bullet2
+				{
+					owner = other.id;
+					speed = other.speed;
+					direction = other.direction;
+					motion_add(other.playerDir + random_range(-other.spray, other.spray), other.bulletSpeed);
+				}
 			}
+			cooldown = fireRate;
+			overheat = overheat + 2;
+			audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
+			audio_play_sound(snd_pew4,0,0);
 		}
-		cooldown = fireRate;
-		overheat = overheat + 2;
-		audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
-		audio_play_sound(snd_pew4,0,0);
+		if (keyboard_check(global.p1Fire))
+		{
+			chargeShot = min(chargeShot + 0.3, 30);
+			if (chargeShot > 3)							//if true draw charge meter
+			{
+				charging = true;
+			}
+			if (chargeShot >= 30) fullyCharged = true;
+		}
+		else chargeShot = 0;
+		if (keyboard_check_released(global.p1Fire))					//fire charged shot if fully charged
+		{
+			if (fullyCharged == true)
+			{
+				if (double == false)
+				{
+					var bullet = instance_create_layer(x,y,"Bullets",obj_chargedShot);		//creates bullet if cooldown 0
+					with bullet
+					{
+						owner = other.id;
+						speed = other.speed;
+						direction = other.direction;
+						motion_add(other.playerDir, other.bulletSpeed*5);
+					}
+				}
+				if (double == true)												//double bullets if double power up active
+				{
+					var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",obj_chargedShot);			//creates bullet if cooldown 0
+					with bullet1
+					{
+						owner = other.id;
+						speed = other.speed;
+						direction = other.direction;
+						motion_add(other.playerDir, other.bulletSpeed*5);
+					}
+					var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",obj_chargedShot);			//creates bullet if cooldown 0
+					with bullet2
+					{
+						owner = other.id;
+						speed = other.speed;
+						direction = other.direction;
+						motion_add(other.playerDir, other.bulletSpeed*5);
+					}
+				}
+				cooldown = fireRate;
+				overheat = overheat + 10;
+				audio_sound_pitch(snd_pew4, random_range(0.2, 0.5));
+				audio_play_sound(snd_pew4,0,0);
+			}
+			fullyCharged = false;
+			charging = false;
+			chargeShot = 0;
+		}
 	}
 }
 

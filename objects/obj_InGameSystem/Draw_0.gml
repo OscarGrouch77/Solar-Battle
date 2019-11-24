@@ -105,14 +105,14 @@ if (instance_exists(obj_player2))
 
 if (instance_exists(obj_player1))
 {
-	draw_sprite(spr_healthCross,0, 30, 60);
+	draw_sprite(spr_armour,0, 30, 60);
 	draw_set_font(fnt_stats);
 	draw_text(50, 60, string(obj_player1.hp));
 }
 
 if (instance_exists(obj_player2))
 {
-	draw_sprite(spr_healthCross,0, room_width - 50, 60);
+	draw_sprite(spr_armour,0, room_width - 50, 60);
 	draw_set_font(fnt_stats);
 	draw_text(room_width - 30, 60, string(obj_player2.hp));
 }

@@ -657,6 +657,48 @@
             "value": "True",
             "varName": "shootAble",
             "varType": 3
+        },
+        {
+            "id": "a518c3c9-744f-434a-a0f5-3cc8b7105536",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "chargeShot",
+            "varType": 0
+        },
+        {
+            "id": "ee52ba3e-ac3e-40b4-8464-da28315a5dc9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "charging",
+            "varType": 3
+        },
+        {
+            "id": "8328979a-8b16-4245-bbeb-33b90e63c423",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "fullyCharged",
+            "varType": 3
         }
     ],
     "solid": false,

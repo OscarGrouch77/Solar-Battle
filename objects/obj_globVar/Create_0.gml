@@ -43,7 +43,7 @@ global.shipStats[3,0] = "Arachnoid";
 //Sniper - Longbow
 global.shipStats[2,10] = "TO UNLOCK: REACH ROUND 10 IN SURVIVAL";
 global.shipStats[2,9] = false;
-global.shipStats[2,8] = "Very accurate, high velocity rail gun make the Longbow deadly at long range. Lacks maneuverability and thrust, but can disable opponents that get too close with an EMP burst (WARNING - this will temporarily disable all weapons systems within range including your own!).";
+global.shipStats[2,8] = "Very accurate, high velocity rail gun make the Longbow deadly at long range. Lacks maneuverability and thrust, but can disrupt energy projectiles and disable opponents that get too close with a powerful EMP burst (WARNING - this will temporarily disable all weapon systems within range including your own!).";
 global.shipStats[2,7] = 10;
 global.shipStats[2,6] = 3;
 global.shipStats[2,5] = 10;
@@ -85,7 +85,7 @@ ini_open("progress.ini");
 
 //ini_write_real("unlocks", "brawler", 1); //uncomment and run to unlock
 ini_write_real("unlocks", "longbow", 1); //uncomment and run to unlock
-//ini_write_real("unlocks", "arachnoid", 1); //uncomment and run to unlock
+ini_write_real("unlocks", "arachnoid", 1); //uncomment and run to unlock
 global.shipStats[0,9] = ini_read_real("unlocks", "axion", 1);
 global.shipStats[1,9] = ini_read_real("unlocks", "brawler", 0);
 global.shipStats[2,9] = ini_read_real("unlocks", "longbow", 0);
