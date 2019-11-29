@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+audio_stop_sound(snd_chargeUp);
 audio_stop_sound(snd_engine1);
 with player1Thrust1 
 {

@@ -199,23 +199,27 @@ if (disabled == false) and (shootAble == true)
 			audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
 			audio_play_sound(snd_pew4,0,0);
 		}
-		if (keyboard_check(global.p1Fire))
+		if (keyboard_check(global.p1Fire))				//code for charging special shot
 		{
 			chargeShot = min(chargeShot + 0.3, 30);
 			if (chargeShot > 3)							//if true draw charge meter
 			{
 				charging = true;
 			}
-			if (chargeShot >= 30) fullyCharged = true;
+			if (chargeShot >= 30) fullyCharged = true;		//30 is max charge
 		}
-		else chargeShot = 0;
+		else 
+		{
+			partialCharge = chargeShot;
+			chargeShot = 0;
+		}
 		if (keyboard_check_released(global.p1Fire))					//fire charged shot if fully charged
 		{
-			if (fullyCharged == true)
+			if (fullyCharged == true)								//fire fully charged shot
 			{
 				if (double == false)
 				{
-					var bullet = instance_create_layer(x,y,"Bullets",obj_chargedShot);		//creates bullet if cooldown 0
+					var bullet = instance_create_layer(x,y,"Bullets",obj_chargedShot);		//creates fully charged shot bullet
 					with bullet
 					{
 						owner = other.id;
@@ -248,10 +252,73 @@ if (disabled == false) and (shootAble == true)
 				audio_sound_pitch(snd_pew4, random_range(0.2, 0.5));
 				audio_play_sound(snd_pew4,0,0);
 			}
+			else																	//code for firing partially charged shot
+			if (charging == true)
+			{
+				if (double == false)
+				{
+					var bullet = instance_create_layer(x,y,"Bullets",myBullet);			//creates bullet if cooldown 0
+					with bullet
+					{
+						owner = other.id;
+						speed = other.speed;
+						direction = other.direction;
+						var chargeLevel = other.partialCharge/30;//30 is max charge
+						var chargedSpeed = max((other.bulletSpeed * 4)*chargeLevel, other.bulletSpeed)
+						motion_add(other.playerDir + random_range(-other.spray, other.spray), chargedSpeed);
+					}
+				}
+				if (double == true)												//double bullets if double power up active
+				{
+					var bullet1 = instance_create_layer(x + lengthdir_x(11, (image_angle + 90)), y + lengthdir_y(11, (image_angle + 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+					with bullet1
+					{
+						owner = other.id;
+						speed = other.speed;
+						direction = other.direction;
+						var chargeLevel = other.partialCharge/30;//30 is max charge
+						var chargedSpeed = max((other.bulletSpeed * 4)*chargeLevel, other.bulletSpeed)
+						motion_add(other.playerDir + random_range(-other.spray, other.spray), chargedSpeed);
+					}
+					var bullet2 = instance_create_layer(x + lengthdir_x(11, (image_angle - 90)), y + lengthdir_y(11, (image_angle - 90)),"Bullets",myBullet);			//creates bullet if cooldown 0
+					with bullet2
+					{
+						owner = other.id;
+						speed = other.speed;
+						direction = other.direction;
+						var chargeLevel = other.partialCharge/30;//30 is max charge
+						var chargedSpeed = max((other.bulletSpeed * 4)*chargeLevel, other.bulletSpeed)
+						motion_add(other.playerDir + random_range(-other.spray, other.spray), chargedSpeed);
+					}
+				}
+				cooldown = fireRate;
+				overheat = overheat + 2;
+				audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
+				audio_play_sound(snd_pew4,0,0);
+			}
 			fullyCharged = false;
 			charging = false;
+			partialCharge = 0;
 			chargeShot = 0;
 		}
+	}
+}
+
+//charging sound effect
+if (charging == true)
+{
+	if !(audio_is_playing(snd_chargeUp))
+	{
+		chSound = audio_play_sound(snd_chargeUp, 2, 1);
+	}	
+	var chPitch = 2.5*(chargeShot/30);
+	audio_sound_pitch(chSound, chPitch);	
+}
+else
+{
+	if (audio_is_playing(snd_chargeUp))
+	{
+		audio_stop_sound(snd_chargeUp);
 	}
 }
 
@@ -342,7 +409,7 @@ if (hp <= 0)										//destroy
 //healing
 if (healing == true)
 {
-	timer++
+	timer++;
 	repair = instance_create_layer(x, y, "topParticle", obj_partSysHealthGain);
 	scr_healthGain(x, y, repair);
 	if (timer > 120)

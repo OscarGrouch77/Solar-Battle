@@ -74,18 +74,18 @@ if (gameOver == true)
 	draw_text_transformed((room_width/2) + 400, room_height/2, global.scorePlayer2, 1, 1, 0);
 }
 
-//drawing missile ammo counters
+//drawing missile and EMP ammo counters
 if (instance_exists(obj_player1))
 {
 	for (var i = 0; i < obj_player1.missileAmmo; i++)
 	{
 		var misOffset = 15;
-		draw_sprite_ext(spr_missile, 0, 30 + (misOffset * i), 30, 1, 1, 90, c_white, 1);
+		draw_sprite_ext(spr_missile, 0, 30 + (misOffset * i), 60, 1, 1, 90, c_white, 1);
 	}
 	for (var i = 0; i < obj_player1.empAmmo; i++)
 	{
 		var misOffset = 20;
-		draw_sprite_ext(spr_empGlobeBig, 0, 30 + (misOffset * i), 30, 0.03, 0.03, 0, c_white, 1);
+		draw_sprite_ext(spr_empGlobeBig, 0, 30 + (misOffset * i), 60, 0.03, 0.03, 0, c_white, 1);
 	}
 }	
 
@@ -94,25 +94,27 @@ if (instance_exists(obj_player2))
 	for (var i = 0; i < obj_player2.missileAmmo; i++)
 	{
 		var misOffset = 15;
-		draw_sprite_ext(spr_missile, 0, room_width - 30 - (misOffset * i), 30, 1, 1, 90, c_white, 1);
+		draw_sprite_ext(spr_missile, 0, room_width - 30 - (misOffset * i), 60, 1, 1, 90, c_white, 1);
 	}
 	for (var i = 0; i < obj_player2.empAmmo; i++)
 	{
 		var misOffset = 20;
-		draw_sprite_ext(spr_empGlobeBig, 0, room_width - 30 - (misOffset * i), 30, 0.03, 0.03, 0, c_white, 1);
+		draw_sprite_ext(spr_empGlobeBig, 0, room_width - 30 - (misOffset * i), 60, 0.03, 0.03, 0, c_white, 1);
 	}
 }	
 
+
+//drawing armour indicators
 if (instance_exists(obj_player1))
 {
-	draw_sprite(spr_armour,0, 30, 60);
+	draw_sprite(spr_armour,0, 30, 30);
 	draw_set_font(fnt_stats);
-	draw_text(50, 60, string(obj_player1.hp));
+	draw_text(50, 30, string(obj_player1.hp));
 }
 
 if (instance_exists(obj_player2))
 {
-	draw_sprite(spr_armour,0, room_width - 50, 60);
+	draw_sprite(spr_armour,0, room_width - 50, 30);
 	draw_set_font(fnt_stats);
-	draw_text(room_width - 30, 60, string(obj_player2.hp));
+	draw_text(room_width - 30, 30, string(obj_player2.hp));
 }

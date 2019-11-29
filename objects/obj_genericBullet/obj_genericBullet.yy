@@ -133,6 +133,20 @@
             "value": "100",
             "varName": "bulletLife",
             "varType": 0
+        },
+        {
+            "id": "a612fa5e-3603-4c9e-8eac-d4be6f85f6fb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "dmg",
+            "varType": 0
         }
     ],
     "solid": false,

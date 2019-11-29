@@ -1159,6 +1159,14 @@
             }
         },
         {
+            "Key": "865b49e5-93d1-40fe-aa10-ca1576555052",
+            "Value": {
+                "id": "a5a1adb2-3f5d-4e99-8ef7-6b41d0f77395",
+                "resourcePath": "sounds\\snd_chargeUp\\snd_chargeUp.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "87408de1-bebc-4589-9ac0-3952717d760a",
             "Value": {
                 "id": "3a1ef380-04de-4f10-917a-77fc5b91dec4",
@@ -1911,6 +1919,14 @@
             }
         },
         {
+            "Key": "e69957a7-8574-4551-8320-938350ff462e",
+            "Value": {
+                "id": "c19cbd6e-fc1e-499f-838d-12e364b92c63",
+                "resourcePath": "scripts\\scr_chargeTrail\\scr_chargeTrail.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e6ae7da1-2115-4885-852d-4972dd70121f",
             "Value": {
                 "id": "5218415e-e116-4f54-87ac-96518a1e8605",
@@ -2112,7 +2128,8 @@
         "3cbdddd9-5541-4f86-8e42-a3d6465a7cf2",
         "a74fcf61-8fb4-43ce-8844-7963420f3d45",
         "50cdc033-ae29-4987-b3ba-32e6626cb6ef",
-        "a4ee00e7-d222-4224-b1a5-9bb661ccbef3"
+        "a4ee00e7-d222-4224-b1a5-9bb661ccbef3",
+        "e69957a7-8574-4551-8320-938350ff462e"
     ],
     "tutorial": ""
 }
