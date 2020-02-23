@@ -15,7 +15,7 @@ if (timer < 80) and (spawning == true)
 if (timer >= spawnTime) 
 {
 	spawning = false;
-	instance_create_layer(spawnX, spawnY, "Instances", obj_survivalSystem.sEnemy);
+	instance_create_layer(spawnX, spawnY, "Instances", spawnInstance);
 	instance_destroy();
 }
 

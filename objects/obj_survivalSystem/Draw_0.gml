@@ -2,11 +2,11 @@
 // You can write your code in this editor
 
 //show G constant
-draw_set_font(fnt_title);
-draw_set_colour(c_white);
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_text(10, 10, string(global.gravitationalConstant));
+//draw_set_font(fnt_title);
+//draw_set_colour(c_white);
+//draw_set_halign(fa_left);
+//draw_set_valign(fa_top);
+//draw_text(10, 10, string(global.gravitationalConstant));
 
 if (gameOver == true) and (showHighScore == false)
 {
@@ -68,4 +68,13 @@ if (instance_exists(obj_player1))
 	draw_sprite(spr_armour,0, 30, 30);
 	draw_set_font(fnt_stats);
 	draw_text(50, 30, string(obj_player1.hp));
+}
+
+//Draw text warnings for round changes e.g. more enemies, gravity increase, enemy skill increase
+if (obj_scoreController.addBonus = true){
+	draw_set_font(fnt_menu);
+	draw_set_colour(c_white);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text(room_width * 0.5, room_height * 0.8, "TEST");
 }

@@ -8,6 +8,7 @@ scr_spawn(x, y);
 spawnX = x;
 spawnY = y;
 timer = 0;
+spawnInstance = undefined;
 image_alpha = 0.015;
 image_speed = 0;
 image_angle = random(360);

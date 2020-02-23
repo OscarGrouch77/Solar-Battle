@@ -19,13 +19,13 @@ if (global.roundNumber = 3) and !(instance_exists(obj_asteroidSpawner))
 	}
 }
 
-if (global.roundNumber = 10)
-{
-	if (obj_scoreController.gameActive == true)
-		{
-			obj_asteroidSpawner.astNumber = 2;
-		}
-}
+//if (global.roundNumber = 10)
+//{
+//	if (obj_scoreController.gameActive == true)
+//		{
+//			obj_asteroidSpawner.astNumber = 2;
+//		}
+//}
 
 //show game over message if player ship does not exist
 if (gameOver = false) and (global.roundEnd == false)

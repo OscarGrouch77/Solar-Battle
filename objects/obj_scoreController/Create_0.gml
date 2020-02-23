@@ -10,3 +10,4 @@ gamePaused = false;
 timer = 0;
 screenShot = -1;
 scrInc = 10;
+enemyExists = false;

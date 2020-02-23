@@ -4,7 +4,11 @@
 //starts awarding score after a 1s delay
 
 //gameActive variable to track when action is happening
-if (instance_exists(obj_player1)) and (instance_exists(obj_survivalSystem.sEnemy))
+if (instance_exists(obj_survivalSystem.sEnemy) or instance_exists(obj_survivalSystem.sEnemy2)){
+	enemyExists = true;
+}else enemyExists = false;
+
+if (instance_exists(obj_player1) and (enemyExists == true))
 {
 	gameActive = true;
 }
@@ -17,11 +21,11 @@ if (gameActive == true)
 }
 
 
-//starts awarding score after a 1s delay, sets startBonus for multiplying
+//checks for enemies and spawn objects - starts awarding score after a 2s delay, sets startBonus for multiplying
 
 if (global.roundEnd == false)
 {
-	if !(instance_exists(obj_survivalSystem.sEnemy)) and !(instance_exists(obj_spawnObjectSurvival))
+	if (!enemyExists) and !(instance_exists(obj_spawnObjectSurvival))
 	{
 		if (instance_exists(obj_player1))
 		{
@@ -53,10 +57,16 @@ if (awardScore == true)
 	
 	
 	///awarding score
-	if (alarm[3] = -1) and (countMulti > 1)
+	if (countMulti > 1)
 	{
 		addBonus = false;
-		alarm[3] = 60;
+		if keyboard_check_pressed(global.p1Fire){
+			global.roundBonus = (countMulti * startBonus);
+			countMulti = 0;
+		}
+		if (alarm[3] = -1){
+			alarm[3] = 30;
+		}
 	}
 	if (alarm[4] = -1) and (countMulti <= 1)
 	{
