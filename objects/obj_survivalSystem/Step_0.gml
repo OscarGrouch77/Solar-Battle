@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 
-
 //makes cursor invisible if game in progress
 if (gameOver == false)
 {

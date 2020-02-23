@@ -29,6 +29,7 @@ while(len < maxL)
         hitpoint[1] = castY;
         return hitpoint;
     }
+	
 
     len++;
 }

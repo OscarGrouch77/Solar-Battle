@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//show G constant
+draw_set_font(fnt_title);
+draw_set_colour(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text(10, 10, string(global.gravitationalConstant));
+
 if (gameOver == true) and (showHighScore == false)
 {
 	draw_set_font(fnt_title);

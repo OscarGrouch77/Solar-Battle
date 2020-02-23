@@ -9,7 +9,7 @@ gameOver = false;
 showHighScore = false;
 sEnemy = obj_cpuSurvivalEasy;	//defines the type of enemy for this round
 enemyNumber = 1;
-
+global.gravitationalConstant = 1200;
 
 do
 	{

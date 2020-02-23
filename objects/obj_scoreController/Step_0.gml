@@ -62,13 +62,16 @@ if (awardScore == true)
 	{
 		alarm[4] = 60;
 	}
-	if (addBonus == true)
+	if (addBonus == true)			//add bonus points to score
 	{
 		if (global.roundBonus > 0)
 		{
-			var scrInc = 10;
-			if global.roundBonus > 1000 scrInc = 100;
-			if global.roundBonus > 10000 scrInc = 1000;
+			if !keyboard_check(global.p1Fire){
+				if global.roundBonus > 1000 scrInc = 100;
+				if global.roundBonus > 10000 scrInc = 1000;
+			}else{
+				scrInc = scrInc * 2;
+			}
 			var targetScore = score + global.roundBonus;
 			score = min(score + scrInc, targetScore);
 			global.roundBonus = max(global.roundBonus - scrInc, 0);
@@ -77,7 +80,7 @@ if (awardScore == true)
 		//initiate next round
 		{	
 			timer++
-			if (timer>180)
+			if (timer>120)
 			{
 				if (alarm[1] = -1)
 				{

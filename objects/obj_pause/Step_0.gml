@@ -25,7 +25,7 @@ if (keyboard_check_pressed(vk_escape))
 
 if (paused)
 {
-	window_set_cursor(cr_default)
+	window_set_cursor(cr_default);
 	if (mouse_check_button_pressed(mb_left)) && !(confirm)
 	{
 		if (point_in_rectangle(mouse_x, mouse_y, room_width * 0.5 - string_width("QUIT TO MENU") * 0.5, boxTop + Vspacing * 3, room_width * 0.5 + string_width("QUIT TO MENU") * 0.5, boxTop + Vspacing * 3 + string_height("QUIT TO MENU")))

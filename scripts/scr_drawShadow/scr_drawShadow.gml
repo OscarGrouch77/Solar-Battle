@@ -11,6 +11,10 @@ xscale = max(30 * ((point_distance(xx, yy, obj_sun.x, obj_sun.y)/room_width)), 2
 yscale = sprite_get_height(1)/64;
 rotation = point_direction(xx, yy, obj_sun.x, obj_sun.y);
 alpha = (1 - (point_distance(xx, yy, obj_sun.x, obj_sun.y)/room_width))/8;
+shadHP1x = -1;
+shadHP1y = -1;
+shadHP2x = -1;
+shadHP2y = -1;
 
 
 //finding x and y coords of the edge of the shadow
@@ -30,6 +34,8 @@ for(var i = 0; collision_line(obj_sun.x, obj_sun.y, self.x + lengthdir_x(i, dirS
 }
 
 
+
+//use raycast script to return hitpoit array
 if (distSun > 1)
 {
 	scr_raycast(obj_sun.x, obj_sun.y, shad1x + lengthdir_x(-20, dirSun), shad1y + lengthdir_y(-20, dirSun), self);

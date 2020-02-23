@@ -6,33 +6,39 @@
 //sets type of enemy to spawn according to round number
 if (global.roundNumber < 4)
 {
+	global.gravitationalConstant = 1200;
 	sEnemy = obj_cpuSurvivalEasy;
 	enemyNumber = 1;
 }
 if (global.roundNumber >= 4)
 {
+	global.gravitationalConstant = 1500;
 	sEnemy = obj_cpuSurvivalEasy2;
 	enemyNumber = 1;
 }
 
 if (global.roundNumber >= 7)
 {
+	global.gravitationalConstant = 1800;
 	sEnemy = obj_cpuSurvivalEasy;
 	enemyNumber = 2;
 }
 
 if (global.roundNumber >= 10)
 {
+	global.gravitationalConstant = 2000;
 	sEnemy = obj_cpuSurvivalStd;
 	enemyNumber = 1;
 }
 if (global.roundNumber >= 12)
 {
+	global.gravitationalConstant = 2500;
 	sEnemy = obj_cpuSurvivalEasy;
 	enemyNumber = 2;
 }
 if (global.roundNumber >= 18)
 {
+	global.gravitationalConstant = 3000;
 	sEnemy = obj_cpuSurvivalEasy2;
 	enemyNumber = 2;
 }
@@ -44,6 +50,7 @@ if (global.roundNumber >= 19)
 
 if (global.roundNumber >= 22)
 {
+	global.gravitationalConstant = 5000;
 	sEnemy = obj_cpuSurvivalStd;
 	enemyNumber = 2;
 }
@@ -56,6 +63,7 @@ if (global.roundNumber >= 24)
 
 if (global.roundNumber >= 25)
 {
+	global.gravitationalConstant = 6000;
 	sEnemy = obj_cpuSurvivalParent;
 	enemyNumber = 2;
 }
