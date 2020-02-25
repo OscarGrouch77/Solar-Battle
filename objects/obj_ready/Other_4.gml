@@ -25,6 +25,7 @@ if (getReady == false)
 	audio_pause_all();
 	//screenShot = sprite_create_from_surface(application_surface, 0, 0, room_width, room_height, 0, 0, 0, 0);
 	instance_deactivate_all(1);
+	instance_activate_object(obj_backgroundResController);
 	window_set_cursor(cr_none);
 	getReady = true;
 }

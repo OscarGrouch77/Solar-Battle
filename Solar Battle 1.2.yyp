@@ -1223,6 +1223,14 @@
             }
         },
         {
+            "Key": "8b465760-185a-4aeb-9a81-11e1199920b3",
+            "Value": {
+                "id": "dd306f9b-5486-40a4-9ba4-b54e6a600941",
+                "resourcePath": "objects\\obj_backgroundResController\\obj_backgroundResController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8cadfb1d-d037-4bfc-9355-48e17e88df1e",
             "Value": {
                 "id": "fc731ebd-01a2-477b-bed4-76054964c69a",
@@ -1972,6 +1980,14 @@
                 "id": "5218415e-e116-4f54-87ac-96518a1e8605",
                 "resourcePath": "views\\e6ae7da1-2115-4885-852d-4972dd70121f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e854af5f-9ccf-4f1a-9a0f-0064348989f4",
+            "Value": {
+                "id": "4878eb10-bad2-4643-b03c-7350510ae7f5",
+                "resourcePath": "sprites\\spr_nebula2560x1080\\spr_nebula2560x1080.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
