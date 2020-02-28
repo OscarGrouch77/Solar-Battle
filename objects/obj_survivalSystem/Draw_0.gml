@@ -70,11 +70,5 @@ if (instance_exists(obj_player1))
 	draw_text(50, 30, string(obj_player1.hp));
 }
 
-//Draw text warnings for round changes e.g. more enemies, gravity increase, enemy skill increase
-if (obj_scoreController.addBonus = true){
-	draw_set_font(fnt_menu);
-	draw_set_colour(c_white);
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_middle);
-	draw_text(room_width * 0.5, room_height * 0.8, "TEST");
-}
+
+

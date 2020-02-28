@@ -11,3 +11,9 @@ timer = 0;
 screenShot = -1;
 scrInc = 10;
 enemyExists = false;
+displayRoundChanges = false;
+
+//vars for pulsing warning text
+pulse = 0;
+sin_value = 0;
+steps_per_cycle = 90;

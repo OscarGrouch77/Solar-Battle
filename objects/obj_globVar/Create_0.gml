@@ -79,9 +79,10 @@ global.shipStats[0,0] = "Axion";
 
 
 //array for survival changes by round: 0 = GRAV CONSTANT, 1 = NUMBER OF ENEMIES, 2 = TYPE OF ENEMY 1, 3 = TYPE OF ENEMY 2, 
-//4 = NUMBER OF ASTEROIDS
+//4 = NUMBER OF ASTEROIDS, 5 = ROUND CHANGES FOR DISPLAY(STRING)
 
 //ROUND 25
+global.survivalRoundSpecs[24,5] = "ENEMY SKILL +\tGRAVITY +";
 global.survivalRoundSpecs[24,4] = 1;
 global.survivalRoundSpecs[24,3] = obj_cpuSurvivalParent;
 global.survivalRoundSpecs[24,2] = obj_cpuSurvivalParent;
@@ -89,6 +90,7 @@ global.survivalRoundSpecs[24,1] = 2;
 global.survivalRoundSpecs[24,0] = 6000;
 
 //ROUND 24
+global.survivalRoundSpecs[23,5] = "ENEMY SKILL +";
 global.survivalRoundSpecs[23,4] = 1;
 global.survivalRoundSpecs[23,3] = obj_cpuSurvivalParent;
 global.survivalRoundSpecs[23,2] = obj_cpuSurvivalEasy;
@@ -96,6 +98,7 @@ global.survivalRoundSpecs[23,1] = 2;
 global.survivalRoundSpecs[23,0] = 5000;
 
 //ROUND 23
+global.survivalRoundSpecs[22,5] = "GRAVITY +";
 global.survivalRoundSpecs[22,4] = 1;
 global.survivalRoundSpecs[22,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[22,2] = obj_cpuSurvivalEasy;
@@ -103,6 +106,7 @@ global.survivalRoundSpecs[22,1] = 2;
 global.survivalRoundSpecs[22,0] = 5000;
 
 //ROUND 22
+global.survivalRoundSpecs[21,5] = "ENEMY NUMBER +\tENEMY SKILL -";
 global.survivalRoundSpecs[21,4] = 1;
 global.survivalRoundSpecs[21,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[21,2] = obj_cpuSurvivalEasy;
@@ -110,6 +114,7 @@ global.survivalRoundSpecs[21,1] = 2;
 global.survivalRoundSpecs[21,0] = 3000;
 
 //ROUND 21
+global.survivalRoundSpecs[20,5] = "";
 global.survivalRoundSpecs[20,4] = 1;
 global.survivalRoundSpecs[20,3] = obj_cpuSurvivalParent;
 global.survivalRoundSpecs[20,2] = obj_cpuSurvivalEasy2;
@@ -117,6 +122,7 @@ global.survivalRoundSpecs[20,1] = 1;
 global.survivalRoundSpecs[20,0] = 3000;
 
 //ROUND 20
+global.survivalRoundSpecs[19,5] = "";
 global.survivalRoundSpecs[19,4] = 1;
 global.survivalRoundSpecs[19,3] = obj_cpuSurvivalParent;
 global.survivalRoundSpecs[19,2] = obj_cpuSurvivalEasy2;
@@ -124,6 +130,7 @@ global.survivalRoundSpecs[19,1] = 1;
 global.survivalRoundSpecs[19,0] = 3000;
 
 //ROUND 19
+global.survivalRoundSpecs[18,5] = "ENEMY NUMBER -\tENEMY SKILL +";
 global.survivalRoundSpecs[18,4] = 1;
 global.survivalRoundSpecs[18,3] = obj_cpuSurvivalParent;
 global.survivalRoundSpecs[18,2] = obj_cpuSurvivalEasy2;
@@ -131,6 +138,7 @@ global.survivalRoundSpecs[18,1] = 1;
 global.survivalRoundSpecs[18,0] = 3000;
 
 //ROUND 18
+global.survivalRoundSpecs[17,5] = "GRAVITY +";
 global.survivalRoundSpecs[17,4] = 1;
 global.survivalRoundSpecs[17,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[17,2] = obj_cpuSurvivalEasy2;
@@ -138,6 +146,7 @@ global.survivalRoundSpecs[17,1] = 2;
 global.survivalRoundSpecs[17,0] = 3000;
 
 //ROUND 17
+global.survivalRoundSpecs[16,5] = "";
 global.survivalRoundSpecs[16,4] = 1;
 global.survivalRoundSpecs[16,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[16,2] = obj_cpuSurvivalEasy2;
@@ -145,6 +154,7 @@ global.survivalRoundSpecs[16,1] = 2;
 global.survivalRoundSpecs[16,0] = 2500;
 
 //ROUND 16
+global.survivalRoundSpecs[15,5] = "ENEMY SKILL +";
 global.survivalRoundSpecs[15,4] = 1;
 global.survivalRoundSpecs[15,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[15,2] = obj_cpuSurvivalEasy2;
@@ -152,6 +162,7 @@ global.survivalRoundSpecs[15,1] = 2;
 global.survivalRoundSpecs[15,0] = 2500;
 
 //ROUND 15
+global.survivalRoundSpecs[14,5] = "";
 global.survivalRoundSpecs[14,4] = 1;
 global.survivalRoundSpecs[14,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[14,2] = obj_cpuSurvivalEasy2;
@@ -159,6 +170,7 @@ global.survivalRoundSpecs[14,1] = 2;
 global.survivalRoundSpecs[14,0] = 2500;
 
 //ROUND 14
+global.survivalRoundSpecs[13,5] = "ENEMY SKILL +";
 global.survivalRoundSpecs[13,4] = 1;
 global.survivalRoundSpecs[13,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[13,2] = obj_cpuSurvivalEasy2;
@@ -166,6 +178,7 @@ global.survivalRoundSpecs[13,1] = 2;
 global.survivalRoundSpecs[13,0] = 2500;
 
 //ROUND 13
+global.survivalRoundSpecs[12,5] = "";
 global.survivalRoundSpecs[12,4] = 1;
 global.survivalRoundSpecs[12,3] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[12,2] = obj_cpuSurvivalEasy2;
@@ -173,6 +186,7 @@ global.survivalRoundSpecs[12,1] = 2;
 global.survivalRoundSpecs[12,0] = 2500;
 
 //ROUND 12
+global.survivalRoundSpecs[11,5] = "ENEMY NUMBER +\tENEMY SKILL -";
 global.survivalRoundSpecs[11,4] = 1;
 global.survivalRoundSpecs[11,3] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[11,2] = obj_cpuSurvivalEasy2;
@@ -180,13 +194,15 @@ global.survivalRoundSpecs[11,1] = 2;
 global.survivalRoundSpecs[11,0] = 2500;
 
 //ROUND 11
+global.survivalRoundSpecs[10,5] = "GRAVITY +";
 global.survivalRoundSpecs[10,4] = 1;
 global.survivalRoundSpecs[10,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[10,2] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[10,1] = 1;
-global.survivalRoundSpecs[10,0] = 2000;
+global.survivalRoundSpecs[10,0] = 2500;
 
 //ROUND 10
+global.survivalRoundSpecs[9,5] = "ENEMY SKILL +";
 global.survivalRoundSpecs[9,4] = 1;
 global.survivalRoundSpecs[9,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[9,2] = obj_cpuSurvivalStd;
@@ -194,6 +210,7 @@ global.survivalRoundSpecs[9,1] = 1;
 global.survivalRoundSpecs[9,0] = 2000;
 
 //ROUND 9
+global.survivalRoundSpecs[8,5] = "ENEMY NUMBER -\tGRAVITY +";
 global.survivalRoundSpecs[8,4] = 1;
 global.survivalRoundSpecs[8,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[8,2] = obj_cpuSurvivalEasy;
@@ -201,13 +218,15 @@ global.survivalRoundSpecs[8,1] = 1;
 global.survivalRoundSpecs[8,0] = 2000;
 
 //ROUND 8
+global.survivalRoundSpecs[7,5] = "";
 global.survivalRoundSpecs[7,4] = 1;
 global.survivalRoundSpecs[7,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[7,2] = obj_cpuSurvivalEasy;
-global.survivalRoundSpecs[7,1] = 1;
+global.survivalRoundSpecs[7,1] = 2;
 global.survivalRoundSpecs[7,0] = 1800;
 
 //ROUND 7
+global.survivalRoundSpecs[6,5] = "ENEMY NUMBER +";
 global.survivalRoundSpecs[6,4] = 1;
 global.survivalRoundSpecs[6,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[6,2] = obj_cpuSurvivalEasy;
@@ -215,6 +234,7 @@ global.survivalRoundSpecs[6,1] = 2;
 global.survivalRoundSpecs[6,0] = 1800;
 
 //ROUND 6
+global.survivalRoundSpecs[5,5] = "";
 global.survivalRoundSpecs[5,4] = 1;
 global.survivalRoundSpecs[5,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[5,2] = obj_cpuSurvivalEasy2;
@@ -222,6 +242,7 @@ global.survivalRoundSpecs[5,1] = 1;
 global.survivalRoundSpecs[5,0] = 1500;
 
 //ROUND 5
+global.survivalRoundSpecs[4,5] = "";
 global.survivalRoundSpecs[4,4] = 1;
 global.survivalRoundSpecs[4,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[4,2] = obj_cpuSurvivalEasy2;
@@ -229,6 +250,7 @@ global.survivalRoundSpecs[4,1] = 1;
 global.survivalRoundSpecs[4,0] = 1500;
 
 //ROUND 4
+global.survivalRoundSpecs[3,5] = "ENEMY SKILL +";
 global.survivalRoundSpecs[3,4] = 1;
 global.survivalRoundSpecs[3,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[3,2] = obj_cpuSurvivalEasy2;
@@ -236,6 +258,7 @@ global.survivalRoundSpecs[3,1] = 1;
 global.survivalRoundSpecs[3,0] = 1500;
 
 //ROUND 3
+global.survivalRoundSpecs[2,5] = "GRAVITY +";
 global.survivalRoundSpecs[2,4] = 1;
 global.survivalRoundSpecs[2,3] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[2,2] = obj_cpuSurvivalEasy;
@@ -243,13 +266,15 @@ global.survivalRoundSpecs[2,1] = 1;
 global.survivalRoundSpecs[2,0] = 1500;
 
 //ROUND 2
+global.survivalRoundSpecs[1,5] = "";
 global.survivalRoundSpecs[1,4] = 1;
 global.survivalRoundSpecs[1,3] = obj_cpuSurvivalEasy;
-global.survivalRoundSpecs[1,2] = obj_cpuSurvivalStd;
-global.survivalRoundSpecs[1,1] = 2;
+global.survivalRoundSpecs[1,2] = obj_cpuSurvivalEasy;
+global.survivalRoundSpecs[1,1] = 1;
 global.survivalRoundSpecs[1,0] = 1200;
 
 //ROUND 1
+global.survivalRoundSpecs[0,5] = "";
 global.survivalRoundSpecs[0,4] = 1;
 global.survivalRoundSpecs[0,3] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[0,2] = obj_cpuSurvivalEasy;

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Starts bonus award sequence
 // You can write your code in this editor
 
 awardScore = true;
