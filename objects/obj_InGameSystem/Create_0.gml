@@ -7,3 +7,4 @@ gamePaused = false;
 winner = 0;
 takeSnapShot = false;
 screenShot = -1;
+global.gravitationalConstant = 2000;

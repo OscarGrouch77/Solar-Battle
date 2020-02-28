@@ -19,3 +19,5 @@ if (global.difficulty == 2) dEnemy = obj_cpuDuelHard;
 
 instance_create_layer(obj_sun.x + (room_width/4), obj_sun.y, "Instances", dEnemy);
 
+global.gravitationalConstant = 2000;
+
