@@ -285,13 +285,13 @@ global.survivalRoundSpecs[0,0] = 1200;
 
 //load progress from ini file
 ini_open("progress.ini");
-//ini_write_real("unlocks", "brawler", 0); //uncomment and run to reset unlocks
-//ini_write_real("unlocks", "longbow", 0); //uncomment and run to reset unlocks
-//ini_write_real("unlocks", "arachnoid", 0); //uncomment and run to reset unlocks
+ini_write_real("unlocks", "brawler", 0); //uncomment and run to reset unlocks
+ini_write_real("unlocks", "longbow", 0); //uncomment and run to reset unlocks
+ini_write_real("unlocks", "arachnoid", 0); //uncomment and run to reset unlocks
 
 //ini_write_real("unlocks", "brawler", 1); //uncomment and run to unlock
-ini_write_real("unlocks", "longbow", 1); //uncomment and run to unlock
-ini_write_real("unlocks", "arachnoid", 1); //uncomment and run to unlock
+//ini_write_real("unlocks", "longbow", 1); //uncomment and run to unlock
+//ini_write_real("unlocks", "arachnoid", 1); //uncomment and run to unlock
 global.shipStats[0,9] = ini_read_real("unlocks", "axion", 1);
 global.shipStats[1,9] = ini_read_real("unlocks", "brawler", 0);
 global.shipStats[2,9] = ini_read_real("unlocks", "longbow", 0);
