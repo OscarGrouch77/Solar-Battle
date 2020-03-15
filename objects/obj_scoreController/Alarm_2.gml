@@ -3,7 +3,7 @@
 
 awardScore = true;
 scrInc = 10;
-takeSnapShot = true;
+//takeSnapShot = true;
 startMulti = global.multiplier;
 countMulti = global.multiplier;
 startBonus = global.roundBonus;

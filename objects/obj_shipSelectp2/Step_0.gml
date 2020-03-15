@@ -28,7 +28,7 @@ if (keyboard_check_pressed(global.p2Right))
 	choice = choice + 1;
 }
 
-if (keyboard_check_pressed(global.p2Fire))
+if (keyboard_check_pressed(global.p2Fire)) and (selectButton.active == true)
 {
 	selectButton.select = !selectButton.select;
 }

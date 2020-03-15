@@ -82,7 +82,7 @@ global.shipStats[0,0] = "Axion";
 //4 = NUMBER OF ASTEROIDS, 5 = ROUND CHANGES FOR DISPLAY(STRING)
 
 //ROUND 25
-global.survivalRoundSpecs[24,5] = "ENEMY SKILL +\tGRAVITY +";
+global.survivalRoundSpecs[24,5] = "ENEMY SKILL +  GRAVITY +";
 global.survivalRoundSpecs[24,4] = 1;
 global.survivalRoundSpecs[24,3] = obj_cpuSurvivalParent;
 global.survivalRoundSpecs[24,2] = obj_cpuSurvivalParent;
@@ -106,7 +106,7 @@ global.survivalRoundSpecs[22,1] = 2;
 global.survivalRoundSpecs[22,0] = 5000;
 
 //ROUND 22
-global.survivalRoundSpecs[21,5] = "ENEMY NUMBER +\tENEMY SKILL -";
+global.survivalRoundSpecs[21,5] = "ENEMY NUMBER +  ENEMY SKILL -";
 global.survivalRoundSpecs[21,4] = 1;
 global.survivalRoundSpecs[21,3] = obj_cpuSurvivalStd;
 global.survivalRoundSpecs[21,2] = obj_cpuSurvivalEasy;
@@ -130,7 +130,7 @@ global.survivalRoundSpecs[19,1] = 1;
 global.survivalRoundSpecs[19,0] = 3000;
 
 //ROUND 19
-global.survivalRoundSpecs[18,5] = "ENEMY NUMBER -\tENEMY SKILL +";
+global.survivalRoundSpecs[18,5] = "ENEMY NUMBER -  ENEMY SKILL +";
 global.survivalRoundSpecs[18,4] = 1;
 global.survivalRoundSpecs[18,3] = obj_cpuSurvivalParent;
 global.survivalRoundSpecs[18,2] = obj_cpuSurvivalEasy2;
@@ -186,7 +186,7 @@ global.survivalRoundSpecs[12,1] = 2;
 global.survivalRoundSpecs[12,0] = 2500;
 
 //ROUND 12
-global.survivalRoundSpecs[11,5] = "ENEMY NUMBER +\tENEMY SKILL -";
+global.survivalRoundSpecs[11,5] = "ENEMY NUMBER +  ENEMY SKILL -";
 global.survivalRoundSpecs[11,4] = 1;
 global.survivalRoundSpecs[11,3] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[11,2] = obj_cpuSurvivalEasy2;
@@ -210,7 +210,7 @@ global.survivalRoundSpecs[9,1] = 1;
 global.survivalRoundSpecs[9,0] = 2000;
 
 //ROUND 9
-global.survivalRoundSpecs[8,5] = "ENEMY NUMBER -\tGRAVITY +";
+global.survivalRoundSpecs[8,5] = "ENEMY NUMBER -  GRAVITY +";
 global.survivalRoundSpecs[8,4] = 1;
 global.survivalRoundSpecs[8,3] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[8,2] = obj_cpuSurvivalEasy;
@@ -285,9 +285,9 @@ global.survivalRoundSpecs[0,0] = 1200;
 
 //load progress from ini file
 ini_open("progress.ini");
-ini_write_real("unlocks", "brawler", 0); //uncomment and run to reset unlocks
-ini_write_real("unlocks", "longbow", 0); //uncomment and run to reset unlocks
-ini_write_real("unlocks", "arachnoid", 0); //uncomment and run to reset unlocks
+//ini_write_real("unlocks", "brawler", 0); //uncomment and run to reset unlocks
+//ini_write_real("unlocks", "longbow", 0); //uncomment and run to reset unlocks
+//ini_write_real("unlocks", "arachnoid", 0); //uncomment and run to reset unlocks
 
 //ini_write_real("unlocks", "brawler", 1); //uncomment and run to unlock
 //ini_write_real("unlocks", "longbow", 1); //uncomment and run to unlock

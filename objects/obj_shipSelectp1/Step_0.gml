@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+//checks if ship unlocked
 if (global.shipStats[choice,9] == 1)
 {
 	selectButton.active = true;
@@ -42,7 +44,7 @@ if (keyboard_check_pressed(global.p1Right))
 	choice = choice + 1;
 }
 
-if (keyboard_check_pressed(global.p1Fire))
+if (keyboard_check_pressed(global.p1Fire)) and (selectButton.active == true)
 {
 	if (selectButton.select == false)
 	{

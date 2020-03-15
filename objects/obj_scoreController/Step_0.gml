@@ -43,6 +43,7 @@ if (global.roundEnd == false)
 //take snapshot for paused screen
 if (awardScore == true)
 {
+	/*
 	if(takeSnapShot == true)
 	{
 		audio_stop_sound(snd_engine1);
@@ -54,40 +55,43 @@ if (awardScore == true)
 		instance_activate_object(obj_survivalSystem);
 		takeSnapShot = false;	
 	}
-	
+	*/
 	
 	///awarding score
-	if (countMulti > 1)
+	if (countMulti > 1)		//applied multiplier to round bonus
 	{
-		var multiDelay = 30;
+		var multiDelay = 20;
 		addBonus = false;
-		if keyboard_check(global.p1Fire){
-			multiDelay = 5;
+		//if keyboard_check(global.p1Fire){
+			//multiDelay = 5;
 			//global.roundBonus = (countMulti * startBonus);
 			//countMulti = 1;
-		}
-		if (alarm[3] = -1){
+		//}
+		if (alarm[3] = -1){							//alarm 3 adds round bonus repeats according to multiplier
 			alarm[3] = multiDelay;
 		}
 	}
-	if (alarm[4] = -1) and (countMulti <= 1){
+	
+	if (alarm[4] = -1) and (countMulti <= 1){		//delays 60 before adding round bonus to score
 		alarm[4] = 60;
 	}
-	if (alarm[4] > 0) and (keyboard_check(global.p1Fire)){
-		if (countMulti <= 1){
-			addBonus = true;
-		}
-	}
+	
+	//if (alarm[4] > 0) and (keyboard_check(global.p1Fire)){
+	//	if (countMulti <= 1){
+	//		addBonus = true;
+	//	}
+	//}
 	if (addBonus == true)			//add bonus points to score
 	{
 		if (global.roundBonus > 0)
 		{
-			if (!keyboard_check(global.p1Fire)){
-				if global.roundBonus > 1000 scrInc = 100;
-				if global.roundBonus > 10000 scrInc = 1000;
-			}else{
-				scrInc = scrInc * 1.1;
-			}
+			//if (!keyboard_check(global.p1Fire)){
+			//	if global.roundBonus > 1000 scrInc = 100;
+			//	if global.roundBonus > 10000 scrInc = 1000;
+			//}else{
+			//	scrInc = scrInc * 1.1;
+			//}
+			scrInc = max(10, floor(global.roundBonus * 0.1));	//increase scrInc in propotion to round bonus, min 10
 			var targetScore = score + global.roundBonus;
 			score = round(min(score + scrInc, targetScore));
 			global.roundBonus = round(max(global.roundBonus - scrInc, 0));
@@ -95,6 +99,7 @@ if (awardScore == true)
 		else
 		//initiate next round
 		{	
+			
 			timer++
 			if (timer>120)
 			{
@@ -103,7 +108,7 @@ if (awardScore == true)
 					alarm[1] = 120;
 					addBonus = false;
 					awardScore = false;
-					gamePaused = false;
+					//gamePaused = false;
 					displayRoundChanges = true;
 					global.roundNumber++;
 					global.checkProgress = true;    //checks progress in globVar
@@ -115,15 +120,18 @@ if (awardScore == true)
 		}
 	}
 }
+
+/*
 if (gamePaused == false)
 {
 	instance_activate_all();
 }
+*/
 
 //code for pulsing warnings - set alpha value to pulse
-if(displayRoundChanges == true){
+//if(displayRoundChanges == true){
 	sin_value += (pi*2)/steps_per_cycle
 	if (sin_value >= pi*2) sin_value = 0;
 	pulse = sin(sin_value);
 	pulse = sign(pulse)*pulse;
-}
+//}
