@@ -9,7 +9,7 @@ gameOver = false;
 showHighScore = false;
 sEnemy							= global.survivalRoundSpecs[0, 2];
 sEnemy2							= global.survivalRoundSpecs[0, 3];
-spawnAsteroid = false;
+
 
 enemyNumber = 1;
 global.gravitationalConstant = 1200;

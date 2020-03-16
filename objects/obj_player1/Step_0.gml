@@ -116,6 +116,42 @@ if (keyboard_check_pressed(global.p1Reverse)) or (disabled == true)
 
 move_wrap(true, true, 0);								//wrap around edges of room
 
+//shooting missile
+if (disabled == false) and (shootAble == true)
+{
+	if (missile == true)
+	{
+		if (keyboard_check_released(global.p1AltFire)) and (charging = false)
+		{
+			if !(fullyCharged){
+				missileActive = true;
+				var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
+				myMissile.owner = id;
+				//myMissile.target = instance_nearest(x, y, enemy);
+				missileAmmo -= 1;
+			}
+		}
+		if (missileAmmo <= 0) missile = false;
+	}
+
+	//firing EMP
+	if (emp == true)
+	{
+		if (keyboard_check(global.p1AltFire)) and (empActive = false)
+		{
+			empActive = true;
+			var myEmp = instance_create_layer(x,y,"Ambient",obj_genericEmp);
+			myEmp.owner = id;
+			empAmmo -= 1;
+			shootAble = false;
+			alarm[7] = 360;
+		}
+		if (empAmmo <= 0) emp = false;
+	}
+}
+
+
+
 //shooting
 
 if (disabled == false) and (shootAble == true)
@@ -163,7 +199,7 @@ if (disabled == false) and (shootAble == true)
 	}
 	else																			//firing code for Arachnoid
 	{
-		if (keyboard_check_pressed(global.p1Fire)) and (cooldown <= 0)
+		if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
 		{
 			if (double == false)
 			{
@@ -200,12 +236,12 @@ if (disabled == false) and (shootAble == true)
 			audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
 			audio_play_sound(snd_pew4,0,0);
 		}
-		if (keyboard_check(global.p1Fire))				//code for charging special shot
+		if (keyboard_check(global.p1AltFire))				//code for charging special shot
 		{
-			chargeShot = min(chargeShot + 0.3, 30);
+			chargeShot = min(chargeShot + 0.3, 30);		//increases chargeshot
 			if (chargeShot > 3)							//if true draw charge meter
 			{
-				charging = true;
+				charging = true;						//charging true after one tenth of full charge time elapsed
 			}
 			if (chargeShot >= 30) fullyCharged = true;		//30 is max charge
 		}
@@ -214,7 +250,7 @@ if (disabled == false) and (shootAble == true)
 			partialCharge = chargeShot;
 			chargeShot = 0;
 		}
-		if (keyboard_check_released(global.p1Fire))					//fire charged shot if fully charged
+		if (keyboard_check_released(global.p1AltFire))					//fire charged shot if fully charged
 		{
 			if (fullyCharged == true)								//fire fully charged shot
 			{
@@ -338,37 +374,7 @@ if (overheat > 10) and (alarm[1] == -1)				//gun overheated starts alarm 1
 	alarm[1] = 60;
 }
 
-//shooting missile
-if (disabled == false) and (shootAble == true)
-{
-	if (missile == true)
-	{
-		if (keyboard_check_released(global.p1AltFire))//and (missileActive = false)
-		{
-			missileActive = true;
-			var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
-			myMissile.owner = id;
-			//myMissile.target = instance_nearest(x, y, enemy);
-			missileAmmo -= 1;
-		}
-		if (missileAmmo <= 0) missile = false;
-	}
 
-	//firing EMP
-	if (emp == true)
-	{
-		if (keyboard_check(global.p1AltFire)) and (empActive = false)
-		{
-			empActive = true;
-			var myEmp = instance_create_layer(x,y,"Ambient",obj_genericEmp);
-			myEmp.owner = id;
-			empAmmo -= 1;
-			shootAble = false;
-			alarm[7] = 360;
-		}
-		if (empAmmo <= 0) emp = false;
-	}
-}
 
 
 

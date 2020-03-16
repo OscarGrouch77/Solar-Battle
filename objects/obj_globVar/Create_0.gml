@@ -275,7 +275,7 @@ global.survivalRoundSpecs[1,0] = 1200;
 
 //ROUND 1
 global.survivalRoundSpecs[0,5] = "";
-global.survivalRoundSpecs[0,4] = 4;
+global.survivalRoundSpecs[0,4] = 0;
 global.survivalRoundSpecs[0,3] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[0,2] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[0,1] = 1;
