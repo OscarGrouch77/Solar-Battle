@@ -14,7 +14,8 @@ if !(point_in_rectangle(x, y, -65, -65, room_width + 65, room_height + 65))					
 
 if (hp <= 0)														//destroy if hp = 0
 {
-	instance_create_layer(x, y, "bottomParticle", obj_particleSysExplosion);
-	scr_asteroidExplosion(x, y);
+	var myExp = instance_create_layer(x, y, "bottomParticle", obj_particleSysExplosion);
+	myExp.astDirection = self.direction;
+	myExp.astSpeed = self.speed;
 	instance_destroy();	
 }

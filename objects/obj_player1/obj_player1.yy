@@ -463,6 +463,20 @@
             "varType": 5
         },
         {
+            "id": "8dc1ecb5-9939-434b-8071-37ed54ad45a1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "obj_player2",
+            "varName": "enemy2",
+            "varType": 5
+        },
+        {
             "id": "aec65cb3-5010-43dc-81a7-071a07b4afdb",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

@@ -6,6 +6,7 @@ playerDir= image_angle
 if (global.gameType == gameType.survival)
 {
 	enemy = obj_survivalSystem.sEnemy;
+	enemy2 = obj_survivalSystem.sEnemy2;
 }
 
 if (global.gameType == gameType.oneDuel)
@@ -342,12 +343,12 @@ if (disabled == false) and (shootAble == true)
 {
 	if (missile == true)
 	{
-		if (keyboard_check(global.p1AltFire)) and (missileActive = false)
+		if (keyboard_check_released(global.p1AltFire))//and (missileActive = false)
 		{
 			missileActive = true;
 			var myMissile = instance_create_layer(x,y,"Bullets",obj_genericMissile);
 			myMissile.owner = id;
-			myMissile.target = instance_nearest(x, y, enemy);
+			//myMissile.target = instance_nearest(x, y, enemy);
 			missileAmmo -= 1;
 		}
 		if (missileAmmo <= 0) missile = false;

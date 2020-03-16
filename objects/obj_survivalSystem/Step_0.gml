@@ -10,14 +10,15 @@ if (gameOver == false)
 else window_set_cursor(cr_default);
 
 
-//spawn asteroid at round 3 or higher
-if (global.roundNumber = 3) and !(instance_exists(obj_asteroidSpawner))
-{
-	if (obj_scoreController.gameActive == true)
-	{
+
+
+//spawn asteroids checks asteroid number in global round specs
+if (global.survivalRoundSpecs[global.roundNumber-1,4]>0){
+	if (obj_scoreController.gameActive == true) and !(instance_exists(obj_asteroidSpawner)){
 		instance_create_layer(1, 1,"Instances", obj_asteroidSpawner);
 	}
 }
+
 
 //if (global.roundNumber = 10)
 //{

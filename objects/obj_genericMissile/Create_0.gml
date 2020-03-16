@@ -3,7 +3,7 @@
 
 owner = undefined;
 rotate = 0;
-target = undefined;
+target = noone;
 
 alarm[1] = 1;
 
