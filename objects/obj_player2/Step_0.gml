@@ -100,7 +100,7 @@ if (disabled == false) and (shootAble == true)
 {
 	if !(sprite_index == spr_arachnid)												//can fire by holding down fire button if not arachnoid
 	{
-		if (keyboard_check(global.p1Fire)) and (cooldown <= 0)
+		if (keyboard_check(global.p2Fire)) and (cooldown <= 0)
 		{
 			if (double == false)
 			{

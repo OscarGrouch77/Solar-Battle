@@ -24,16 +24,26 @@ draw_set_alpha(1);
 draw_set_color(c_white);
 draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 1);
 draw_sprite_ext(ship[choice,1], 0, Vcentre, Vtop + 230 + ship[choice,0] *6, 6, 6, 90, c_white, 1);
+if (global.shipStats[choice,9] == false)
+{
+	draw_set_alpha(0.8);
+	draw_set_color(c_black);
+	draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 0);
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+	draw_rectangle(Vcentre - 200, Vtop + 30, Vcentre + 200, Vtop + 430, 1);
+	draw_sprite_ext(spr_lock, 1, Vcentre, Vtop + 230, 6, 6, 0, c_white, 1);
+}
 
 //draw change selection triangles
-if (point_in_triangle(mouse_x, mouse_y, Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280)or (keyboard_check(global.p2Left)))
+if (point_in_triangle(mouse_x, mouse_y, Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280)or (keyboard_check(Kleft)))
 {
 	draw_set_color(c_white);
 }
 else draw_set_colour(c_gray);
 draw_triangle(Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280, 0);
 
-if (point_in_triangle(mouse_x, mouse_y, Vcentre + 250, Vtop + 230, Vcentre + 220, Vtop + 180, Vcentre + 220, Vtop + 280) or (keyboard_check(global.p2Right)))
+if (point_in_triangle(mouse_x, mouse_y, Vcentre + 250, Vtop + 230, Vcentre + 220, Vtop + 180, Vcentre + 220, Vtop + 280) or (keyboard_check(Kright)))
 {
 	draw_set_color(c_white);
 }

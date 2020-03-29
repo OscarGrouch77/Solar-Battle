@@ -43,21 +43,37 @@ if (rotate == -1){
 	image_angle -= 4;
 }
 
-
-//pointing towards target
-if instance_exists(target)
-{
-	targetDir = point_direction(x, y, target.x, target.y);
-	scr_rotateTo(targetDir);
+//starts missile homing after short delay from launching
+if (homing == true){
+	//pointing towards target
+	if instance_exists(target)
+	{
+		targetDir = point_direction(x, y, target.x, target.y);
+		scr_rotateTo(targetDir);
+	}
+	//thrusting towards target
+	motion_add(image_angle, 0.5);
+	speed = min(speed, 10);
+	//create smoke trail
+	var exhaustDir = direction + 180;
+	var exhaustSpd = 3;
+	with (obj_partSysMissileSmoke){
+		part_type_direction(smoke1, exhaustDir -5, exhaustDir +5, 0, 10);
+		part_type_speed(smoke1, exhaustSpd, exhaustSpd, -0.02, 0);
+		part_type_direction(smoke2, exhaustDir -5, exhaustDir +5, 0, 10);
+		part_type_speed(smoke2, exhaustSpd, exhaustSpd, -0.02, 0);
+		part_type_direction(smoke3, exhaustDir -5, exhaustDir +5, 0, 10);
+		part_type_speed(smoke3, exhaustSpd, exhaustSpd, -0.02, 0);
+	}
+	scr_missileSmoke(x,y);
+	//sound missile engine
+	if !(audio_is_playing(snd_missile1))
+	{
+		audio_sound_gain(snd_missile1, 0.3, 0);
+		audio_sound_pitch(snd_missile1,2);
+		audio_play_sound(snd_missile1, 1, true);
+	}
 }
-
-
-
-//thrusting towards target
-
-motion_add(image_angle, 0.5);
-speed = min(speed, 10);
-
 
 //alarm destroys self
 if (alarm[0] = -1)
@@ -67,12 +83,5 @@ if (alarm[0] = -1)
 
 move_wrap(true, true, 0);
 
-scr_missileSmoke(x,y);
 
-//sound missile engine
-if !(audio_is_playing(snd_missile1))
-{
-	audio_sound_gain(snd_missile1, 0.3, 0);
-	audio_sound_pitch(snd_missile1,2);
-	audio_play_sound(snd_missile1, 1, true);
-}
+

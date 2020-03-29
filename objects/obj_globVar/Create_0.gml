@@ -81,6 +81,14 @@ global.shipStats[0,0] = "Axion";
 //array for survival changes by round: 0 = GRAV CONSTANT, 1 = NUMBER OF ENEMIES, 2 = TYPE OF ENEMY 1, 3 = TYPE OF ENEMY 2, 
 //4 = NUMBER OF ASTEROIDS, 5 = ROUND CHANGES FOR DISPLAY(STRING)
 
+//ROUND 26+
+global.survivalRoundSpecs[25,5] = "";
+global.survivalRoundSpecs[25,4] = 3;
+global.survivalRoundSpecs[25,3] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[25,2] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[25,1] = 2;
+global.survivalRoundSpecs[25,0] = 6000;
+
 //ROUND 25
 global.survivalRoundSpecs[24,5] = "ENEMY SKILL +  GRAVITY +";
 global.survivalRoundSpecs[24,4] = 3;
@@ -285,9 +293,9 @@ global.survivalRoundSpecs[0,0] = 1200;
 
 //load progress from ini file
 ini_open("progress.ini");
-//ini_write_real("unlocks", "brawler", 0); //uncomment and run to reset unlocks
-//ini_write_real("unlocks", "longbow", 0); //uncomment and run to reset unlocks
-//ini_write_real("unlocks", "arachnoid", 0); //uncomment and run to reset unlocks
+//ini_write_real("unlocks", "brawler", 0); //uncomment and run to reset unlocks remember to recomment afterwards
+//ini_write_real("unlocks", "longbow", 0); //uncomment and run to reset unlocks remember to recomment afterwards
+//ini_write_real("unlocks", "arachnoid", 0); //uncomment and run to reset unlocks remember to recomment afterwards
 
 //ini_write_real("unlocks", "brawler", 1); //uncomment and run to unlock
 //ini_write_real("unlocks", "longbow", 1); //uncomment and run to unlock

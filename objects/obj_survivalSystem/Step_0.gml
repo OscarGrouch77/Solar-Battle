@@ -13,7 +13,8 @@ else window_set_cursor(cr_default);
 
 
 //spawn asteroids checks asteroid number in global round specs
-if (global.survivalRoundSpecs[global.roundNumber-1,4]>0){
+var arrayRound = min(array_height_2d(global.survivalRoundSpecs) -1, global.roundNumber-1);
+if (global.survivalRoundSpecs[arrayRound,4]>0){
 	if (obj_scoreController.gameActive == true) and !(instance_exists(obj_asteroidSpawner)){
 		instance_create_layer(1, 1,"Instances", obj_asteroidSpawner);
 	}

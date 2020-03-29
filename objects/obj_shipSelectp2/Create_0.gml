@@ -27,3 +27,11 @@ rateLength = 0;
 rangeLength = 0;
 accuracyLength = 0;
 agilityLength = 0;
+
+//tool tip
+showTip = false;
+
+//create variables for left, right, fire
+Kleft = global.p2Left;
+Kright = global.p2Right;
+Kfire = global.p2Fire;

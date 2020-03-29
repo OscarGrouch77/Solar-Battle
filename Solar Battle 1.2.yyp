@@ -1623,6 +1623,14 @@
             }
         },
         {
+            "Key": "c3120e5c-c5e3-4631-9fb0-749966866db3",
+            "Value": {
+                "id": "4b15e1b1-a4c5-4b6c-ae1f-5449ab35a669",
+                "resourcePath": "sounds\\snd_missileRelease\\snd_missileRelease.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c31e0831-7c80-49fe-93bc-46f0c954d55c",
             "Value": {
                 "id": "5c8691f7-68d2-44c9-8a5d-bfca19891064",

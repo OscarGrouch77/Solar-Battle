@@ -35,3 +35,8 @@ agilityLength = 0;
 
 //tool tip
 showTip = false;
+
+//create variables for left, right, fire
+Kleft = global.p1Left;
+Kright = global.p1Right;
+Kfire = global.p1Fire;

@@ -42,14 +42,14 @@ if (global.shipStats[choice,9] == false)
 }
 
 //draw change selection triangles
-if (point_in_triangle(mouse_x, mouse_y, Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280)or (keyboard_check(global.p1Left)))
+if (point_in_triangle(mouse_x, mouse_y, Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280) or (keyboard_check(Kleft)))
 {
 	draw_set_color(c_white);
 }
 else draw_set_colour(c_gray);
 draw_triangle(Vcentre - 250, Vtop + 230, Vcentre - 220, Vtop + 180, Vcentre - 220, Vtop + 280, 0);
 
-if (point_in_triangle(mouse_x, mouse_y, Vcentre + 250, Vtop + 230, Vcentre + 220, Vtop + 180, Vcentre + 220, Vtop + 280) or (keyboard_check(global.p1Right)))
+if (point_in_triangle(mouse_x, mouse_y, Vcentre + 250, Vtop + 230, Vcentre + 220, Vtop + 180, Vcentre + 220, Vtop + 280) or (keyboard_check(Kright)))
 {
 	draw_set_color(c_white);
 }

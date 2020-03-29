@@ -34,7 +34,7 @@ else
 
 //display changes to game this round
 if (displayRoundChanges == true){
-	var arrayRound = global.roundNumber -1;
+	var arrayRound = min(array_height_2d(global.survivalRoundSpecs) -1, global.roundNumber -1);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 	
