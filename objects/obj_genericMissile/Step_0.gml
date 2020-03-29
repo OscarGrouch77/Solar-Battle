@@ -36,11 +36,11 @@ if !(instance_exists(target)){
 
 //rotating controller
 if (rotate == 1){
-	image_angle += 4;
+	image_angle += 5;
 }
 
 if (rotate == -1){
-	image_angle -= 4;
+	image_angle -= 5;
 }
 
 //starts missile homing after short delay from launching
@@ -53,9 +53,9 @@ if (homing == true){
 	}
 	//thrusting towards target
 	motion_add(image_angle, 0.5);
-	speed = min(speed, 10);
+	speed = min(speed, 12);
 	//create smoke trail
-	var exhaustDir = direction + 180;
+	var exhaustDir = image_angle + 180;
 	var exhaustSpd = 3;
 	with (obj_partSysMissileSmoke){
 		part_type_direction(smoke1, exhaustDir -5, exhaustDir +5, 0, 10);
