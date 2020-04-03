@@ -19,3 +19,5 @@ if (hp <= 0)														//destroy if hp = 0
 	myExp.astSpeed = self.speed;
 	instance_destroy();	
 }
+
+

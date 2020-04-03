@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-sprite_index = choose(spr_asteroidBig, spr_asteroidBig2);
+sprite_index = choose(spr_asteroidBig, spr_asteroidBig2, spr_asteroid3, spr_asteroid4, spr_asteroid5, spr_asteroid6);
 
 hp = 1;
 

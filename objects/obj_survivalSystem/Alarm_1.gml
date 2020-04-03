@@ -4,7 +4,6 @@
 //checks SurvivalRound Specs array for round settings
 //0 = GRAV CONSTANT, 1 = NUMBER OF ENEMIES, 2 = TYPE OF ENEMY 1, 3 = TYPE OF ENEMY 2, 
 //4 = NUMBER OF ASTEROIDS
-
 var arrayRound = min(global.roundNumber - 1, array_height_2d(global.survivalRoundSpecs) - 1);
 
 global.gravitationalConstant	= global.survivalRoundSpecs[arrayRound, 0];

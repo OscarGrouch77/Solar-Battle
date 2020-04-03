@@ -58,7 +58,7 @@ else
 }
 
 //smoke trail
-
+/*
 if (hp ==2)
 {
 	with (cpuDemo1Thrust1)
@@ -80,7 +80,7 @@ if (hp ==1)
 		scr_smokeTrail(x+ random_range(-3, 3), y+ random_range(-3, 3));
 	}
 }
-
+*/
 
 		
 		

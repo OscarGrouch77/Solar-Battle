@@ -10,7 +10,7 @@ if(instance_exists(enemy))
 
 #region quadratic method
 
-
+		//relative position and speed of enemy
 		var relX = enemy.x - x;
 		var relY = enemy.y - y;
 		var relHspeed = enemy.hspeed - hspeed;
@@ -28,7 +28,7 @@ if(instance_exists(enemy))
 		{
 			var timeToHit = (-b - sqrt(sqr(b) - (4*a*c))) / (2*a);
 
-			//position of target at time to hit
+			//relative position of target at time to hit
 
 			var aimX = relX + (relHspeed * timeToHit);
 			var aimY = relY + (relVspeed * timeToHit);

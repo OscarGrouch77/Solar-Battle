@@ -16,6 +16,9 @@ shadHP1y = -1;
 shadHP2x = -1;
 shadHP2y = -1;
 
+//create hitpont array
+hitpoint[1] = 0;
+
 
 //finding x and y coords of the edge of the shadow
 for(var i = 0; collision_line(obj_sun.x, obj_sun.y, self.x + lengthdir_x(i, dirSun + 90) + lengthdir_x(-20, dirSun), self.y + lengthdir_y(i, dirSun + 90) + lengthdir_y(20, dirSun + 180), self, true, false); i += 1)

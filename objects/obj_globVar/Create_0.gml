@@ -17,7 +17,6 @@ global.p2Ship = spr_brawler;
 
 global.checkProgress = false;
 
-
 enum gameType
 {
 	oneDuel,
@@ -84,23 +83,23 @@ global.shipStats[0,0] = "Axion";
 //ROUND 26+
 global.survivalRoundSpecs[25,5] = "";
 global.survivalRoundSpecs[25,4] = 3;
-global.survivalRoundSpecs[25,3] = obj_cpuSurvivalParent;
-global.survivalRoundSpecs[25,2] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[25,3] = obj_cpuSurvivalHard;
+global.survivalRoundSpecs[25,2] = obj_cpuSurvivalHard;
 global.survivalRoundSpecs[25,1] = 2;
 global.survivalRoundSpecs[25,0] = 6000;
 
 //ROUND 25
 global.survivalRoundSpecs[24,5] = "ENEMY SKILL +  GRAVITY +";
 global.survivalRoundSpecs[24,4] = 3;
-global.survivalRoundSpecs[24,3] = obj_cpuSurvivalParent;
-global.survivalRoundSpecs[24,2] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[24,3] = obj_cpuSurvivalHard;
+global.survivalRoundSpecs[24,2] = obj_cpuSurvivalHard;
 global.survivalRoundSpecs[24,1] = 2;
 global.survivalRoundSpecs[24,0] = 6000;
 
 //ROUND 24
 global.survivalRoundSpecs[23,5] = "ENEMY SKILL +";
 global.survivalRoundSpecs[23,4] = 3;
-global.survivalRoundSpecs[23,3] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[23,3] = obj_cpuSurvivalHard;
 global.survivalRoundSpecs[23,2] = obj_cpuSurvivalEasy;
 global.survivalRoundSpecs[23,1] = 2;
 global.survivalRoundSpecs[23,0] = 5000;
@@ -124,7 +123,7 @@ global.survivalRoundSpecs[21,0] = 3000;
 //ROUND 21
 global.survivalRoundSpecs[20,5] = "";
 global.survivalRoundSpecs[20,4] = 3;
-global.survivalRoundSpecs[20,3] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[20,3] = obj_cpuSurvivalHard;
 global.survivalRoundSpecs[20,2] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[20,1] = 1;
 global.survivalRoundSpecs[20,0] = 3000;
@@ -132,7 +131,7 @@ global.survivalRoundSpecs[20,0] = 3000;
 //ROUND 20
 global.survivalRoundSpecs[19,5] = "";
 global.survivalRoundSpecs[19,4] = 3;
-global.survivalRoundSpecs[19,3] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[19,3] = obj_cpuSurvivalHard;
 global.survivalRoundSpecs[19,2] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[19,1] = 1;
 global.survivalRoundSpecs[19,0] = 3000;
@@ -140,7 +139,7 @@ global.survivalRoundSpecs[19,0] = 3000;
 //ROUND 19
 global.survivalRoundSpecs[18,5] = "ENEMY NUMBER -  ENEMY SKILL +";
 global.survivalRoundSpecs[18,4] = 3;
-global.survivalRoundSpecs[18,3] = obj_cpuSurvivalParent;
+global.survivalRoundSpecs[18,3] = obj_cpuSurvivalHard;
 global.survivalRoundSpecs[18,2] = obj_cpuSurvivalEasy2;
 global.survivalRoundSpecs[18,1] = 1;
 global.survivalRoundSpecs[18,0] = 3000;
