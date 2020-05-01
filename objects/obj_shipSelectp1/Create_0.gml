@@ -3,6 +3,8 @@
 
 
 //initialise 2d array of ship sprite and Y offsets
+ship[4,1] = spr_kepler;
+ship[4,0] = 0;
 ship[3,1] = spr_arachnid;
 ship[3,0] = 0;
 ship[2,1] = spr_longbow;
@@ -11,6 +13,7 @@ ship[1,1] = spr_brawler;
 ship[1,0] = 0;
 ship[0,1] = spr_axion;
 ship[0,0] = 10;
+
 
 choice = 0;
 

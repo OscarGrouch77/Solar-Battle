@@ -713,6 +713,48 @@
             "value": "0",
             "varName": "fullyCharged",
             "varType": 3
+        },
+        {
+            "id": "c519cf0f-374a-461f-b17d-69ad38c95d40",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravHeat",
+            "varType": 0
+        },
+        {
+            "id": "6dc68bfe-381c-4b30-a1fd-24a7d721e303",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravGunPush",
+            "varType": 3
+        },
+        {
+            "id": "3966358f-8602-4983-a7c1-f1d21c11c746",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "False",
+            "varName": "gravConeExists",
+            "varType": 3
         }
     ],
     "solid": false,

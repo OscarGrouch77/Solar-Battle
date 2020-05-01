@@ -27,6 +27,20 @@ enum gameType
 global.gameType = gameType.oneDuel;
 
 //create array for ship info 0 = "NAME", 1 = "ROLE", 2 = THRUST, 3 = FIRE RATE, 4 = RANGE, 5 = ACCURACY, 6 = AGILITY, 7 = ARMOUR, 8 = "DESCRIPTION", 9 = unlocked, 10 = "unlock conditions"
+
+//gravity manipulator - Kepler
+global.shipStats[4,10] = "TO UNLOCK: REACH ROUND 25 IN SURVIVAL";
+global.shipStats[4,9] = false;
+global.shipStats[4,8] = "The Kepler can control the force of gravity!";
+global.shipStats[4,7] = 10;
+global.shipStats[4,6] = 5;
+global.shipStats[4,5] = 5;
+global.shipStats[4,4] = 6;
+global.shipStats[4,3] = 6;
+global.shipStats[4,2] = 8;
+global.shipStats[4,1] = "Grav Tech";
+global.shipStats[4,0] = "Kepler";
+
 //Alien Tech - Arachnid
 global.shipStats[3,10] = "TO UNLOCK: REACH ROUND 20 IN SURVIVAL";
 global.shipStats[3,9] = false;
@@ -295,14 +309,17 @@ ini_open("progress.ini");
 //ini_write_real("unlocks", "brawler", 0); //uncomment and run to reset unlocks remember to recomment afterwards
 //ini_write_real("unlocks", "longbow", 0); //uncomment and run to reset unlocks remember to recomment afterwards
 //ini_write_real("unlocks", "arachnoid", 0); //uncomment and run to reset unlocks remember to recomment afterwards
+//ini_write_real("unlocks", "kepler", 0); //uncomment and run to reset unlocks remember to recomment afterwards
 
 //ini_write_real("unlocks", "brawler", 1); //uncomment and run to unlock
 //ini_write_real("unlocks", "longbow", 1); //uncomment and run to unlock
 //ini_write_real("unlocks", "arachnoid", 1); //uncomment and run to unlock
+ini_write_real("unlocks", "kepler", 1); //uncomment and run to unlock
 global.shipStats[0,9] = ini_read_real("unlocks", "axion", 1);
 global.shipStats[1,9] = ini_read_real("unlocks", "brawler", 0);
 global.shipStats[2,9] = ini_read_real("unlocks", "longbow", 0);
 global.shipStats[3,9] = ini_read_real("unlocks", "arachnoid", 0);
+global.shipStats[4,9] = ini_read_real("unlocks", "kepler", 0);
 
 ini_close();
 
