@@ -5,6 +5,6 @@
 if (instance_exists(owner))
 {
 	image_angle = owner.image_angle;
-	x = owner.x;
-	y = owner.y;
+	x = owner.x + xOffset;
+	y = owner.y + yOffset;
 }

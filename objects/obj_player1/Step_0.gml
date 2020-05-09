@@ -404,10 +404,22 @@ if (disabled == false) and (shootAble == true)
 			{
 				if (gravConeExists == false)
 				{
-					gravCone = instance_create_layer(x, y, "Instances", obj_gravCone);
-					with gravCone
+					var num = 5;
+					//for loop creates 4 copies of the gravcone off screen for room wrapping
+					for(var i = num; i > 0; i--)
 					{
-						owner = other.id;
+						var gravCone = instance_create_layer(x, y, "Instances", obj_gravCone);
+						with gravCone
+						{
+							owner = other.id;
+							switch (i)
+							{
+								case 4: xOffset = -room_width; break;
+								case 3: xOffset = room_width; break;
+								case 2: yOffset = -room_height; break;
+								case 1: yOffset = room_height; break;
+							}
+						}
 					}
 					gravConeExists = true;
 				}
