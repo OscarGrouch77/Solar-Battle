@@ -1,7 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_yscale = 2;
-image_xscale = 4;
-image_alpha = 0.5;
-
-
+scr_gravGunPush(other.x, other.y, x, y);

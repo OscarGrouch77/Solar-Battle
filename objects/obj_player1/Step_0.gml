@@ -342,6 +342,8 @@ if (disabled == false) and (shootAble == true)
 				chargeShot = 0;
 			}
 		}
+		
+		////code for grav gun ship
 		if (sprite_index == spr_kepler)
 		
 		////normal firing code////
