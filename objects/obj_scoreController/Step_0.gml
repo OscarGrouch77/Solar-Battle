@@ -25,7 +25,7 @@ if (gameActive == true)
 
 if (global.roundEnd == false)
 {
-	if (!enemyExists) and (!instance_exists(obj_spawnObjectSurvival))
+	if (!enemyExists) and (!instance_exists(obj_spawnObjectSurvivalShaded))
 	{
 		if (instance_exists(obj_player1))
 		{

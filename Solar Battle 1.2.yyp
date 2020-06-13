@@ -1071,6 +1071,14 @@
             }
         },
         {
+            "Key": "789820c3-2aec-4e2c-8d38-d44f0fe16fc7",
+            "Value": {
+                "id": "7e564071-a628-412d-ac97-fcd8ef03ec03",
+                "resourcePath": "shaders\\shd_spawn\\shd_spawn.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "792abb46-8e8a-4676-8f27-5ab1ffee3e7a",
             "Value": {
                 "id": "03d24364-0481-4012-bde0-7a9029c5f5e7",
@@ -1100,6 +1108,14 @@
                 "id": "906a3ce5-4ebb-40fe-9ab7-ed84761a2f70",
                 "resourcePath": "views\\7a2e86fc-c487-47e0-8ae1-5e2cde2870b9.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7a607ca1-7951-4d6b-9aad-c2554005f26a",
+            "Value": {
+                "id": "050ac50a-1ea1-47b8-ad6f-56687ccd95d4",
+                "resourcePath": "objects\\obj_spawnObjectSurvivalShaded\\obj_spawnObjectSurvivalShaded.yy",
+                "resourceType": "GMObject"
             }
         },
         {

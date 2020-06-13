@@ -638,7 +638,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "obj_spawnObjectSurvival.image_angle",
+            "value": "obj_spawnObjectSurvivalShaded.image_angle",
             "varName": "image_angle",
             "varType": 0
         },

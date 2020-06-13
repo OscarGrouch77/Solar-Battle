@@ -20,11 +20,11 @@ for(var i = enemyNumber; i > 0; i--)
 		}
 		until (point_distance(randX1, randY1, obj_sun.x, obj_sun.y) > 400);
 		if (i = 1){
-			var spawnObj = instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvival);
+			var spawnObj = instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvivalShaded);
 			spawnObj.spawnInstance = sEnemy;
 		}
 		if (i = 2){
-			var spawnObj = instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvival);
+			var spawnObj = instance_create_layer(randX1, randY1, "topParticle", obj_spawnObjectSurvivalShaded);
 			spawnObj.spawnInstance = sEnemy2;
 		}
 		
