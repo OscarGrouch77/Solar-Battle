@@ -193,6 +193,16 @@
             "enumb": 7,
             "eventtype": 2,
             "m_owner": "90614845-7168-480a-871d-31e6337a1d80"
+        },
+        {
+            "id": "e8ae39b6-4665-4372-be33-9062e5edb441",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "3034d513-27d8-4cb2-aabe-fa154d7b6ce5",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "90614845-7168-480a-871d-31e6337a1d80"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -672,6 +682,48 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "fullyCharged",
+            "varType": 3
+        },
+        {
+            "id": "5b565c68-f7b2-47ce-a93e-7025f24baa59",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravHeat",
+            "varType": 0
+        },
+        {
+            "id": "4710ff48-6a86-48ee-a284-8a99c06b2d4b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravGunPush",
+            "varType": 3
+        },
+        {
+            "id": "5d9b8651-1a5b-4242-8ac0-db5915ed2fab",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravConeExists",
             "varType": 3
         }
     ],

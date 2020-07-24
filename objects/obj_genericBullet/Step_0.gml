@@ -12,3 +12,5 @@ else image_angle = image_angle + 5;			//make bullet spin
 scr_gravityForce(x,y);
 	
 move_wrap(true, true, 0);						///wrap around room
+
+speed = clamp(speed, 0, 30);
