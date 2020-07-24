@@ -91,10 +91,10 @@ Draw End event:
 
 
 varying vec2 v_vTexcoord;
-//varying vec4 v_vColour;
+varying vec4 v_vColour;
 
-// if these settings don't need to be dynamic: remove the uniforms and implement the constants
-
+uniform float dir;
+uniform float timer;
 uniform float zoom1;
 uniform float zoom2;
 uniform float radius;
@@ -102,19 +102,24 @@ uniform float aberration;
 uniform float contrast;
 uniform float saturation;
 uniform float gamma;
-//const float zoom1 = 0.4;
-//const float zoom2 = 0.2;
-//const float radius = 0.6;
-//const float aberration = 0.05;
-//const float contrast = 1.7;
-//const float saturation = 0.75;
-//const float gamma = 1.4;
+
+//variable for making the cone shape
+uniform vec4 uvs;
+uniform float vectorX;								//X of ship direction vector
+uniform float vectorY;								//Y of ship direction vector
+vec2 circle_centre = vec2(0.5, 0.5);				//centre of circle normalised
+vec2 dirVec = vec2(vectorX, vectorY);				//vector of angle ship is facing
+float dirMag = length(dirVec);						//magnitude of dirVec
+float coneEdgeDegs = 10.0;							//degrees away from direction facing that effect not visible
+float coneEdgeRadians = radians(coneEdgeDegs);	//radians away from direction facing that effect not visible
 
 void main() {	
 	// GET MAGNIFY SAMPLE OFFSET FROM THE CENTRE:
+	float freq				= 20.0;														//frequency of waves
 	float dist				= length(v_vTexcoord - 0.5);								// distance to the center
+	float wave				= (abs(sin((-timer + freq * dist)/2.0)) + 2.0)/4.0;			//propogating sine wave effect							//range -1 - 1 based on distance from centre
 	float angle				= atan(v_vTexcoord.y - 0.5, v_vTexcoord.x - 0.5);			// angle from the center
-	float zoomed_radius		= dist * ((zoom2 * dist / radius) + zoom1);					// new radius to get the sample from
+	float zoomed_radius		= wave * dist * ((zoom2 / radius) + zoom1);			// new radius to get the sample from
 	vec2 offset				= vec2(cos(angle), sin(angle)) * zoomed_radius;				// offset from the center
 	
 	// MAGNIFY:
@@ -139,10 +144,19 @@ void main() {
 	// contrast:
 	base_col.rgb			= (base_col.rgb - 0.5) * contrast + 0.5;
 	// saturation:
-	float gray				= dot(base_col.rgb, vec3(0.33,0.33,00.33));
+	float gray				= dot(base_col.rgb, vec3(0.33,0.33,0.33));
 	base_col.rgb			= mix(vec3(gray), base_col.rgb, saturation);
 	
-	
+	//Set Alpha to 0 if outside cone angle
+	vec2 pos = (v_vTexcoord - uvs.xy) * uvs.zw;									//position coords of fragment within the sprite
+	vec2 posRel = pos - circle_centre;											//position of fragment relative to centre of circle
+	float fragMag = length(posRel);												//magnitude of vector of the fragment from centre
+	float angleDiff = abs(acos(dot(dirVec, posRel)/dot(dirMag,fragMag)));		//radians difference between angle facing and fragment angle
+	float angleDiffDegs = degrees(angleDiff);
+	base_col.a = 1.0 - smoothstep(coneEdgeDegs - 5.0, coneEdgeDegs + 5.0, angleDiffDegs);			//set alpha to 0 if fragment is outside angle tolerance with fade at edges
+	base_col.a = base_col.a * (1.0 - smoothstep(0.4, 0.5, fragMag));
 	// OUTPUT:
 	gl_FragColor			= base_col;
 }
+	//mix(v_vColour * texture2D( gm_BaseTexture, v_vTexcoord ), base_col, v_vColour * texture2D( gm_BaseTexture, v_vTexcoord ).a);
+

@@ -14,3 +14,10 @@ if (instance_exists(owner))
 	}
 }
 
+timer += 0.15;
+
+shd_angle = image_angle;						
+
+vectorX = lengthdir_x(1, shd_angle);
+vectorY = lengthdir_y(1, shd_angle);
+

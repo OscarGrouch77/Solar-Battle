@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "142a1580-8033-4f6e-be39-0764e1208c4a",
+            "Value": {
+                "id": "6709a442-a26e-45de-9d9f-6f0b45816cf6",
+                "resourcePath": "shaders\\shd_gravWave\\shd_gravWave.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "15067388-de01-42d3-a3a3-f337a0119940",
             "Value": {
                 "id": "6cba384b-4795-4fd6-8b87-9b07ddc8b843",
@@ -604,6 +612,14 @@
                 "id": "2d2343f8-7f21-4ba7-bf93-d3c7701aed63",
                 "resourcePath": "fonts\\fnt_multi2\\fnt_multi2.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "3efcc1f8-04fe-4584-b24c-c8b136787450",
+            "Value": {
+                "id": "0a4eb8cc-acb7-4b20-8c70-ad8fea41b02a",
+                "resourcePath": "shaders\\shader3\\shader3.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -1780,6 +1796,14 @@
                 "id": "86496e8d-bfa6-4065-96b1-966eac8eaa89",
                 "resourcePath": "sprites\\spr_bigGlow\\spr_bigGlow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c838b1ad-47d3-4f85-9759-b2d728cc1e98",
+            "Value": {
+                "id": "4c4cca4c-4572-429c-beeb-9e9a8796c2ca",
+                "resourcePath": "shaders\\shd_clipMask\\shd_clipMask.yy",
+                "resourceType": "GMShader"
             }
         },
         {
