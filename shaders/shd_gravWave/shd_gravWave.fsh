@@ -146,6 +146,8 @@ void main() {
 	// saturation:
 	float gray				= dot(base_col.rgb, vec3(0.33,0.33,0.33));
 	base_col.rgb			= mix(vec3(gray), base_col.rgb, saturation);
+	//colour adjust
+	base_col.g = base_col.g * 1.5 * wave;										//adjust green with wave effect
 	
 	//Set Alpha to 0 if outside cone angle
 	vec2 pos = (v_vTexcoord - uvs.xy) * uvs.zw;									//position coords of fragment within the sprite
@@ -154,7 +156,7 @@ void main() {
 	float angleDiff = abs(acos(dot(dirVec, posRel)/dot(dirMag,fragMag)));		//radians difference between angle facing and fragment angle
 	float angleDiffDegs = degrees(angleDiff);
 	base_col.a = 1.0 - smoothstep(coneEdgeDegs - 5.0, coneEdgeDegs + 5.0, angleDiffDegs);			//set alpha to 0 if fragment is outside angle tolerance with fade at edges
-	base_col.a = base_col.a * (1.0 - smoothstep(0.4, 0.5, fragMag));
+	base_col.a = base_col.a * (1.0 - smoothstep(0.3, 0.5, fragMag));								//set alpha to zero if beyond edge of effect
 	// OUTPUT:
 	gl_FragColor			= base_col;
 }

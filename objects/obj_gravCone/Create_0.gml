@@ -23,7 +23,7 @@ zoom2			= 0.4;
 radius			= 0.7;
 aberration		= 0.02;
 contrast		= 1.7;
-saturation		= 0.75;
+saturation		= 1.3;
 gamma			= 1.4;
 timer = 0.0;
 
