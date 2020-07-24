@@ -43,14 +43,16 @@ if (rotate == -1){
 	image_angle -= 5;
 }
 
-//starts missile homing after short delay from launching
-if (homing == true){
-	//pointing towards target
+//pointing towards target
 	if instance_exists(target)
 	{
 		targetDir = point_direction(x, y, target.x, target.y);
 		scr_rotateTo(targetDir);
 	}
+
+//starts missile engine after short delay from launching
+if (homing == true){
+	
 	//thrusting towards target
 	motion_add(image_angle, 0.5);
 	speed = min(speed, 12);
