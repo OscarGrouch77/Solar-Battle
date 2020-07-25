@@ -7,8 +7,6 @@ image_alpha = 0.5;
 xOffset = 0;
 yOffset = 0;
 
-
-
 //magnifying shader stuff
 shd_angle = image_angle;						
 

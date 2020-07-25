@@ -1303,6 +1303,14 @@
             }
         },
         {
+            "Key": "8a1cbf81-f678-49d5-a44c-11b899141b56",
+            "Value": {
+                "id": "76b6d536-333b-4bb7-bc8a-19eade0e45b8",
+                "resourcePath": "sounds\\snd_gravWave\\snd_gravWave.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8a86378f-c11c-4b3d-8d87-6c830e3cd71f",
             "Value": {
                 "id": "ef4fed98-7b43-4dc1-9bf1-5a7cebc0856e",

@@ -12,7 +12,7 @@ if(global.gameType == gameType.oneDuel) or (global.gameType == gameType.twoDuel)
 {
 	if(rollAstNumber == true)
 	{
-		astNumber = 4;
+		astNumber = irandom_range(1,4);
 		rollAstNumber = false;
 	}
 }

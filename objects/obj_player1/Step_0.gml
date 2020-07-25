@@ -193,7 +193,7 @@ if (disabled == false) and (shootAble == true)
 			cooldown = fireRate;
 			overheat = overheat + 2;
 			audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
-			audio_play_sound(snd_pew4,0,0);
+			audio_play_sound(snd_pew4,1,0);
 		}
 		
 	}
@@ -236,7 +236,7 @@ if (disabled == false) and (shootAble == true)
 				cooldown = fireRate;
 				overheat = overheat + 2;
 				audio_sound_pitch(snd_pew4, random_range(0.7, 1.1));
-				audio_play_sound(snd_pew4,0,0);
+				audio_play_sound(snd_pew4,1,0);
 			}
 		
 			if (keyboard_check(global.p1AltFire))				//code for charging special shot
@@ -397,11 +397,23 @@ if (disabled == false) and (shootAble == true)
 				if (gravHeat >= gravWarmUp)
 				{
 					gravGunPush = true;
+					if(!audio_is_playing(snd_gravWave))
+					{
+						audio_play_sound(snd_gravWave, 1, false);
+					}
 				}
-				else gravGunPush = false;
+				else 
+				{
+					gravGunPush = false;
+					if(audio_is_playing(snd_gravWave))
+					{
+						audio_stop_sound(snd_gravWave);
+					}
+				}
 			}
 			if (gravGunPush == true)
 			{
+				
 				if (gravConeExists == false)
 				{
 					var num = 5;
@@ -422,11 +434,17 @@ if (disabled == false) and (shootAble == true)
 						}
 					}
 					gravConeExists = true;
+					
 				}
 			}
 			else
 			{
 				gravConeExists = false;
+				
+				if(alarm[8] = -1)
+				{
+					alarm[8] = 20;
+				}
 			}
 				
 			
