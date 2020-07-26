@@ -243,16 +243,6 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
-        },
-        {
-            "id": "6e372985-b619-4896-af04-fb33d92904e5",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 8,
-            "eventtype": 2,
-            "m_owner": "da1375a5-0907-43bf-b154-eef2550c4cf8"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -735,20 +725,6 @@
             "varType": 3
         },
         {
-            "id": "c519cf0f-374a-461f-b17d-69ad38c95d40",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "gravHeat",
-            "varType": 0
-        },
-        {
             "id": "6dc68bfe-381c-4b30-a1fd-24a7d721e303",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -775,6 +751,62 @@
             "value": "False",
             "varName": "gravConeExists",
             "varType": 3
+        },
+        {
+            "id": "c519cf0f-374a-461f-b17d-69ad38c95d40",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravHeat",
+            "varType": 0
+        },
+        {
+            "id": "e89c73a0-af19-4bc9-b4a2-5ddb846b4771",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "100",
+            "varName": "gravMaxHeat",
+            "varType": 0
+        },
+        {
+            "id": "db04cb78-b167-4c57-9393-e9640cf8181d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "gravHeatRate",
+            "varType": 0
+        },
+        {
+            "id": "8d137134-3f4c-4a57-a309-5c0ec92ee661",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "10",
+            "varName": "gravWarmUp",
+            "varType": 0
         }
     ],
     "solid": false,

@@ -117,7 +117,7 @@ void main() {
 	// GET MAGNIFY SAMPLE OFFSET FROM THE CENTRE:
 	float freq				= 20.0;														//frequency of waves
 	float dist				= length(v_vTexcoord - 0.5);								// distance to the center
-	float wave				= (abs(sin((-timer + freq * dist)/2.0)) + 2.0)/4.0;			//propogating sine wave effect							//range -1 - 1 based on distance from centre
+	float wave				= (((sin((-timer + freq * dist)/2.0))/2.0 + 0.5) + 2.0)/4.0;			//propogating sine wave effect
 	float angle				= atan(v_vTexcoord.y - 0.5, v_vTexcoord.x - 0.5);			// angle from the center
 	float zoomed_radius		= wave * dist * ((zoom2 / radius) + zoom1);			// new radius to get the sample from
 	vec2 offset				= vec2(cos(angle), sin(angle)) * zoomed_radius;				// offset from the center

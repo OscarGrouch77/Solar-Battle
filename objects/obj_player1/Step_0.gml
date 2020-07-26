@@ -390,9 +390,6 @@ if (disabled == false) and (shootAble == true)
 			if (keyboard_check(global.p1AltFire))				
 			{
 				//grav gun heats up to max level at max level grav gun will disable
-				var gravHeatRate = 1;
-				var gravMaxHeat = 100;
-				var gravWarmUp = 10;
 				gravHeat = min(gravHeat + gravHeatRate, gravMaxHeat);	
 				if (gravHeat >= gravWarmUp)
 				{
@@ -410,6 +407,14 @@ if (disabled == false) and (shootAble == true)
 						audio_stop_sound(snd_gravWave);
 					}
 				}
+			}
+			if (gravHeat >= gravMaxHeat)
+			{
+				gravGunPush = false;
+					if(audio_is_playing(snd_gravWave))
+					{
+						audio_stop_sound(snd_gravWave);
+					}
 			}
 			if (gravGunPush == true)
 			{
@@ -433,18 +438,16 @@ if (disabled == false) and (shootAble == true)
 							}
 						}
 					}
-					gravConeExists = true;
-					
+					gravConeExists = true;	
 				}
 			}
 			else
 			{
 				gravConeExists = false;
-				
-				if(alarm[8] = -1)
-				{
-					alarm[8] = 20;
-				}
+				if(audio_is_playing(snd_gravWave))
+					{
+						audio_stop_sound(snd_gravWave);
+					}
 			}
 				
 			
