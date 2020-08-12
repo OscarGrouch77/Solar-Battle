@@ -115,7 +115,7 @@ float coneEdgeRadians = radians(coneEdgeDegs);	//radians away from direction fac
 
 void main() {	
 	// GET MAGNIFY SAMPLE OFFSET FROM THE CENTRE:
-	float freq				= 20.0;														//frequency of waves
+	float freq				= 60.0;														//frequency of waves
 	float dist				= length(v_vTexcoord - 0.5);								// distance to the center
 	float wave				= (((sin((-timer + freq * dist)/2.0))/2.0 + 0.5) + 2.0)/4.0;			//propogating sine wave effect
 	float angle				= atan(v_vTexcoord.y - 0.5, v_vTexcoord.x - 0.5);			// angle from the center

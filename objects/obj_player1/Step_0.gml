@@ -387,78 +387,69 @@ if (disabled == false) and (shootAble == true)
 			}
 			
 			////code for gravity gun////
-			if (keyboard_check(global.p1AltFire))				
+			if (keyboard_check(global.p1AltFire)) and (gravOverheated == false)			
 			{
-				//grav gun heats up to max level at max level grav gun will disable
-				gravHeat = min(gravHeat + gravHeatRate, gravMaxHeat);	
-				if (gravHeat >= gravWarmUp)
+				//grav gun heats up to max level at max level grav gun will disable and initiate cooldown period
+				gravHeat = min(gravHeat + gravHeatRate, gravMaxHeat);	//heats up gravHEat at a rate of gravHeatRate per frame up to max of gravMaxHEat
+				gravWarmth = min(gravWarmth + gravHeatRate, gravWarmUp);	//heats up gravHeat at a rate of gravHeatRate per frame up to max of gravMaxHEat
+				if(gravWarmth >= gravWarmUp)
 				{
-					gravGunPush = true;
-					if(!audio_is_playing(snd_gravWave))
+					if(gravHeat < gravMaxHeat) and (gravConeExists = false)
 					{
-						audio_play_sound(snd_gravWave, 1, false);
+						createCone = true;
 					}
 				}
-				else 
+				if (createCone == true)
 				{
-					gravGunPush = false;
-					if(audio_is_playing(snd_gravWave))
-					{
-						audio_stop_sound(snd_gravWave);
-					}
-				}
-			}
-			if (gravHeat >= gravMaxHeat)
-			{
-				gravGunPush = false;
-					if(audio_is_playing(snd_gravWave))
-					{
-						audio_stop_sound(snd_gravWave);
-					}
-			}
-			if (gravGunPush == true)
-			{
 				
-				if (gravConeExists == false)
-				{
-					var num = 5;
-					//for loop creates 4 copies of the gravcone off screen for room wrapping
-					for(var i = num; i > 0; i--)
+					if (gravConeExists == false)
 					{
-						var gravCone = instance_create_layer(x, y, "Instances", obj_gravCone);
-						with gravCone
+						var num = 5;
+						//for loop creates 4 copies of the gravcone off screen for room wrapping
+						for(var i = num; i > 0; i--)
 						{
-							owner = other.id;
-							switch (i)
+							var gravCone = instance_create_layer(x, y, "Instances", obj_gravCone);
+							with gravCone
 							{
-								case 4: xOffset = -room_width; break;
-								case 3: xOffset = room_width; break;
-								case 2: yOffset = -room_height; break;
-								case 1: yOffset = room_height; break;
+								owner = other.id;
+								switch (i)
+								{
+									case 4: xOffset = -room_width; break;
+									case 3: xOffset = room_width; break;
+									case 2: yOffset = -room_height; break;
+									case 1: yOffset = room_height; break;
+								}
 							}
-						}
 					}
 					gravConeExists = true;	
-				}
+					}
+					createCone = false;
+				}	
 			}
-			else
+			if(gravHeat >= gravMaxHeat)				//checks if gravGun is overheated
+				{
+					gravOverheated = true;
+				}
+			if(gravOverheated == true)				//if gravgun is overheated deactivates gravcone
 			{
 				gravConeExists = false;
-				if(audio_is_playing(snd_gravWave))
-					{
-						audio_stop_sound(snd_gravWave);
-					}
+				createCone = false;
+				if(gravHeat <= 0)					//sets gravOverheated to false when gravHeat reaches 0
+				{
+					gravOverheated = false;
+				}
 			}
-				
-			
-			gravHeat = max(gravHeat - 0.2, 0);			//gravGun cools down
-			if (gravHeat <= 0)
+			gravHeat = max(gravHeat - gravCoolRate, 0);			//cools down gravHeat at cool rate until it reaches 0
+			if!(keyboard_check(global.p1AltFire))				//resets cone creation variables and removes cone
 			{
-				gravGunPush = false;
+				gravWarmth = 0;
+				gravConeExists = false;
+				createCone = false;
 			}
-		}
+		}	
 	}
 }
+
 
 //charging sound effect
 if (charging == true)

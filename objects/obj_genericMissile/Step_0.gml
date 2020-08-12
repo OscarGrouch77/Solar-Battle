@@ -26,7 +26,9 @@ if !(target)
 			target = noone;
 		}
 	}else{
-		target = instance_nearest(x,y,owner.enemy);
+		if(instance_exists(owner.enemy)){
+			target = instance_nearest(x,y,owner.enemy);
+		}
 	}
 }
 

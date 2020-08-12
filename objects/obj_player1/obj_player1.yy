@@ -735,7 +735,7 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "gravGunPush",
+            "varName": "createCone",
             "varType": 3
         },
         {
@@ -790,7 +790,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
+            "value": "0.3",
             "varName": "gravHeatRate",
             "varType": 0
         },
@@ -806,6 +806,48 @@
             "resourceFilter": 1023,
             "value": "10",
             "varName": "gravWarmUp",
+            "varType": 0
+        },
+        {
+            "id": "936496f8-6fbf-43ad-8f8f-e76d71a9da1e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravOverheated",
+            "varType": 3
+        },
+        {
+            "id": "50a3ea16-c55f-4fea-8f0c-745c1b9690f2",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0.1",
+            "varName": "gravCoolRate",
+            "varType": 0
+        },
+        {
+            "id": "b20474ea-6567-4468-b2d6-e722a538f655",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gravWarmth",
             "varType": 0
         }
     ],

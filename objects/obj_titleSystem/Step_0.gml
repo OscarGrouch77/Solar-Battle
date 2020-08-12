@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//controls what the escape key does by room
 if (keyboard_check_pressed(vk_escape))
 {
 	switch(room)
